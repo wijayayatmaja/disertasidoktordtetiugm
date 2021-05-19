@@ -1,0 +1,294 @@
+\chapter{PROPOSED METHOD}
+In this section, the proposed method to assess rooftop photovoltaic hosting capacity is provided.
+\begin{figure}[!b]
+	\centering
+	\vspace{-10pt}
+	\includegraphics[width=1\textwidth]{Fig/researchflow.pdf}
+	\vspace{-15pt}
+	\caption{Flowchart of the research.}
+	\label{fig-researchflow}
+\end{figure}
+As can be seen in Fig. \ref{fig-researchflow}, the research flow provided in this research is divided into four stages. It begins with preliminary research. In this stage, literature review is conducted to understand the current theory, practices, and findings about rooftop photovoltaic hosting capacity assessment methods. Moreover, to deal with the problem characterized in this research, method development is chosen as the area of contribution. In addition, hypothesis is stated to measure the results. 
+
+This research tries to propose development of finite Markov chains based method to assess rooftop photovoltaic hosting capacity. To deal with the complexity of rooftop photovoltaic hosting capacity assessment, firstly the mathematical formulations are constructed and secondly the algorithm of rooftop photovoltaic allocation strategy is provided in detail. Furthermore, many scenarios are considered and time-series analysis framework is employed.
+
+In addition, Monte Carlo based rooftop photovoltaic hosting capacity assessment method is developed to be compared to the proposed Markov chains based method concerning MAE.
+
+After developing the methods, the next stage is case study stage. A case study is required to provide experimental validation for the proposed method. Moreover, it is also intended to consider the real-life context of large-scale rooftop photovoltaic penetration. Despite the proposed method, the previous method developed previously is also performed using the same case study.
+
+At the last stage, the rooftop photovoltaic hosting capacity results are written to the desired file, then the evaluation is performed. Since there are a huge amount of data, a huge amount of processing is needed. Consequently, to characterize the data, statistical analyses are implemented. Finally, the results are discussed, the hypothesis is justified, and the conclusions are derived.
+\section{Construction of Rooftop Photovoltaic Allocation Strategy}
+To provide the allocation strategy of rooftop photovoltaic penetration, mathematical formulations defining the problem are constructed.
+\subsection{Rooftop Photovoltaic Allocation Scenario}
+Rooftop photovoltaic allocation scenario $A^m$ defines the distinct scenarios for each rooftop photovoltaic allocation process. Because of the random characteristics of rooftop photovoltaic allocation, the process is classified as stochastic process. The rooftop photovoltaic allocation scenario $A^m$ is formulated as the element of set $A$, as
+\begin{equation}\label{pas1}
+%A=\{A^m\ |\ m\in M\},
+A=\{A^1,A^2,...,A^m,...,A^u\}.
+\end{equation}
+
+In this research, the total number of rooftop photovoltaic allocation scenario $u$ represents the number of Markov chains runs.
+\subsection{States of Markov Chains}
+States of Markov chains represent the possible categories of customers with rooftop photovoltaic, as
+\begin{equation}\label{smc1}
+Y=\{y|y \text{ is category of customer with rooftop photovoltaic}\}.
+\end{equation} 
+
+The selection process of the customer equipped with rooftop photovoltaic are conducted by stochastic process of Markov chains. Assume it performs the transition from a state $y_i$ to the other state $y_j$, then $\{y_i,y_j\}$ would become outcome values of $y$. Furthermore, since the state $y_j$ of prior rooftop photovoltaic allocation process would become the state $y_i$ of posterior rooftop photovoltaic allocation process, for now it is adequate to only take the definition of $y_j$.
+\subsection{Rooftop Photovoltaic Allocation Process}
+In addition to the rooftop photovoltaic allocation scenario, $m^{th}$ rooftop photovoltaic allocation scenario $A^m$ contains a number of distinct rooftop photovoltaic sizes and locations. As a result, for each rooftop photovoltaic allocation scenario, $\{j^{th},k^{th}\}$ rooftop photovoltaic allocation representing a distinct combination of rooftop photovoltaic size and location is called a rooftop photovoltaic allocation process $a^m_{j,k}$, as
+\begin{equation}\label{pas2}
+%A^m=\{a^m_{j,k}\ |\ m\in M\wedge k\in K\}.
+A^m=\{a^m_{j,1},a^m_{j,2},...,a^m_{j,k},...,a^m_{j,w}\}.
+\end{equation} 
+
+Since there is $u$ number of rooftop photovoltaic allocation scenarios and $w$ number of rooftop photovoltaic allocation processes for each scenario, the number of the distinct combinations of rooftop photovoltaic sizes and locations is $u\bigcdot w$.
+\subsection{Customer with Rooftop Photovoltaic}
+Customer with rooftop photovoltaic $c^m_{j,k}$ is defined as the current selected customer whose rooftop photovoltaic is integrated to the distribution grid. It is determined corresponding to $\{m^{th},j^{th},k^{th}\}$ rooftop photovoltaic allocation process $a^m_{j,k}$, as
+\begin{equation}\label{cpv1}
+%\mathit{C^m_j}=\{c^m_{j,k}\ |\ m\in M\wedge k\in K\wedge j\in \Z^+\}.
+\mathit{C^m_j}=\{c^m_{j,1},c^m_{j,2},...,c^m_{j,k},...,c^m_{j,w}\}.
+\end{equation}
+
+In addition, $k^{th}$ rooftop photovoltaic allocation process assigns one customer with rooftop photovoltaic $c^m_{j,k}$ for each Markov chains run. Consequently, if $u$ Markov chains runs are conducted, there are $u$ rooftop photovoltaic allocation scenarios for each customer with rooftop photovoltaic, as
+\begin{equation}\label{cpv2}
+\mathit{C^k_j}=\{c^k_{j,1},c^k_{j,2},...,c^k_{j,m},...,c^k_{j,u}\}.
+\end{equation}
+\subsection{Rooftop Photovoltaic Size}
+Rooftop photovoltaic size $x^m_{j,k}$ is kW value of the rooftop photovoltaic generation. It is determined corresponding to $\{m^{th},j^{th},k^{th}\}$ rooftop photovoltaic allocation process $a^m_{j,k}$. In other words, it is the size of rooftop photovoltaic of the selected customer with rooftop photovoltaic $c^m_{j,k}$. Moreover, its value is obtained from the rooftop photovoltaic integration projects data set $\mathit{D}$ sorted by date. This arrangement is needed because, to deal with the Markov chains algorithm, the order of the data matters. Additionally, the rooftop photovoltaic size $x^m_{j,k}$ must comply with its category of customer with rooftop photovoltaic $y_j$. For this reason, the rooftop photovoltaic size $x^m_{j,k}$ is randomly selected from the range between $y_{j-1}$ and $y_j$, as
+\begin{equation}\label{xpv1}
+x^m_{j,k}=\{x^m_{j,k}\ \text{is random value}|y_{j-1} < x^m_{j,k} \leq y_j\},
+\end{equation}
+and the set $\mathit{X^m_j}$ containing $x^m_{j,k}$ is formulated as
+\begin{equation}\label{xpv2}
+%\mathit{X^m_j}=\{x^m_{j,k}\ |\ y_{j-1} < x^m_{j,k} \leq y_j\wedge x^m_{j,k}\in D\wedge m\in M\wedge k\in K\wedge y_j\in Y\wedge j\in \Z^+\}.
+\mathit{X^m_j}=\{x^m_{j,1},x^m_{j,2},...,x^m_{j,k},...,x^m_{j,w}\},
+\end{equation}
+then, for each rooftop photovoltaic size, formulation providing $u$ rooftop photovoltaic allocation scenarios is described as
+\begin{equation}\label{xpv3}
+\mathit{X^k_j}=\{x^k_{j,1},x^k_{j,2},...,x^k_{j,m},...,x^k_{j,u}\}.
+\end{equation}
+\subsection{Customer Penetration Level}
+For each rooftop photovoltaic allocation scenario, without regarding to $j^{th}$ category of customer with rooftop photovoltaic $y_j$, customer penetration level $cp^m_k$ is defined as the total number of customer equipped with rooftop photovoltaic from the beginning to $k^{th}$ rooftop photovoltaic allocation process. As a result, the customer penetration level $cp^m_k$ is defined as
+\begin{equation}\label{cpl1}
+cp^m_k=k\%,
+\end{equation}
+and for all rooftop photovoltaic penetration,
+\begin{equation}\label{cpl2}
+cp^m_w=w\%,
+\end{equation}
+then the customer penetration level set $\mathit{CP^m}$ is defined as
+\begin{equation}\label{cpl3}
+%\mathit{CP^m}=\{cp^m_k\ |\ m\in M\wedge k\in K\}.
+\mathit{CP^m}=\{cp^m_1,cp^m_2,...,cp^m_k,...,cp^m_w\}.
+\end{equation}
+\subsection{Rooftop Photovoltaic Penetration Level}
+The number of rooftop photovoltaic sizes integrated to the distribution grid for $\{m^{th},k^{th}\}$ rooftop photovoltaic allocation process $a^m_{j,k}$, without regarding to $j^{th}$ customer with photovoltaic category $y_j$, is denoted as rooftop photovoltaic penetration level $xp^m_k$. Its value is represented in kW, and it is defined as
+\begin{equation}\label{xpl1}
+xp^m_k=\sum_{k=1}^k x^m_{j,k},
+\end{equation}
+if 100\% customer penetration level $cp^m_k$ is reached,
+\begin{equation}\label{xpl2}
+\mathit{xp^m_w}=\sum_{k=1}^w x^m_{j,k},
+\end{equation}
+then the rooftop photovoltaic penetration level set $\mathit{XP^m}$ is defined as
+\begin{equation}\label{xpl3}
+%\mathit{XP^m}=\{xp^m_k\ |\ m\in M\wedge k\in K\}.
+\mathit{XP^m}=\{xp^m_1,xp^m_2,...,xp^m_k,...,xp^m_w\}.
+\end{equation}
+\subsection{Rooftop Photovoltaic Location of Penetration}
+Location of rooftop photovoltaic penetration $l^m_{j,k}$ corresponds to the location of the selected customers with rooftop photovoltaic $c^m_{j,k}$. Since the customers with rooftop photovoltaic are randomly selected, the rooftop photovoltaic locations are also randomly distributed. Therefore, the location of rooftop photovoltaic penetration $l^m_{j,k}$ is described as 
+\begin{equation}\label{lpv1}
+l^m_{j,k}=location(c^m_{j,k}),
+\end{equation}
+and the location of rooftop photovoltaic penetration set $\mathit{L^m_j}$ is defined as
+\begin{equation}\label{lpv2}
+%\mathit{L^m_j}=\{l^m_{j,k}\ |\ m\in M\wedge k\in K\wedge j\in \Z^+\}.
+\mathit{L^m_j}=\{l^m_{j,1},l^m_{j,2},...,l^m_{j,k},...,l^m_{j,w}\}.
+\end{equation}
+\section{Development of Finite Markov Chains Based Rooftop Photovoltaic Hosting Capacity Assessment Method}
+Since each rooftop photovoltaic allocation process assigns one customer with rooftop photovoltaic $c^m_{j,k}$ for $m^{th}$ rooftop photovoltaic allocation scenario $A^m$, and the customers have a finite total number, the number of rooftop photovoltaic allocation processes $w$ are classified as finite stochastic process. Therefore, the Markov chains developed in this research is classified as a finite Markov chains.
+
+The development of the proposed finite Markov chains based rooftop photovoltaic hosting capacity assessment uses the proposed mathematical formulation described previously. From Equation (\ref{smc1}) and in line with Equation (\ref{fmc}), despite $y_j$, it is necessity to define $y_i$ in developing finite Markov chains. Both $y_i$ and $y_j$ are the category of prior rooftop photovoltaic allocation process $a^m_{j,k-1}$ and posterior rooftop photovoltaic allocation process $a^m_{j,k}$, respectively. Moreover, $y_j$ is determined by transition probability matrix of Markov chains for a given $y_i$ without regarding the arrangement.
+\subsection{Transition Probabilities Matrix}
+To construct the transition probability matrix, the actual photovoltaic penetration data are needed. At least two procedures are required to construct the transition probability matrix. Firstly, the transition probabilities for the states are calculated. Secondly, the transition probability matrix is constructed by placing the transition probabilities as its elements. As described previously, the states are determined corresponding to $\{i^{th},j^{th}\}$ category of customer with rooftop photovoltaic $y$.
+
+\bgroup
+\begin{algorithm}[!b]
+	\caption{Transition Probability Matrix}\label{alg:transprob1}
+	\begin{algorithmic}[1]
+		\Procedure{MakeSetPhotovoltaicPenetration}{}
+		\State Create sorted data set $\mathit{D}$
+		\EndProcedure \\
+		
+		\Procedure{MakeSetMarkovStates}{}
+		\State\textproc {MakeSetPhotovoltaicPenetration}
+		\State Create set $Y$ from set $D$
+		\EndProcedure \\
+		
+		\Function {TransProbMatrix}{$a^m_{j,k}$}
+		\State\textproc {MakeSetMarkovStates}		
+		\For {each $\{y_i,y_j\}$ in $Y$}
+		\State $y_i \gets$ prior outcome value
+		\State $y_j \gets$ posterior outcome value
+		\State Calculate $p_{ij}=Pr[a^m_{j,k}=y_j\ |\ \mathit{a^m_{j,k-\text{1}}}=y_i]$
+		\EndFor 		
+		\State Create $r\times r$ transition probability matrix $\mathbf{P}$ with $p_{ij}$ as entries
+		\State\Return matrix $\mathbf{P}$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+\egroup
+The procedures to calculate the transition probability matrix is described in Algorithm \ref{alg:transprob1}. The algorithm begins with sorting the residential rooftop photovoltaic penetration data by date. From the sorted data set $\mathit{D}$, the transition probability $p_{ij}$ is calculated for each transition from prior state $y_i$ to the posterior one $y_j$. Using Equation (\ref{tp1}), the transition probability for finite Markov chains developed in this research is formulated as
+\begin{equation}
+p_{ij}=Pr[a^m_{j,k}=y_j\ |\ \mathit{a^m_{j,k-\text{1}}}=y_i]\label{tp2}.
+\end{equation}
+
+By applying Equation (\ref{tp2}) for all actual photovoltaic penetration data, $r\bigcdot r$ number of transition probability values are obtained. Furthermore, assume $\mathbf{P}$ is a square ($r\times r$) matrix, then the transition probability matrix $\mathbf{P}$ is described as follows.
+\[\mathbf{P}=
+\begin{blockarray}{ccccc}
+	&y_{j}&y_{j}&\dots&y_{j}\\[-6pt]
+	\begin{block}{c[cccc]}
+	y_{i}&p_{11}&p_{12}&\dots&p_{1r}\\[-7pt]
+	y_{i}&p_{21}&p_{22}&\dots&p_{2r}\\[-7pt]
+	\vdots&\vdots&\vdots&\ddots&\vdots\\[-7pt]
+	y_{i}&p_{r1}&p_{r2}&\dots&p_{rr}\\[3pt]
+ 	\end{block}
+\end{blockarray}	
+\]
+\subsection{Number of Markov Chains Runs} 
+Since each rooftop photovoltaic allocation scenario represents unique scenario of rooftop photovoltaic size and location, the mathematical symbol $u$ also indicates the number of Markov chains runs. To calculate the number of Markov chains runs $u$, using Equation (\ref{mnp1}), the MNP method is employed. As a consequence, the Markov chains would be independently run until reaching $u$ runs.
+%\subsection{Function of Violation}
+%As described previously, the rooftop photovoltaic hosting capacity is determined concerning operational limits of the distribution grid. Let $T^m$ be a finite random variable that can take on any real number $t^m_k\in \{t^m_1,t^m_2,...,t^m_k,...,t^m_w\}$, then $Pr\{T^m=t^m_k\}$ be the probability function of $\{T^m=t^m_k\}$ for which violation occurs at $k^{th}$ rooftop photovoltaic allocation process $a^m_{j,k}$. On other words, it is defined as a probability function of observing violation for $m^{th}$ Markov chains run and $k^{th}$ rooftop photovoltaic allocation process.
+\subsection{Rooftop Photovoltaic Hosting Capacity}
+For each Markov chains run, a rooftop photovoltaic hosting capacity is determined. It defines the rooftop photovoltaic penetration level for previous rooftop photovoltaic allocation process if a violation occurs presently, as
+\begin{equation}\label{phc1}
+\mathit{h^m}=min\Big\{\mathit{xp^m_{k-\text{1}}}\ |\ Pr[T^m=\mathit{t^m_k}]\geq \frac{1}{w}\wedge k\neq 1\Big\}.
+\end{equation}
+
+Since $u$ number of Markov chains runs are conducted, $u$ number of rooftop photovoltaic hosting capacities are obtained. However, the desired hosting capacity is determined by calculating the minimum rooftop photovoltaic hosting capacity $\mathit{h_{min}}$. It is formulated as
+\begin{equation}\label{phc2}
+\mathit{h_{min}}=min\{h^1,h^2,...,h^m,...,h^u\}.
+\end{equation}
+\subsection{Algorithm}
+The proposed method to assess rooftop photovoltaic hosting capacity of large-scale rooftop photovoltaic penetration on low-voltage distribution system is detailed in Algorithm \ref{alg:marchai1}. The algorithm begins with obtaining load curve data and photovoltaic output data needed to consider the fluctuation in time-series framework. In addition to the implementation of time-series analysis, 4-hour time period from 10:00 a.m. to 2:00 p.m. is assigned. It is chosen because the highest values of photovoltaic output lie in this period of time. To make it short, this program code is called distribution system code. Additionally, a hosting capacity assessment program code need to be written. In the hosting capacity assessment program code, for each rooftop photovoltaic allocation process, the distribution system code is iteratively run.
+
+\bgroup
+\begin{algorithm}[htbp]
+	\caption{Finite Markov Chains for Assessing Rooftop Photovoltaic Hosting Capacity (Part 1)}\label{alg:marchai1}
+	\begin{algorithmic}[1]
+		\Procedure{ObtainLoadCurve}{}
+		\State Obtain load curve containing load demands in time-series
+		\EndProcedure \\
+		
+		\Procedure{ObtainPhotovoltaicOutput}{}
+		\State Obtain photovoltaic output in time-series
+		\EndProcedure \\	
+		
+		\Procedure{MakeSetPhotovoltaicAllocation}{}
+		\State Create set $A$ containing $A^m$ for $m=1$
+		\State Create set $A^m$ containing $a^m_{j,k}$
+		\EndProcedure \\
+		
+		\Procedure {MakeSetCustomerWithPhotovoltaic}{}
+		\State Create $\mathit{C^m_j}$ containing $c^m_{j,k}$
+		\EndProcedure\\
+		
+		\Procedure{MakeSetPhotovoltaicSize}{}
+		\State Create $\mathit{X^m_j}$ containing $x^m_{j,k}$, $x^m_{j,k} \in \mathit{D}$
+		\EndProcedure \\
+		
+		\Function{CalculateCP}{}
+		\State Calculate $cp^m_k=k\ \%$
+		\State\Return $cp^m_k$
+		\EndFunction \\
+		
+		\Function{CalculateXP}{}
+		\State Calculate $xp^m_k=\sum_{k=1}^k x^m_{j,k}$
+		\State\Return $xp^m_k$
+		\EndFunction \\
+		
+		\Function{CalculateH}{}
+		\State Calculate $\mathit{h^m}=min\big\{\mathit{xp^m_{k-\text{1}}}\ |\ Pr[T^m=\mathit{t^m_k}]\geq \frac{1}{w}\wedge k\neq 1\big\}$
+		\State\Return $\mathit{h^m}$
+		\EndFunction	
+		\algstore{bkbreak}
+\end{algorithmic}
+\end{algorithm}
+\addtocounter{algorithm}{-1}
+\begin{algorithm}[!t]
+	\caption{Finite Markov Chains for Assessing Rooftop Photovoltaic Hosting Capacity (Part 2)}
+	\begin{algorithmic}[1]
+		\algrestore{bkbreak}
+		\Function{PerformPhotovoltaicAllocation}{}
+		\If {$r$ changes}
+		\State Update $Y$ with remaining $y$
+		\EndIf
+		\For {each $k$ in rooftop photovoltaic process $a^m_k$}
+		\State\textproc {TransProbMatrix}($a^m_k$)
+		\State Calculate state $y_j$ given state $y_i$ using matrix $\mathbf{P}$
+		\EndFor
+		\State\Return State $y_j$
+		\EndFunction\\
+		
+		\Function{PerformFiniteMarkovChains}{}
+		\State\textproc{ObtainLoadCurve}
+		\State\textproc{ObtainPhotovoltaicOutput}
+		\State Construct a code of the distribution grid under study
+		\State Define the operational limits concerned
+		\State Initialize  $m\ :\ m=1$
+		\State Initialize  $k\ :\ k=1$
+		\State Obtain $a^m_k$
+		\State\textproc {MakeSetPhotovoltaicAllocation}
+		\State Initialize $y_j$
+		\State Obtain $c^m_{j,k}$, $x^m_{j,k}$, and $l^m_{j,k}$
+		\State\textproc {MakeSetCustomerWithPhotovoltaic}
+		\State\textproc {MakeSetPhotovoltaicSize}
+		
+		\While{$m$ in $cp^m_k \neq$ $u$}
+		\State\textproc{CalculateCP}
+		\State\textproc{CalculateXP}
+		\If{$m$ >= 2}
+		\State Update $a^m_k$
+		\EndIf	
+
+		\While {$k$ in $cp^m_k \neq$ $w$}		
+		\If{$k$ >= 2}
+		\State $y_i \gets$ $y_j$
+		\State\textproc {PerformPhotovoltaicAllocation}
+		\State Update $c^m_{j,k}$, $x^m_{j,k}$, and $l^m_{j,k}$ 
+		\EndIf		
+		\State Penetrate rooftop photovoltaic using $c^m_{j,k}$, $x^m_{j,k}$, and $l^m_{j,k}$
+		\State Run power flow in time-series
+		\State Evaluate the results using the operational limits		
+%		\If{violation occurs at $k^{th}$ photovoltaic allocation process}
+		\algstore{bkbreak}
+\end{algorithmic}
+\end{algorithm}	
+\addtocounter{algorithm}{-1}
+\begin{algorithm}[!t]
+\caption{Finite Markov Chains for Assessing Rooftop Photovoltaic Hosting Capacity (Part 3)}
+\begin{algorithmic}[1]
+\algrestore{bkbreak}
+		\If {$Pr[T^m=\mathit{t^m_k}]= \frac{1}{w}$ is True}
+		\State Determine $\mathit{xp^m_{k-\text{1}}}$ as rooftop photovoltaic hosting capacity
+		\EndIf		
+		\State Update $k\ :\ k=k+1$
+		\EndWhile
+		\State Calculate $\mathit{h_{min}}=min\{h^1,h^2,...,h^m,...,h^u\}$
+		\State Update $m\ :\ m=m+1$
+		\EndWhile		
+		\State\Return $\mathit{A^m}$, $\mathit{C^m_j}$, $\mathit{X^m_j}$, $\mathit{CP^m}$, $\mathit{XP^m}$, $\mathit{L^m_j}$, and $\mathit{h_{min}}$
+		\State Record the desired results
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+\egroup
+Furthermore, the rooftop photovoltaic allocation process $a^m_{j,k}$ and category of customer with rooftop photovoltaic $y_j$ is initialized. Corresponding to $m^{th}$ rooftop photovoltaic allocation scenario $A^m$, $k^{th}$ rooftop photovoltaic allocation process $a^m_{j,k}$, and $j^{th}$ category of customer with rooftop photovoltaic, respectively, customer with rooftop photovoltaic $c^m_{j,k}$, rooftop photovoltaic size $x^m_{j,k}$, and rooftop photovoltaic location $l^m_{j,k}$ are determined. Prior to the main function of Markov chains based rooftop photovoltaic hosting capacity assessment method, three functions including customer penetration level $cp^m_k$, rooftop photovoltaic penetration level $xp^m_k$, and rooftop photovoltaic allocation function are defined. In the rooftop photovoltaic allocation function, the previous transition probability matrix function presented in Algorithm \ref{alg:transprob1} is assigned. It is employed to determine the outcome value of $y_j$ given the previous outcome value of $y_i$. In this function, the transition probability matrix is updated if the number of states $r$ changes. It keeps changing until all states become absorbing.
+
+In addition to the process in allocating rooftop photovoltaics, an iterating loop to obtain the 100\% of customer penetration level $cp^m_k$ is performed. In this loop, the rooftop photovoltaic allocation process is conducted according to the previous state $y_i$. Using the information of previous state value $y_i$, the current state $y_j$ could be determined. Note that for the next iteration, the value of state $y_j$ is assigned to $y_i$. As a result, customer with rooftop photovoltaic $c^m_{j,k}$, rooftop photovoltaic size $x^m_{j,k}$, and rooftop photovoltaic penetration location $l^m_{j,k}$ are determined. They are used as inputs to conduct the rooftop photovoltaic penetration.
+Moreover, the power flow is performed in time-series considering the load curve and photovoltaic output data. Thus, the results are evaluated using the defined operational limits. These procedures are iteratively repeated corresponding to $k^{th}$ rooftop photovoltaic allocation process of customer penetration level $cp^m_k$. For $m^{th}$ rooftop photovoltaic allocation scenario $A^m$, if a violation occurs at $k^{th}$ rooftop photovoltaic allocation process $a^m_{j,k}$, the rooftop photovoltaic penetration level $\mathit{xp^m_{k-\text{1}}}$ is determined as the rooftop photovoltaic hosting capacity of the Markov chains run. After all Markov chains runs are conducted, the minimum rooftop photovoltaic hosting capacity $\mathit{h_{min}}$ is calculated and the final results are written to the desired file.
+%\section{Defining Accuracy Evaluation}
+%Accuracy evaluation needs to be performed to assess the proposed method in determining rooftop photovoltaic hosting  capacity. In this research, accuracy evaluation of the proposed Markov chains method is defined as probability of violation function $\mathit{t^m_k}$ for which the values lie below or equal to the defined tolerance value $\varepsilon$. As a result, it is formulated as
+%\begin{equation}
+%Acc_{\varepsilon}=\{Pr[T^m=\mathit{t^m_k}]\ |\ Pr[T^m=\mathit{t^m_k}] \leq \varepsilon\}\label{acc}
+%\end{equation}

@@ -1,0 +1,528 @@
+\chapter{TINJAUAN PUSTAKA DAN LANDASAN TEORI}
+\label{bab-tinjauan}
+\section{Tinjauan Pustaka}
+Bagian ini menyediakan temuan dan kontribusi dari penelitan-penelitian sebelumnya yang berkaitan dengan pengembangan metode penentuan kapasitas \textit{hosting} stokastik dari PLTS tersebar skala besar pada jaringan distribusi tegangan rendah. Hal ini disediakan untuk memperlihatkan posisi penelitian-penelitian yang sudah terbit dalam rangka menyelesaikan permasalahan yang dipaparkan pada bagian sebelumnya dalam naskah disertasi ini. Sementara itu, keaslian penelitian dari penelitian disertasi ini juga disediakan. Selain untuk menunjukkan kebaruan dan kontribusi dari solusi yang diusulkan, keaslian penelitian itu juga untuk menunjukkan posisi penelitian disertasi ini dibandingkan dengan penelitian-penelitian sebelumnya. Langkah pertama yang dilakukan dalam studi pustaka ini adalah analisis \textit{bibliometric}. Untuk melakukan hal tersebut, Gambar \ref{biblio} diilustrasikan. 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{Fig/biblio}
+	\caption{Peta \textit{bibliometric} terkait kapasitas \textit{hosting}.}
+	\label{biblio}
+\end{figure}
+Gambar tersebut menunjukkan sebuah peta \textit{bibliometric} dengan indeks pencarian terkait kapasitas \textit{hosting}. Peta \textit{bibliometric} dirancang dari abstrak-abstrak artikel jurnal-jurnal yang terindeks Scopus dari tahun 2015-2021. Setiap frasa kunci yang dimunculkan dalam peta \textit{bibliometric} tersebut adalah frasa kunci yang memiliki minimal 10 garis korelasi antar artikel jurnal.
+
+Peta \textit{bibliometric} pada Gambar \ref{biblio} menunjukkan arah penelitian-penelitian terkait kapasitas \textit{hosting}. Peta \textit{bibliometric} ini penting untuk dijadikan pedoman agar kebaruan/keaslian penelitian yang diusulkan pada penelitian disertasi ini berada pada jalur dan arah penelitian-penelitian sebelumnya dengan tetap memegang komponen-komponen pokok dari topik pengembangan metode penentuan kapasitas \textit{hosting}.  Beberapa hal yang dapat dipahami dari peta \textit{bibliometric} tersebut antara lain:
+\begin{enumerate}
+	\item Penetrasi PLTS yang banyak diteliti adalah penetrasi skala besar yang tersebar pada jaringan distribusi tegangan rendah. 
+	\item Kaitannya dengan risiko yang diterima penyulang dan karakteristik ketidakpastian penetrasi, akurasi menjadi tujuan utama dari pengembangan metode penentuan kapasitas \textit{hosting}.
+	\item Studi kasus umumnya menggunakan \textit{feeder test} dari IEEE dengan program perhitungan aliran daya OpenDSS.
+	\item Dampak pada sistem distribusi yang paling banyak dipertimbangkan adalah pelanggaran terhadap regulasi tegangan, khususnya tegangan lebih.
+\end{enumerate}
+
+Untuk memperdalam maksud dari analisis \textit{bibliometric} tersebut, pada bagian selanjutnya dari naskah disertasi ini, komponen-komponen pokok dari topik pengembangan metode penentuan kapasitas \textit{hosting} dijelaskan secara rinci. Selanjutnya, untuk mencapai tujuan akhir berupa perumusan usulan solusi yang asli/baru, hal-hal lain yang juga memiliki kaitan juga dijelaskan.
+
+%Penelitian-penelitian sebelumnya telah melakukan pengembangan metode penentuan kapasitas \textit{hosting} PLTS tersebar telah dilakukan untuk menjawab tantangan dalam mendapatkan hasil yang representatif dan metode yang akurat. Periode awal dalam proses pengembangan tersebut adalah penentuan kapasitas \textit{hosting} dengan metode berbasis \textit{deterministic} \cite{Conti2007,Shayani2011,Kabir2016,Heslop2016,Luthander2017,Emmanuel2017,Abdelkader2020}. Metode berbasis \textit{deterministic} digunakan untuk melakukan estimasi kapasitas \textit{hosting} PLTS tersebar karena akurasinya yang tinggi \cite{Heslop2016,Abdelkader2020}. Pada pendekatan ini, kapasitas \textit{hosting} dicari dengan menetapkan nilai-nilai tertentu sebagai variabel-variabel simulasi. Metode ini tidak memperhitungkan karakteristik acak dari penetrasi sehingga ukuran daya PLTS dan lokasi integrasinya ditentukan secara \textit{deterministic}. Artinya, metode berbasis \textit{deterministic} tidak memasukkan ketidakpastian-ketidakpastian ukuran daya PLTS dan lokasi integrasi PLTS \cite{Conti2007,Kabir2016}. Proses penyebaran PLTS pada pendekatan ini dilakukan dengan menetapkan ukuran daya PLTS dengan suatu nilai tertentu dan lokasi integrasi PLTS pada satu atau beberapa \textit{bus} dalam sistem-sistem distribusi yang digunakan. 
+
+%Untuk mempercepat proses komputasi, metode penentuan kapasitas \textit{hosting} berbasis \textit{deterministic} dapat dinyatakan dalam suatu \textit{rule of thumb} \cite{Shayani2011}. Dalam hal ini, permintaan-permintaan beban dapat dinyatakan dalam nilai-nilai persentase yang telah ditetapkan. Selanjutnya, metode berbasis \textit{deterministic} yang lain dilakukan dengan memodelkan PLTS sebagai model \textit{P-Q} (daya aktif dan daya reaktif yang konstan) dan \textit{P-V} (daya aktif dan tegangan yang konstan) \cite{Emmanuel2017}. Hal itu dilakukan untuk mempercepat konvergensi dari iterasi simulasinya sehingga waktu komputasi yang cepat dapat diperoleh. Walaupun demikian, akurasi yang tinggi dan waktu komputasi yang singkat pada metode berbasis \textit{deterministic} didapat karena penggunaan sistem distribusi yang disederhanakan \cite{Shayani2011,Abdelkader2020}, padahal mayoritas sistem distribusi tenaga listrik riil mempunyai skema jaringan yang besar. Berkaitan dengan hal tersebut, pada sistem tenaga listrik yang besar, akurasi dari metode \textit{deterministic} akan menurun karena pada sistem yang besar tersebut pendekatan ini membutuhkan beban komputasi yang tinggi \cite{Kabir2016}. 
+
+%Metode berbasis \textit{deterministic} umumnya digunakan dalam menentukan kapasitas \textit{hosting} pada satu atau beberapa PLTS tersebar berukuran daya besar \cite{Wang2004,Gozel2009}. Walaupun demikian, penggunaan skenario \textit{worst-case} dan pembulatan nilai-nilai yang ekstrim tetap perlu dilakukan pada metode berbasis \textit{deterministic} tersebut \cite{Mokryani2017}. Hal ini disebabkan karena penetrasi PLTS mempunyai banyak karakteristik-karakteristik ketidakpastian alami seperti yang telah dijelaskan. Faktor-faktor ketidakpastian ini semakin tinggi ketika kasus penetrasi PLTS yang dihadapi adalah penetrasi PLTS tersebar yang jumlahnya banyak dan tersebar secara acak alami. Dengan alasan itu, metode berbasis \textit{deterministic} tidak cukup untuk dipakai pada penentuan dan analisis penetrasi PLTS tersebar \cite{Zubo2017}. 
+
+%\subsection{Penetrasi PLTS Tersebar pada Jaringan Distribusi Tegangan Rendah}
+\subsection{Kerangka Analisis Probabilistik untuk Ketidakpastian dan Variabilitas Masukan}
+Analisis probalistik merupakan analisis yang masukannya berupa variabel-variabel acak yang mempunyai \textit{probability density function} (PDF)\cite{Dantzig2011}. Tantangan paling besar dalam analisis probabilistik adalah penghitungan dampak dari variabel-variabel masukan yang bersifat acak terhadap variabel keluaran yang diamati. Pada kasus kapasitas \textit{hosting}, variabel-variabel masukannya adalah ketidakpastian dan variabilitas penetrasi PLTS tersebar, sedangkan variabel keluarannya adalah kapasitas \textit{hosting} yang direpresentasikan oleh level penetrasi PLTS tersebar terhadap indeks-indeks performa operasi sistem distribusi tenaga listrik. Penghitungan dampak masukan terhadap keluaran tersebut menentukan kualitas analisis probabilistik dari kapasitas \textit{hosting}. 
+
+Untuk mendapatkan hasil analisis probabilistik yang diinginkan, proses memodelkan variabel-variabel ketidakpastian dan variabilitas masukan memegang peranan yang penting \cite{Hasan2019}. Untuk alasan tersebut, distribusi-distribusi probabilitas masukan digunakan sebagai bentuk dari pemodelan variabel ketidakpastian dan variabilitas masukan tersebut. Dalam hal ini, pemilihan jenis distribusi-distribusi probabilitas tersebut dilakukan berdasarkan karakteristik-karakteristik dari variabel-variabel ketidakpastian/variabilitas dan skenario yang digunakan. Distribusi-distribusi probabilitas masukan untuk penetrasi PLTS tersebar ditunjukkan pada Tabel \ref{tab-ketidakpastian}.
+%\bgroup
+%\vspace{4pt}
+%{\renewcommand{\arraystretch}{1.3}
+%\begin{table}[!h]
+%	\caption{Perbandingan Distribusi Probabilitas Masukan Penetrasi PLTS Tersebar}
+%	\vspace{-12pt}
+%	\begin{center}
+%		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{6em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{12em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{10em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
+%			\cline{1-3} 
+%			\textbf{Karakteristik}&	
+%			\textbf{Model Distribusi Penelitian Sebelumnya}&
+%			\textbf{Pemodelan Distribusi pada Penelitian Disertasi Ini}\\
+%			%\hline Iradiasi matahari		&Distribusi normal \cite{Arun2009}, Distribusi beta \cite{Mena2014,Baptista2019}, Distribusi uniform \cite{Lu2015}, Model AR \cite{Graham1990}, Model ARM \cite{Mora-Lopez1998} & \\
+%			\hline Lokasi integrasi PLTS&Distribusi uniform \cite{Kharrazi2020,Shahnia2011}, distribusi normal\cite{Dubey2017,Ding2017,Torquato2018} &Distribusi normal\\
+%			\hline Ukuran daya PLTS 	&Distribusi uniform\cite{Shahnia2011}, distribusi normal\cite{Kharrazi2020,Dubey2017,Ding2017} &Distribusi normal\\
+%			\hline Daya keluaran PLTS 	&Dihitung dari data historis iradiasi matahari \cite{Ruiz-Rodriguez2012,Dubey2017,Ding2017}, autoregressive moving average (ARMA)\cite{Silva2016} &Dihitung dari data historis iradiasi matahari\\
+%			\hline Permintaan beban 	&Dirancang dari data historis permintaan beban\cite{Dubey2017,Ding2017,Torquato2018} &Dirancang dari data historis permintaan beban\\
+%			\hline Ukuran dan lokasi PLTS-baterai &Distribusi normal (PLTS disebar terpisah dengan baterai) \cite{Al-Saffar2020}, \textit{Deterministic}\cite{Hashemi2018,Yang2014} &Distribusi normal (PLTS disebar terintegrasi dengan baterai)\\
+%			%\hline Kendali daya aktif baterai pada pelanggan dengan PLTS-baterai &- &Ya\\
+%			%\hline Kendali daya reaktif baterai pada pelanggan dengan PLTS-baterai &- &Ya\\
+%			\hline
+%		\end{tabular}
+%		\label{tab-ketidakpastian}
+%	\end{center}
+%	\vspace{-12pt}
+%	%\thisfloatpagestyle{floatpage}
+%\end{table}
+%\egroup
+
+\bgroup
+\vspace{4pt}
+{\renewcommand{\arraystretch}{1.3}
+\begin{table}[!h]
+	\caption{Perbandingan Distribusi Probabilitas Masukan Penetrasi PLTS Tersebar}
+	\vspace{-12pt}
+	\begin{center}
+		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{14em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{15em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
+			\cline{1-2} 
+			\textbf{Karakteristik}&	
+			\textbf{Model Distribusi Penelitian Sebelumnya}\\
+			%\hline Iradiasi matahari		&Distribusi normal \cite{Arun2009}, Distribusi beta \cite{Mena2014,Baptista2019}, Distribusi uniform \cite{Lu2015}, Model AR \cite{Graham1990}, Model ARM \cite{Mora-Lopez1998} & \\
+			\hline Lokasi integrasi PLTS&Distribusi uniform \cite{Kharrazi2020,Shahnia2011}, distribusi normal\cite{Dubey2017,Ding2017,Torquato2018}\\
+			\hline Ukuran daya PLTS 	&Distribusi uniform\cite{Shahnia2011}, distribusi normal\cite{Kharrazi2020,Dubey2017,Ding2017}\\
+			\hline Daya keluaran PLTS 	&Dihitung dari data historis iradiasi matahari \cite{Ruiz-Rodriguez2012,Dubey2017,Ding2017}, autoregressive moving average (ARMA)\cite{Silva2016}\\
+			\hline Permintaan beban 	&Dirancang dari data historis permintaan beban\cite{Dubey2017,Ding2017,Torquato2018}\\
+			\hline Ukuran dan lokasi baterai &Distribusi normal (PLTS disebar terpisah dengan baterai) \cite{Al-Saffar2020}, \textit{Deterministic}\cite{Hashemi2018,Yang2014}\\
+			%\hline Kendali daya aktif baterai pada pelanggan dengan PLTS-baterai &- &Ya\\
+			%\hline Kendali daya reaktif baterai pada pelanggan dengan PLTS-baterai &- &Ya\\
+			\hline
+		\end{tabular}
+		\label{tab-ketidakpastian}
+	\end{center}
+	\vspace{-12pt}
+	%\thisfloatpagestyle{floatpage}
+\end{table}
+\egroup
+
+
+
+Dari Tabel \ref{tab-ketidakpastian} tampak bahwa berbagai model distribusi probabilitas masukan dapat digunakan untuk merepresentasikan lokasi PLTS, ukuran daya PLTS, daya keluaran PLTS, permintaan beban, dan inverter PLTS. Lokasi PLTS pada jaringan distribusi dan ukuran daya PLTS yang dihubungkan ke jaringan digolongkan sebagai variabel ketidakpastian karena sifatnya yang acak alami \cite{Kharrazi2020,Shahnia2011,Dubey2017,Ding2017,Torquato2018}. Ukuran daya PLTS yang dipasang oleh setiap pelanggan ditentukan oleh pelanggan sendiri sehingga \textit{utility} melihatnya sebagai karakteristik yang acak dan tidak pasti besarnya \cite{Shahnia2011,Kharrazi2020,Dubey2017,Ding2017}. Selanjutnya, daya keluaran PLTS, baik daya aktif maupun daya reaktif mempunyai karakteristik variabilitas \cite{Ruiz-Rodriguez2012,Dubey2017,Ding2017,Silva2016}. Daya keluaran PLTS ini dihitung dari iradiasi matahari yang juga bersifat berubah-ubah sepanjang waktu. Iradiasi matahari mempunyai sifat variabilitas karena perubahan dari pergerakan awan, cuaca, iklim, dan ketidaktepatan pengukuran.
+
+Selain dari sistem PLTS-nya, variabilitas juga terdapat pada sistem distribusi tenaga listrik, yaitu permintaan beban \cite{Dubey2017,Ding2017,Torquato2018}. Permintaan beban ini berfluktuasi dan bervariasi sepanjang waktu setiap harinya. Sementara itu, untuk karakteristik ukuran dan lokasi baterai tersebar, peneliti pada \cite{Al-Saffar2020} menggunakan distribusi normal untuk mendistribusikan PLTS tersebar dan baterai. Meskipun demikian, PLTS tersebar didistribusikan terpisah dengan baterai. Artinya, baterai difungsikan untuk pencegahan gangguan, bukan kriteria karakteristik yang melekat dengan PLTS tersebar dalam penentuan kapasitas \textit{hosting}. Dengan kata lain, penentuan kapasitas \textit{hosting} hanya melibatkan karakeristik ketidakpastian dari PLTS tersebar, sedangkan baterai didistribusikan setelah kapasitas \textit{hosting} dihitung. Selanjutnya, peneliti pada \cite{Hashemi2018,Yang2014} menggunakan pendekatan \textit{deterministic} dalam penentuan ukuran dan lokasi PLTS-baterai tersebar sehingga penelitian-penelitian tersebut tidak membuat model distribusi peubah-peubah acak.
+
+%Pada penelitian disertasi ini, karakteristik PLTS-baterai tersebar ditetapkan sebagai masukan. Seperti PLTS tanpa baterai, PLTS-baterai tersebar juga dimodelkan dengan ketidakpastian ukuran daya dan lokasi integrasi. Dalam hal ini, distribusi normal digunakan untuk membuat pemodelan distribusi dari ukuran dan lokasi PLTS-baterai tersebar tersebut. Berbeda dengan penelitian sebelumnya \cite{Al-Saffar2020}, penelitian disertasi ini memperhitungkan PLTS yang terintegrasi dengan baterai dalam penentuan kapasitas \textit{hosting}.%Selanjutnya, dikarenakan oleh kemampuannya dalam pengaturan daya aktif dan reaktif, karakteristik berupa kendali daya aktif dan reaktif baterai pada PLTS-baterai tersebar ditetapkan sebagai masukan.
+
+\subsection{Batasan Level Tegangan Sistem Distribusi Tegangan Rendah}
+Batasan level tegangan sistem distribusi tegangan rendah adalah salah satu batas operasi yang cukup sering digunakan untuk penentuan kapasitas \textit{hosting} stokastik\cite{Santos-Martin2016,Silva2016,Navarro-Espinosa2016,Arshad2017,Baptista2019,Epri2012,Dubey2015,Dubey2017,Ding2017,Bollen2017,Torquato2018,Deakin2019,Vergara2020}. Batasan ini disebutkan sebagai batasan paling restriktif diantara batas yang lain di sistem distribusi tegangan rendah. Dalam menyuplai daya kepada pelanggan-pelanggan yang bersifat pasif, jaringan tenaga listrik konvensional mempunyai desain aliran menurun dari sistem pembangkit, kemudian menuju sistem transmisi dan berlanjut ke sistem distribusi. Dalam hal ini, fokus dari penyedia layanan daya listrik adalah fenomena penurunan tegangan pada penyulang-penyulang. Akan tetapi, kondisi ini berubah ketika terjadi integrasi PLTS tersebar skala besar pada sistem distribusi. Beberapa pelanggan-pelanggan yang awalnya bersifat pasif tersebut berubah menjadi pelanggan-pelanggan yang bersifat aktif, yaitu kaitannya dengan pengaliran daya. Injeksi arus dari pelanggan-pelanggan aktif ini mengubah arah aliran daya konvensional dan profil tegangan pada sistem distribusi. Skenario paling buruk adalah ketika total daya yang dibangkitkan PLTS-PLTS tersebar tersebut melebihi total kebutuhan beban dan rugi-rugi saluran. Pada kondisi tersebut, aliran daya balik dapat terjadi dan menyebabkan kenaikan tegangan yang melebihi batas-batas yang diijinkan oleh penyulang.
+
+Rangkaian sederhana mengenai penetrasi PLTS tersebar pada sistem tenaga listrik ditunjukkan pada Gambar \ref{voltagerise}.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Fig/voltagerise}
+	\caption{Rangkaian sederhana dari PLTS tersebar yang terhubung pada sistem tenaga listrik.}
+	\label{voltagerise}
+\end{figure}
+Berdasarkan gambar tersebut, formula untuk mendeskripsikan fenomena penurunan tegangan yang melalui penghantar adalah
+\begin{equation}\label{dropv1}
+\Delta\vv{U}=\vv{U}_m-\vv{U}_n=I(r+jx)=\Delta\vv{U}_{Re}+\Delta\vv{U}_{Im}.
+\end{equation}
+
+Dalam hal ini, perbedaan sudut fase antara kedua titik yang berdekatan, titik $m$ dan $n$, diasumsikan sangat kecil, sehingga bagian imajiner dari penurunan tegangan diabaikan. Dengan mempertimbangkan hubungan antara daya aktif dan reaktif, didapatkan
+\begin{equation}\label{dropv2}
+	|\Delta\vv{U}|\approx|\Delta\vv{U}_{Re}|=\dfrac{r\cdot P_r+x\cdot Q_r}{\vv{U}_n},
+\end{equation}
+kemudian, turunan dari Persamaan \ref{dropv2} terhadap transfer daya dapat dinyatakan sebagai
+\begin{equation}\label{vrise1}
+	\dfrac{\delta|\Delta\vv{U}|}{\delta P_r}dP_r+\dfrac{\delta|\Delta\vv{U}|}{\delta Q_r}dQ_r=\dfrac{r}{|\Delta\vv{U}|}dP_r+\dfrac{x}{|\Delta\vv{U}|}dQ_r.
+\end{equation}
+
+Dari Persamaan \ref{vrise1}, dapat dipahami bahwa perbedaan tegangan akan naik ketika daya aktifnya naik. Dengan kata lain, jika daya aktif dari pembangkitan PLTS tersebar lebih besar daripada permintaan daya aktif pada titik $m$, tegangan pada titik tersebut akan lebih besar daripada tegangan pada titik $n$.
+
+Dalam hal ini, kenaikan tegangan yang telah dijelaskan tersebut perlu untuk diukur. Pengukuran kenaikan ditujukan untuk menghindari pelanggaran batas tegangan. Batasan-batasan level tegangan pada sistem-sistem tenaga listrik diperlihatkan pada Tabel \ref{tab-batastegangan}.
+\bgroup
+\vspace{4pt}
+{\renewcommand{\arraystretch}{1.3}
+\begin{table}[!h]
+	\caption{Batasan Level Tegangan pada Berbagai Standar}
+	\vspace{-12pt}
+	\begin{center}
+		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{11em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{12.7em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
+			\cline{1-2} 
+			\textbf{Standar}&	
+			\textbf{Batasan Level Tegangan}\\
+			\hline EN 50160 (\textit{Voltage characteristics of electricity supplied by public systems}) \cite{ENStd.501602000}  &Tegangan rendah: $\pm$ 10\% (0.9 pu sampai dengan 1.1 pu), rata-rata RMS 10 menit\\
+			\hline ANSI Standard C84.1 (\textit{Electric power systems and equipment$-$voltage ratings (60 Hz)}) \cite{ANSI2011}  &Rentang A: $\pm$ 5\% (0.95 pu sampai dengan 1.05 pu) Rentang B: 91.7\% untuk tegangan minimum (0.917 pu) dan 105.8\% untuk tegangan maksimum (1.058 pu) \\
+			\hline IEC 60038 (\textit{Voltage standard}) \cite{IEC60038:2002} &Tegangan rendah: $\pm$ 10\% untuk tegangan nominal 230/400 V \\
+			\hline
+		\end{tabular}
+		\label{tab-batastegangan}
+	\end{center}
+	\vspace{-12pt}
+	%\thisfloatpagestyle{floatpage}
+\end{table}
+\egroup
+Diperlihatkan pada tabel tersebut bahwa Standar EN 50160 mengatur batas tegangan pada rentang 0.9 pu sampai dengan 1.1 pu dengan rata-rata nilai RMS yang terjadi selama 10 menit \cite{ENStd.501602000}. Durasi dalam definisi tersebut dimaksudkan untuk membedakan kenaikan tegangan dengan perubahan cepat pada tegangan atau tegangan \textit{dip}. Selanjutnya, Standar ANSI C84.1 menjelaskan dua jenis rentang dalam mengatur batasan level tegangan, yaitu rentang A dan rentang B \cite{ANSI2011}. Dalam hal ini, rentang A adalah rentang tegangan optimal, yaitu 0.95 pu sampai dengan 1.05 pu. Rentang B adalah rentang tegangan yang diterima, tetapi tidak optimal, yaitu 0.91 pu sampai dengan 1.058 pu. Pada IEC 60038, rentang yang diijinkan adalah 0.9 pu sampai dengan 1.1 pu untuk tegangan nominal 230/400 V pada sistem 50 Hz \cite{IEC60038:2002}. Meskipun demikian, batasan level tegangan yang tertuang pada \textit{grid code} juga berbeda-beda untuk negara yang berbeda, misalnya -6.1\%/ +10.0\% di Australia,-8.3\%/ +4.2\% di Canada, $\pm$ 10\% di Jerman, $\pm$ 6\% di Jepang, $\pm$ 5.9\% di Korea, -6.0\%/ +10.0\% di U.K., dan $\pm$ 5 di U.S. \cite{Lee2017}. 
+
+%Pada penelitian disertasi ini, batas operasi tegangan lebih diterapkan sebagai kekangan dalam menentukan kapasitas \textit{hosting} untuk penetrasi PLTS tersebar skala besar. Untuk batasan level tegangan lebih, penelitian disertasi ini menggunakan Standar ANSI C84.1. Dalam hal ini, rentang tegangan dari 0.95 pu sampai dengan 1.05 pu (rentang A) digunakan sebagai rentang dalam mengevaluasi kenaikan tegangan yang diakibatkan oleh penetrasi PLTS tersebar skala besar pada jaringan distribusi. Berbeda dengan penelitian sebelumnya yang menggunakan resolusi pengamatan per jam \cite{Dubey2015,Dubey2017} atau penelitian pada \cite{Torquato2018} yang menggunakan resolusi pengamatan per 15 menit, penelitian disertasi ini menggunakan resolusi pengamatan per 1 menit. Karena fluktuasi daya keluaran PLTS tersebar yang sangat cepat, resolusi yang lebih tinggi ini diterapkan agar dampak-dampak penetrasi PLTS terhadap tegangan lebih pada waktu kurang dari satu jam dapat diamati.
+
+\subsection{Kapasitas \textit{Hosting} Stokastik}
+Konsep mengenai kapasitas \textit{hosting} pertama kali dicetuskan tahun 2004. Selanjutnya, pada tahun 2005, M. H. J. Bollen dan M. H\"{a}ger membatasi dampak kenaikan penetrasi energi baru terbarukan sebagai batasan-batasan teknis terhadap operator sistem tenaga listrik dan pelanggan \cite{Bollen2005}. Kapasitas \textit{hosting} didefinisikan sebagai penetrasi energi baru terbarukan ketika sistem tenaga listrik beroperasi dengan baik. Penghitungan kapasitas \textit{hosting} didasarkan pada indeks-indeks performa operasi sistem tenaga listrik yang bervariasi sehingga kapasitas \textit{hosting} bukan merupakan satu nilai ukuran yang diwakili dengan satu hasil. Pada tahun 2011, M. H. J. Bollen dan F. Hasan mendefinisikan kapasitas \textit{hosting} sebagai jumlah maksimum dari unit-unit pembangkitan tersebar yang dapat diintegrasikan pada sistem tenaga listrik ketika performa operasi sistem menjadi tidak diijinkan untuk terjadi jika berada diatas jumlah penetrasi ini \cite{Bollen2011}. Untuk kasus penetrasi PLTS tersebar, ilustrasi mengenai definisi kapasitas \textit{hosting} tersebut ditunjukkan pada Gambar \ref{LimitPHC}. Dalam gambar tersebut ditunjukkan bahwa penetrasi PLTS tersebar menyebabkan penurunan performa operasi sistem distribusi tegangan rendah, dan kapasitas \textit{hosting} adalah batas maksimal penetrasi sebelum penurunan operasi sistem distribusi tersebut menyentuh batas operasi yang diijinkan.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Fig/LimitPHC}
+	\caption{Konsep kapasitas \textit{hosting} PLTS tersebar.}
+	\label{LimitPHC}
+\end{figure}
+
+Pada \cite{Palmintier2016}, Electric Power Research Institute (EPRI) dan Sandia National Laboratories (SNL) menyatakan bahwa ketidakpastian didalam menentukan kapasitas \textit{hosting} semakin meningkat karena ketidaktahuan mengenai lokasi integrasi PLTS, keberagaman ukuran daya PLTS, variabilitas alami dari daya keluaran PLTS karena perubahan-perubahan cuaca, fluktuasi kebutuhan beban, dan lain-lain. Hal ini menyebabkan perlunya pengembangan metode penentuan kapasitas \textit{hosting} stokastik untuk penetrasi PLTS tersebar \cite{Epri2012,Epri2013}. Oleh karena itu, kapasitas \textit{hosting} dihasilkan bukan sebagai satu nilai tunggal. Gambar \ref{phcepri} memperlihatkan nilai-nilai kapasitas \textit{hosting} stokastik untuk batas operasi tegangan lebih.
+\begin{figure}[!h]
+	\vspace*{-15pt}
+	\centering
+	\includegraphics[width=0.6\textwidth]{Fig/phcepri}
+	\caption{Kapasitas \textit{hosting} stokastik untuk batas operasi tegangan lebih \cite{Epri2013}.}
+	\label{phcepri}
+\end{figure}
+
+Pada Gambar \ref{phcepri} teramati bahwa, dalam penentuan kapasitas \textit{hosting} stokastik, penetrasi-penetrasi dalam gambar tersebut dapat dibagi menjadi tiga bagian. Bagian A yang berwarna hijau menandakan bahwa performa operasi sistem tenaga listrik dapat diterima untuk semua penetrasi pada area ini. Artinya, tidak terdapat pelanggaran batas operasi tegangan lebih pada bagian A ini. Bagian B yang berwarna kuning menunjukkan bahwa sebagian penetrasi pada area ini tidak menyebabkan pelanggaran batas operasi tegangan lebih, sedangkan sebagian lagi mengalami pelanggaran. Hal ini disebabkan oleh perbedaan lokasi integrasi dan ukuran PLTS tersebar. Bagian C yang berwarna merah memperlihatkan bahwa semua penetrasi pada area ini menyebabkan terjadinya pelanggaran batas operasi tegangan lebih. Berkaitan dengan area-area tersebut, batas antara bagian A dan bagian B disebut sebagai kapasitas \textit{hosting} minimum, sedangkan batas antara bagian B dan bagian C disebut sebagai kapasitas \textit{hosting} maksimum. Dalam hal ini, kapasitas \textit{hosting} stokastik yang dicari adalah kapasitas \textit{hosting} minimum, kemudian peningkatan kapasitas \textit{hosting} stokastik berada diantara batas kapasitas \textit{hosting} minimum dan kapasitas \textit{hosting} maksimum atau bagian B.
+
+Metode-metode untuk penentuan kapasitas \textit{hosting} stokastik yang berdasarkan ketidakpastian-ketidakpastian dari sisi operator sistem distribusi tenaga listrik telah banyak diteliti\cite{Dubey2017,Ding2017,Bollen2017,Torquato2018,Vergara2020,Deakin2019}.
+%\subsection{Metode-Metode Penentuan Kapasitas \textit{Hosting} Stokastik}
+Metode stokastik untuk penentuan kapasitas \textit{hosting} yang paling banyak dikembangkan sampai saat ini adalah Monte Carlo. 
+%Definisi metode Monte Carlo dapat dijelaskan melalui sejarahnya. Pada tahun 1908, William Sealy Gosset dengan nama pena Student membuat tulisan yang sekarang dikenal sebagai distribusi \textit{Student's t} \cite{Student1908}. Peneliti tersebut melakukan simulasi acak untuk mendapatkan sampel ukuran tinggi badan dan jari tengah kiri dari 3.000 orang kriminal. Selanjutnya, Leonard Henry Caleb Tippett membuat \textit{Tippett's numbers} pada tahun 1927 \cite{Tippett1927}. Penulis tersebut menggunakan 41.600 angka acak dari \textit{Cencus Reports} dan mengelompokkannya dalam empat kelompok yang terdiri atas 10.400 angka. Dari \textit{Tippett's numbers} ini, pengambilan sampel dari sebuah populasi dengan integral probabilitas dapat dilakukan. Pada pertengahan tahun 1949, sebuah simposium tentang metode Monte Carlo yang disponsori oleh \textit{Rand Corporation}, \textit{National Bureau of Standards}, dan \textit{Oak Ridge Laboratory} diadakan di Los Angeles. Pada tahun tersebut, dibulan September, Nicholas Metropolis dan Stanislaw Ulam menulis artikel jurnal berjudul \textit{The Monte Carlo Method} \cite{Metropolis1949}.
+%Setelah tahun tersebut, perkembangan metode Monte Carlo terjadi cukup pesat dengan implementasi pada berbagai bidang. Pada tahun 1953, Nicholas Metropolis dkk mempresentasikan algoritme \textit{Metropolis} untuk mempelajari posisi-posisi relatif dari atom-atom \cite{Metropolis1953}. Selanjutnya, Phelim P. Boyle menunjukkan bahwa metode Monte Carlo dapat digunakan untuk menilai pilihan-pilihan dalam lingkup finansial pada tahun 1977 \cite{Boyle1977}. Pada tahun yang sama, Daniel Thomas Gillespie menggunakan metode Monte Carlo untuk menyimulasikan reaksi-reaksi kimia yang mempunyai jumlah molekul yang kecil karena persamaan-persamaan diferensial tidak cukup akurat untuk mendeskripsikannya \cite{Gillespie1977}. Pada tahun 1988, James T. Kajiya memperkenalkan metode berbasis Monte Carlo yang dinamakan \textit{path tracing} untuk \textit{graphical rendering} \cite{Kajiya1986}. Melalui proses perkembangan konsep Monte Carlo tersebut, metode Monte Carlo dikerjakan dengan cara pemrosesan variabel-variabel acak. Variabel acak diartikan sebagai variabel yang berbeda-beda dan bergantung pada kasus tertentu dengan probabilitas tertentu \cite{Mazhdrakov2018}. Selanjutnya, 
+Monte Carlo didefinisikan sebagai algoritme iteratif yang menghasilkan variabel-variabel yang dapat dinyatakan dalam PDF dengan cara mengerjakan proses berulang kali menggunakan sampel variabel-variabel acak yang didapat dari masukan yang juga berupa PDF. Karena pendekatan Monte Carlo ini membutuhkan jumlah proses pengerjaan yang sangat banyak, beban komputasinya sangat tinggi. 
+
+Pendekatan Monte Carlo terdiri atas tiga tipe, \textit{non-sequential Monte Carlo}, \textit{sequential Monte Carlo}, dan \textit{pseudo-sequential Monte Carlo}. \textit{Non-sequential Monte Carlo} adalah metode yang berdasarkan asumsi bahwa sistem dapat direpresentasikan melalui kombinasi keadaan-keadaan dari setiap komponen dari sistem tersebut \cite{Tao2018}. Pada tipe ini, variabel-variabel masukan dipilih secara acak untuk setiap iterasi sebagai masukan, kemudian proses iterasinya dikerjakan untuk mendapatkan keluaran yang diinginkan. Proses iterasinya dihentikan ketika kriteria untuk menghentikan iterasi terpenuhi. Umumnya kriteria untuk menghentikan iterasi tersebut didasarkan pada ukuran statistik berupa rata-rata atau variansi dari variabel-variabel keluarannya. Metode ini tidak berdasarkan kronologi variabel-variabel masukan sehingga mengurangi kompleksitas yang diperlukan dalam mengerjakan metode ini \cite{Vallee2013}. Metode Monte Carlo yang mempertimbangkan kronologi dalam mengambil sampel variabel-variabel masukan adalah \textit{sequential Monte Carlo} \cite{Arun2009}. Pada metode ini, strategi urutan waktu digunakan untuk mengambil sampel-sampel dari variabel-variabel ketidakpastian dari masukan. Meskipun demikian, \textit{sequential Monte Carlo} membutuhkan beban komputasi yang tinggi\cite{Zio2015}. Selanjutnya, \textit{pseudo-sequential Monte Carlo} adalah metode hibrida dari \textit{non-sequential Monte Carlo} dan \textit{sequential Monte Carlo} \cite{Billinton1994}. Pada metode ini, \textit{non-sequential Monte Carlo} diaplikasikan untuk mengambil sampel dari keadaan-keadaan sistem, kemudian \textit{sequential Monte Carlo} digunakan untuk mengerjakan simulasi dengan atribut-atribut tertentu. Oleh karena itu, metode ini lebih cepat dan lebih ringan dari sisi komputasinya dibandingkan dengan \textit{sequential Monte Carlo}\cite{Zhao2014}. 
+
+Seperti yang dapat dilihat pada Tabel \ref{tab-monte}, pendekatan \textit{non-sequential} diaplikasikan oleh M. Deakin pada \cite{Watson2016,Arshad2017,Deakin2019}.
+\bgroup
+\vspace{4pt}
+{\renewcommand{\arraystretch}{1.3}
+\begin{table}[!h]
+	\caption{Perbandingan Metode Penentuan Kapasitas \textit{Hosting} Stokastik}
+	\vspace{-12pt}
+	\begin{center}
+		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{11em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{9em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{8em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
+			\cline{1-3} 
+			\textbf{Referensi}&	
+			%\textbf{\textit{Non-Sequential Monte Carlo}}&
+			\textbf{Metode Stokastik}&
+			\textbf{Mekanisme Runtun Waktu}\\
+			\hline J. D. Watson (2016) \cite{Watson2016} 	&Monte Carlo  &Non-Sequential 	\\
+			\hline A. Arshad (2017) \cite{Arshad2017} 		&Monte Carlo  &Non-Sequential 	\\
+			\hline A. Dubey (2017) \cite{Dubey2017}  		&Monte Carlo  &Pseudo-Sequential 	\\
+			\hline F. Ding (2017) \cite{Ding2017}  			&Monte Carlo  &Pseudo-Sequential 	\\
+			\hline M. H. Bollen (2017) \cite{Bollen2017} 	&Monte Carlo  &Pseudo-Sequential 	\\
+			\hline R. Torquato (2018) \cite{Torquato2018}  	&Monte Carlo  &Pseudo-Sequential 	\\
+			\hline M. Deakin (2019) \cite{Deakin2019} 		&Monte Carlo  &Non-Sequential 	\\
+			\hline P. P. Vergara (2020) \cite{Vergara2020} 	&Monte Carlo  &Pseudo-Sequential 	\\
+			\hline E. Quiles (2020) \cite{Quiles2020} 	&Monte Carlo  &Pseudo-Sequential 	\\
+			%\hline Penelitian disertasi ini  				&Markov Chain Monte Carlo  &Sequential 	\\
+			\hline
+		\end{tabular}
+		\label{tab-monte}
+	\end{center}
+	\vspace{-12pt}
+	%\thisfloatpagestyle{floatpage}
+\end{table}
+\egroup
+Penelitian-penelitian tersebut tidak menggunakan analisis runtun waktu sehingga simulasinya tidak bersifat \textit{chronological}. Penelitian pada \cite{Arshad2017} menggunakan skenario kondisi terburuk untuk menggantikan kerangka runtun waktu. Sementara itu, untuk penelitian-penelitian pada \cite{Watson2016,Deakin2019}, variabel-variabel ketidakpastian diwakilkan oleh suatu nilai tertentu dalam simulasi-simulasinya. Selanjutnya, penelitian-penelitian pada \cite{Dubey2017,Ding2017,Bollen2017,Torquato2018,Vergara2020,Quiles2020} menggunakan \textit{pseudo-sequential Monte Carlo}. Pada penelitian-penelitian tersebut, pemilihan pelanggan yang memasang PLTS dilakukan secara \textit{non-sequential}, sedangkan perhitungan aliran daya dilakukan secara \textit{sequential} pada setiap rentang waktu tertentu.
+
+%Pada penelitian disertasi ini, metode penentuan kapasitas \textit{hosting} stokastik dilakukan dengan basis pendekatan Markov Chain Monte Carlo. Berbeda dibandingkan dengan penelitian-penelitian pada \cite{Dubey2017,Ding2017,Bollen2017,Torquato2018,Vergara2020,Quiles2020}, penelitian ini menggunakan pendekatan \textit{sequential}. Meskipun demikian, untuk mengatasi tingginya beban komputasi dari pendekatan \textit{sequential} seperti yang ditunjukkan oleh \cite{Zhao2014}, penelitian ini menggunakan probabilitas transisi dalam memilih pelanggan-pelanggan berikutnya untuk menyambungkan PLTS tersebar ke jaringan distribusi sistem tenaga listrik. Penelitian ini menggunakan data pelanggan yang memasang PLTS sesuai urutan waktu atau \textit{sequential} untuk membentuk probabilitas-probablitas transisi dari model Markov yang diusulkan. Selanjutnya, pada proses penetrasinya, urutannya didasarkan pada probabilitas dari \textit{states} yang dibentuk oleh model Markov tersebut. Singkatnya, pada pendekatan Markov Chain Monte Carlo yang diusulkan pada penelitian disertasi ini, pengerjaan proses acak dilakukan dengan berdasarkan pada matriks probabilitas transisi dari proses Markov yang telah dirancang dengan basis pendekatan \textit{sequential}. Dari sisi perhitungan aliran daya, penelitian ini menerapkan pendekatan \textit{sequential} juga pada setiap rentang waktu tertentu.
+
+\subsection{Prosedur Penentuan Kapasitas \textit{Hosting} Stokastik}
+Berbagai metode penentuan kapasitas \textit{hosting} untuk penetrasi PLTS tersebar skala besar telah banyak dikerjakan oleh penelitian-penelitian sebelumnya. Dari tahun ke tahun, setiap penelitian dikerjakan untuk mengembangkan metode agar akurasi dapat ditingkatkan. Pada tahun 2012, EPRI merancang skenario penetrasi acak untuk PLTS tersebar \cite{Epri2012,Smith2015}. Penelitian tersebut membagi kelas pelanggan menjadi dua kategori, yaitu komersial dan rumah tangga. Kategori rumah tangga terdiri atas pelanggan-pelanggan yang melakukan pemasangan PLTS tersebar sampai 10 kW, sedangkan kategori komersial ditujukan untuk pemasangan PLTS diatas 10 kW. Pada setiap proses penyebaran PLTS dikerjakan skenario yang unik dan berbeda. $M$ skenario penetrasi dirancang dengan $N$ penetrasi untuk setiap skenario sehingga total ada $(M\times N)$ skenario.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{Fig/Epri2012}
+	\caption{Skenario penentuan kapasitas \textit{hosting} PLTS tersebar pada \cite{Epri2012}.}
+	\label{Epri2012}
+\end{figure}
+Ilustrasi mengenai metode tersebut ditunjukkan pada Gambar \ref{Epri2012} \cite{Epri2012}. 
+Perancangan skenario seperti itu dimaksudkan untuk merepresentasikan penetrasi PLTS tersebar yang mempunyai karakteristik natural yang acak.
+
+Anamika Dubey dkk melakukan investigasi dan analisis mengenai dampak penetrasi PLTS tersebar pada jaringan distribusi tegangan rendah \cite{Dubey2015} pada tahun 2015. Penelitian tersebut juga menggunakan perancangan skenario seperti ditunjukkan pada Gambar \ref{Epri2012}. Anamika Dubey dkk menunjukkan bahwa dampak penetrasi PLTS bervariasi untuk penetrasi pelanggan yang sama. Hasil tersebut disebabkan oleh perbedaan lokasi integrasi dan ukuran daya PLTS. Penelitian itu juga melakukan studi sensitivitas dan menunjukkan bahwa penetrasi pada titik terjauh dari penyulang memberikan dampak paling besar terhadap tegangan lebih. Oleh karena itu, nilai kapasitas \textit{hosting} PLTS akan semakin kecil seiring dengan semakin jauhnya lokasi penetrasi PLTS tersebar terhadap sumber penyulang. Dalam penelitian itu juga ditunjukkan bahwa peningkatan nilai beban minimum akan meningkatkan nilai kapasitas \textit{hosting} PLTS. 
+
+Selanjutnya, pada tahun 2017, Anamika Dubey dkk mengembangkan metode penentuan kapasitas PLTS tersebar skala besar berbasis Monte Carlo dengan menyediakan formula matematika dan kerangka analisis runtun waktu \cite{Dubey2017}. Metode penentuan kapasitas \textit{hosting} PLTS tersebar yang diusulkan pada penelitian tersebut ditunjukkan pada Gambar \ref{methoddubey} \cite{Dubey2017}.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Fig/methoddubey}
+	\caption{Metode penentuan kapasitas \textit{hosting} PLTS tersebar pada \cite{Dubey2017}.}
+	\label{methoddubey}
+\end{figure}
+Dalam penelitian tersebut, 100 simulasi Monte Carlo dirancang dengan 50 level penetrasi pelanggan untuk setiap skenario dan kenaikan sebesar 2\% untuk setiap perpindahan level penetrasi. Untuk menentukan kapasitas \textit{hosting} PLTS tersebar, penelitian tersebut mengusulkan dua formula matematika, yaitu $H_{1,k}$ dan $H_{100,k}$. $H_{1,k}$ adalah kapasitas \textit{hosting} pertama, yaitu minimal terdapat satu skenario dari sejumlah skenario yang mendeteksi adanya pelanggaran batas tegangan lebih. $H_{100,k}$ didefinisikan sebagai penetrasi PLTS terkecil ketika semua skenario yang dikerjakan telah mendeteksi pelanggaran batas tegangan lebih.
+
+Fei Ding dan Barry Mather \cite{Ding2017} juga menggunakan pendekatan pola sebaran seperti pada \cite{Dubey2017} dengan menerapkan 100 skenario penetrasi dan 50 level penetrasi pelanggan, seperti yang diperlihatkan pada Gambar \ref{methodfeiding}.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Fig/methodfeiding}
+	\caption{Metode penentuan kapasitas \textit{hosting} PLTS tersebar pada \cite{Ding2017}.}
+	\label{methodfeiding}
+\end{figure}
+Rentang waktu pengamatan empat jam dari pukul 10.00 sampai pukul 14.00 digunakan oleh peneliti tersebut. Penelitian tersebut menggunakan 17 penyulang riil sebagai sistem distribusi yang diteliti. Dengan batas operasi tegangan lebih, terdapat 13 penyulang yang mengalami pelanggaran. Hal tersebut mengartikan bahwa terdapat 4 penyulang yang tidak mengalami pelanggaran tegangan lebih walaupun  100\% pelanggan telah menyambungkan PLTS ke jaringan distribusi. 
+
+B. Bletterie  mengerjakan penentuan kapasitas \textit{hosting} PLTS tersebar dengan empat skenario \cite{Bletterie2017} yang ditunjukkan pada Gambar \ref{methodbletterie}, 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Fig/methodbletterie}
+	\caption{Skenario penyebaran PLTS tersebar pada \cite{Bletterie2017}.}
+	\label{methodbletterie}
+\end{figure}
+yaitu penyebaran PLTS secara merata sepanjang penyulang, penyebaran meningkat dari sumber penyulang ke ujung penyulang, penyebaran menurun dari sumber penyulang ke ujung penyulang, dan penyebaran di sekitar ujung penyulang. Hasilnya menunjukkan bahwa skenario penyebaran menurun dari sumber penyulang ke ujung penyulang memberikan nilai kapasitas \textit{hosting} paling besar, sedangkan penyebaran di sekitar ujung penyulang memberikan nilai kapasitas \textit{hosting} paling kecil.
+
+
+Bollen dkk \cite{Bollen2017} mengusulkan metode penentuan kapasitas \textit{hosting} PLTS dengan analisis pada runtun waktu tertentu yang merepresentasikan konsumsi beban-beban minimum. Pada penelitian tersebut, kapasitas \textit{hosting} didapat dari hasil evaluasi indeks performa batasan operasional jaringan distribusi tenaga listrik. Penelitian tersebut menggunakan batasan operasional berupa arus lebih, variasi nilai tegangan yang cepat, ketidakseimbangan tegangan, \textit{harmonics}, dan \textit{supraharmonics}.
+
+Ricardo Torquato dkk melakukan penelitian mengenai penentuan kapasitas \textit{hosting} PLTS tersebar dilakukan dengan pendekatan level penetrasi \cite{Torquato2018}.  Seperti yang ditunjukkan pada Gambar \ref{methodtorquato},
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Fig/methodtorquato}
+	\caption{Metode penentuan kapasitas \textit{hosting} PLTS tersebar pada \cite{Torquato2018}.}
+	\label{methodtorquato}
+\end{figure}
+metode yang diusul kan pada penelitian tersebut dilakukan dengan variasi level penetrasi pelanggan dari 20\% sampai 100\% dengan besar kenaikan 20\%. Proses penetrasi PLTS tersebar dilakukan secara acak dan berulang dengan kenaikan ukuran daya PLTS sebesar 1 kW untuk setiap level penetrasi pelanggan. 500 skenario penempatan lokasi dikerjakan pada setiap level penambahan ukuran daya PLTS tersebar dengan rentang waktu pengamatan dua jam dari pukul 11.00 sampai 13.00, serta jeda waktu pengamatan 15 menit. Penelitian tersebut menunjukkan bahwa kapasitas \textit{hosting} PLTS tersebar dapat diamati dari persentase level penetrasi pelanggan. Semakin besar level penetrasi pelanggan maka kapasitas \textit{hosting} PLTS tersebar semakin besar dan persentase terjadinya pelanggaran tegangan lebih juga semakin besar.
+
+Matthew Deakin dkk mengusulkan cara untuk mempersingkat waktu dan beban komputasi dari metode stokastik Monte Carlo dalam penentuan kapasitas \textit{hosting} PLTS. Untuk tujuan tersebut, kapasitas \textit{hosting} PLTS ditentukan dengan menggunakan pendekatan \textit{fixed-power} dan \textit{fixed-voltage}. Hasilnya menunjukkan bahwa pendekatan \textit{fixed-voltage} lebih efisien dan membutuhkan waktu komputasi lebih cepat. Dalam hal ini, dapat dipahami jika peneliti tersebut menggunakan pembatasan proses penetrasi pada pendekatan \textit{fixed-voltage} sehingga tidak semua kemungkinan diamati. Penelitian tersebut menggunakan 1000 simulasi Monte Carlo. 
+
+Penentuan kapasitas \textit{hosting} PLTS yang diusulkan oleh Pedro P. Vergara dkk \cite{Vergara2020} menggunakan data profil beban dan daya keluaran PLTS dari data yang didapat oleh peneliti. Ilustrasi metode yang diusulkan, ditunjukkan pada Gambar \ref{methodvergara} \cite{Vergara2020}.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.55\textwidth]{Fig/methodvergara}
+	\caption{Metode penentuan kapasitas \textit{hosting} PLTS tersebar pada \cite{Vergara2020}.}
+	\label{methodvergara}
+\end{figure}
+Penentuan lokasi integrasi PLTS dilakukan secara acak sampai semua pelanggan memasang PLTS. Setiap proses penetrasi, aliran daya yang berbasis runtun waktu dikerjakan. Kapasitas \textit{hosting} ditentukan berdasarkan pelanggaran terhadap batas operasi. Batas-batas operasi ini direpresentasikan dalam nilai tegangan dan indeks pembebanan. 
+
+Perbandingan prosedur penentuan kapasitas \textit{hosting} stokastik diperlihatkan pada Tabel \ref{tab-prosedur}.
+\bgroup
+\vspace{4pt}
+%\def\arraystretch{1.3}
+{\renewcommand{\arraystretch}{1.3}
+\begin{table}[!h]
+	\caption{Perbandingan Prosedur Penentuan Kapasitas \textit{Hosting} Stokastik}
+	\vspace{-12pt}
+	\begin{center}
+		%\setlength\tabcolsep{4pt}
+		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{10em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{2.5em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{3em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{2.5em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{3em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{3em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
+			\cline{1-6} 
+			\textbf{Referensi}&	
+			%\textbf{\textit{Metode Penetrasi}}& 	
+			%\textbf{\textit{Model Stokastik Keluaran PLTS}}&	
+			%\textbf{\textit{Model Stokastik Profil Beban}}&	
+			\textbf{Lokasi PLTS Acak}&	
+			\textbf{Ukuran Daya PLTS Acak}&	
+			\textbf{PLTS- Baterai}&	
+			\textbf{Kendali Proses Penetrasi}&	
+			\textbf{Analisis Runtun Waktu}\\
+			\hline EPRI (2012) \cite{Epri2012} 				&Ya	&Ya	&-	&-	&Ya\\
+			\hline A. Dubey (2015) \cite{Dubey2015} 		&Ya	&Ya	&-	&-	&Ya\\
+			\hline A. Dubey (2017) \cite{Dubey2017} 		&Ya	&Ya	&-	&-	&Ya\\
+			\hline F. Ding (2017) \cite{Ding2017}			&Ya	&Ya	&-	&-	&Ya\\
+			\hline M. H. Bollen (2017) \cite{Bollen2017}	&Ya	&-	&-	&-	&Ya\\
+			\hline R. Torquato (2018) \cite{Torquato2018}	&Ya	&-	&-	&-	&Ya\\
+			\hline M. Deakin (2019) \cite{Deakin2019}		&Ya	&-	&-	&Ya	&-\\
+			%\hline S.Wang (2020) \cite{Wang2020}			&Ya	&Ya	&-	&-	&Ya\\
+			\hline P. P. Vergara (2020) \cite{Vergara2020}	&Ya	&-	&-	&-	&Ya\\
+			%\hline M.Al-Saffar (2020) \cite{Al-Saffar2020}	&Ya	&Ya	&Ya	&-	&Ya\\
+			%\hline Penelitian disertasi ini					&Ya	&Ya	&Ya	&Ya	&Ya\\
+			\hline
+		\end{tabular}
+		\label{tab-prosedur}
+	\end{center}
+	\vspace{-12pt}
+	%\thisfloatpagestyle{floatpage}
+\end{table}
+\egroup
+Pada tabel tersebut, terdapat lima kriteria yang diamati, yaitu pemilihan acak untuk lokasi integrasi PLTS tersebar, pemilihan acak untuk ukuran daya PLTS tersebar, pertimbangan PLTS-baterai dalam model, kendali proses penetrasi, dan analisis runtun waktu. Teramati bahwa semua penelitian sebelumnya mengacak lokasi integrasi PLTS tersebar pada jaringan distribusi\cite{Epri2012,Dubey2015,Dubey2017,Ding2017,Bollen2017,Torquato2018,Deakin2019,Vergara2020}. Selanjutnya, peneliti-peneliti pada \cite{Epri2012,Dubey2015,Dubey2017,Ding2017} mengambil sampel acak ukuran daya PLTS dari data historis yang dibentuk dalam PDF. Sementara itu, peneliti-peneliti pada \cite{Bollen2017,Torquato2018,Deakin2019,Vergara2020} menggunakan suatu angka tertentu sebagai ukuran daya PLTS tersebar. Untuk PLTS-baterai tersebar, belum ada penelitian sebelumnya yang mempertimbangkan PLTS yang terintegrasi dengan baterai untuk dijadikan kandidat untuk dihubungkan ke jaringan distribusi tegangan rendah. Berkaitan dengan simulasi Monte Carlo yang digunakan, dari delapan penelitian-penelitian sebelumnya tersebut, hanya M. Deakin yang menggunakan kendali dalam proses penetrasi PLTS tersebar \cite{Deakin2019}. Sebaliknya, hanya M. Deakin yang tidak menggunakan analisis runtun waktu \cite{Deakin2019}.
+
+%Pada penelitian distertasi ini, pelanggan dipilih secara acak menggunakan proses Markov sehingga ukuran daya PLTS tersebar bervariasi secara acak. Untuk lokasi integrasi PLTS tersebar juga tersebar secara acak karena mengikuti lokasi dari pelanggan yang telah dipilih acak. Selanjutnya, untuk merepresentasikan pelanggan-pelanggan yang mengintegrasikan PLTS-baterai pada jaringan distribusi tegangan rendah, penelitian disertasi ini mempertimbangkan karakteristik-karakteristik ketidakpastian PLTS-baterai tersebar seperti yang sudah dideskripsikan sebelumnya. Terkait metodenya, matriks probabilitas transisi pada proses markov menjadi kendali dalam melakukan proses penetrasi PLTS tersebar pada jaringan distribusi. Dari sisi analisisnya, kerangka analisis runtun waktu digunakan dalam penelitian disertasi ini untuk menganalisis dampak penertasi pada setiap rentang waktu tertentu.
+
+\subsection{Konfigurasi serta Kendali Sistem Baterai pada Penetrasi PLTS dan Baterai Tersebar}
+Pada awalnya terdapat dua konfigurasi dari instalasi PLTS tersebar. Konfigurasi pertama adalah instalasi PLTS tersebar tanpa baterai yang terhubung pada sistem distribusi tenaga listrik, sedangkan konfigurasi kedua adalah instalasi PLTS tersebar dengan baterai yang tidak terhubung ke sistem distribusi tenaga listrik. Dalam hal ini, PLTS tersebar yang terhubung ke sistem distribusi tersebut dapat berpotensi menurunkan performa operasi sitem distribusi tersebut. Sebaliknya, keberadaan PLTS tersebar yang tidak terhubung ke sistem distribusi tidak mengganggu performa sistem distribusi tersebut. Meskipun begitu, penelitian-penelitian sebelumnya menunjukkan bahwa PLTS-PLTS tersebar yang diintegrasikan pada jaringan distribusi tegangan rendah semakin meningkat \cite{IEApvps2020,irena2020}. Kondisi ini menunjukkan bahwa terdapat kebutuhan mengenai keberadaan baterai pada sisi pelanggan \cite{Nourai2010,Roberts2011}. Selanjutnya, kebutuhan tersebut mendorong terciptanya konfigurasi instalasi PLTS tersebar yang ketiga, yaitu instalasi PLTS-baterai yang terhubung pada sistem distribusi tenaga listrik. Ketiga konfigurasi tersebut diilustrasikan pada Gambar \ref{diagrampltsbateraigrid}.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{Fig/diagrampltsbateraigrid}
+	\caption{Konfigurasi-konfigurasi instalasi PLTS tersebar oleh pelanggan.}
+	\label{diagrampltsbateraigrid}
+\end{figure}
+
+Meskipun demikian, penelitian-penelitian sebelumnya belum mempertimbangkan PLTS yang terintegrasi dengan baterai (PLTS-baterai) dalam model penetrasinya. Secara detail, perbandingan konfigurasi serta kendali sistem PLTS dan baterai tersebar ditunjukkan pada Tabel \ref{tab-pltsbaterai}.
+\bgroup
+\vspace{4pt}
+%\def\arraystretch{1.3}
+{\renewcommand{\arraystretch}{1.3}
+\begin{table}[!h]
+	\caption{Perbandingan Konfigurasi serta Kendali Sistem PLTS dan Baterai Tersebar}
+	\vspace{-12pt}
+	\begin{center}
+		%\setlength\tabcolsep{4pt}
+		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{6em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{7em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{7em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{7em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
+			\cline{1-4} 
+			\textbf{Referensi}&		
+			\textbf{Konfigurasi PLTS Tersebar}&	
+			\textbf{Konfigurasi PLTS dan Bate- rai}&	
+			\textbf{Metode Kendali PLTS dan Bate- rai}\\
+			\hline N. Jayasekara (2016) \cite{Jayasekara2016} 	&Tersebar secara \textit{deterministic}.	&Terpisah. Baterai terpusat.	&Optimasi untuk meminimalkan biaya distribusi dan siklus baterai.\\
+			\hline S. Hashemi (2018) \cite{Hashemi2018} 		&Tersebar secara \textit{deterministic}.	&Terpisah. Baterai tersebar.	&Pengendalian terpusat.\\
+			\hline P. H. Divshali (2019) \cite{Hasanpor2019} 	&Tersebar secara \textit{deterministic}.	&Terpisah. Baterai terpusat.	&Kendali kuadratik.\\
+			\hline M. Al-Saffar (2020) \cite{Al-Saffar2020}		&Tersebar secara stokastik.	&Terpisah. Baterai tersebar.	&\textit{Reinforcement learning}.\\
+			%\hline Penelitian disertasi ini						&Tersebar secara stokastik.	&Terintegrasi. PLTS-baterai.	&Optimasi meminimalkan siklus baterai dan memaksimalkan kapasitas \textit{hosting}.\\
+			\hline
+		\end{tabular}
+		\label{tab-pltsbaterai}
+	\end{center}
+	\vspace{-12pt}
+	%\thisfloatpagestyle{floatpage}
+\end{table}
+\egroup
+Pada tabel tersebut teramati bahwa Bo Lu dan M. Shahidehpour membagi operasi PLTS dan baterai tersebar menjadi tiga kondisi\cite{Lu2005}. Kondisi pertama adalah kondisi pengisian baterai. Ketika permintaan beban sedang turun, maka PLTS tersebar dan atau sistem distribusi akan melakukan pengisian baterai. Kondisi kedua adalah kondisi diam baterai. Pada kondisi ini, PLTS tersebar menyuplai beban secara langsung pada durasi waktu tertentu ketika daya keluaran PLTS tinggi dan permintaan beban tinggi. Kondisi ketiga adalah kondisi pengosongan baterai. Baik PLTS tersebar maupun baterai menyuplai beban puncak pada durasi waktu tertentu saat siang hari. Selanjutnya, baterai menyuplai beban puncak pada malam hari ketika tidak ada daya keluaran PLTS. Ketiga kondisi tersebut terjadi ketika cuaca mendukung PV dalam mendapatkan iradiasi matahari yang cukup untuk membangkitkan daya listrik. Pada saat mendung, hanya baterai yang akan bekerja pada sistem PLTS dan baterai tersebar karena tidak ada daya yang dibangkitkan oleh PLTS tersebar.
+
+N. Jayasekara dkk mengembangkan strategi integrasi sistem baterai yang optimal pada jaringan distribusi untuk meningkatkan kapasitas \textit{hosting} \cite{Jayasekara2016}. Terkait peningkatan kapasitas \textit{hosting}, penelitian itu mempertimbangkan dua hal, yaitu biaya sistem distribusi, serta biaya siklus baterai. Selanjutnya, sistem baterai pada penelitian tersebut dianalisis dari sisi aturan tegangan, pengurangan rugi-rugi daya, dan \textit{peak shaving}. Hasilnya memperlihatkan bahwa metode yang diusulkan dapat menginvestigasi \textit{peak shaving}, aturan tegangan, dan pengurangan rugi-rugi daya untuk meningkatkan efisiensi sistem.
+
+S. Hashemi dan J. \O stergaard mengusulkan suatu kendali efisien sistem baterai untuk meningkatkan kapasitas \textit{hosting} PLTS \cite{Hashemi2018}. Tujuan dari kendali tersebut adalah untuk mencegah tegangan lebih pada kondisi PLTS tersebar yang tinggi pada jaringan distribusi. Penelitian tersebut mengusulkan metode untuk menentukan titik-titik operasi dinamis dari sistem baterai. Melalui metode tersebut, dampak dari penyerapan daya reaktif oleh inverter PLTS dimodelkan seperti konsumsi beban. Untuk menghitung kapasitas \textit{hosting} PLTS, sebuah penyulang dengan 52 pelanggan dan 23 bus digunakan dalam simulasi. Simulasi menggunakan 50, 75, dan 100\% penetrasi PLTS. Dalam hal ini, uukuran daya PLTS yang dipasang oleh semua pelanggan menggunakan satu nilai tetap yang sama. Hasilnya menunjukkan bahwa sistem baterai 5 kWh dapat menghasilkan kenaikan kapasitas \textit{hosting} sebesar 75\%.
+
+P. H. Divshali dan L. S\"{o}der merancang metode peningkatan kapasitas \textit{hosting} dengan cara mengoptimalkan pemilihan baterai dan konverter menggunakan kendali kuadratik dari sistem baterai terpusat \cite{Hasanpor2019}. Sistem baterai terpusat tersebut dapat mengurangi arus balik dan mengatur tegangan dengan menyerap kelebihan daya ketika produksi daya keluaran PLTS lebih tinggi dari permintaan-permintaan beban. Sistem baterai tersebut juga dapat mengendalikan daya reaktif. Dalam penelitian tersebut, kapasitas \textit{hosting} ditentukan dengan batas operasi arus dan tegangan. Penelitian tersebut menunjukkan bahwa metode yang diusulkan dapat mengendalikan dan memperbaiki profil tegangan.
+
+Mohammed Al-Saffar dkk mengembangkan metode untuk kendali antar sistem baterai pada PLTS tersebar \cite{Al-Saffar2020}. Untuk tujuan tersebut, penetrasi PLTS tersebar skala besar dilakukan dalam penelitian tersebut. Penelitian tersebut mengerjakan 100 skenario acak yang terdiri dari lokasi integrasi dan ukuran PLTS. Prosedur tersebut diulangi untuk setiap kenaikan level presentasi 10\%. Proses dihentikan ketika 100\% level penetrasi sudah tercapai. Untuk kendali baterainya, penelitian tersebut menggunakan \textit{state of charge control (CSOCC)}, yaitu kombinasi dari \textit{Monte-Carlo tree search based reinforcement learning (MCTS-RL)} dan kendali \textit{SOC} menggunakan \textit{Method Predictive Control (MPC)}. Dalam hal ini, baterai-baterai tersebut dikendalikan untuk mengurangi tegangan lebih paada suatu daerah menggunakan \textit{MCTS-RL} berdasarkan kapasitas masing-masing baterai. Hasilnya, metode yang diusulkan pada penelitian tersebut dapat mengurangi dampak negatif tegangan lebih.
+
+%Pada penelitian disertasi ini, PLTS tersebar didistribusikan secara stokastik sebagai proses acak. Selanjutnya, berbeda dengan penelitian-penelitian sebelumnya \cite{Jayasekara2016,Hashemi2018,Hasanpor2019,Al-Saffar2020}, penelitian disertasi ini mempertimbangkan pelanggan-pelanggan yang memasang PLTS tersebar yang sudah terintegrasi dengan baterai untuk dipenetrasikan ke jaringan distribusi. Metode yang digunakan dalam pengendaliannya adalah metode optimasi untuk meminimalkan siklus baterai dan memaksimalkan kapasitas \textit{hosting}. Perbandingan konfigurasi dan kendali sistem PLTS-baterai tersebar dari penelitian-penelitian sebelumnya \cite{Jayasekara2016,Hashemi2018,Hasanpor2019,Al-Saffar2020} dan penelitian disertasi ini ditunjukkan pada Tabel \ref{tab-pltsbaterai}.
+
+%\subsection{Markov Chain Monte Carlo untuk Pemodelan Distribusi Acak}
+\subsection{Usulan Solusi dan Keaslian Penelitian}
+Salah satu produk keluaran dari kajian pustaka yang telah dideskripsikan adalah usulan solusi spesifik terhadap permasalahan spesifik yang telah dirumuskan. Selain usulan solusi, pada bagian ini juga dijelaskan mengenai keaslian penelitian. Keaslian penelitian dideskripsikan untuk menunjukkan kebaruan usulan solusi dan posisinya diantara penelitian-penelitian sebelumnya.
+
+\subsubsection{Usulan Solusi}
+Usulan-usulan solusi untuk permasalahan-permasalahan spesifik terkait penentuan kapasitas \textit{hosting} stokastik ditampilkan pada Tabel \ref{tab-usul}. Usulan solusi yang dijelaskan pada Tabel \ref{tab-usul} dituliskan berdasarkan permasalahan spesifik yang telah dirumuskan pada bagian sebelumnya dari naskah disertasi ini. Namun, pada dasarnya, usulan solusi utamanya adalah Markov Chain Monte Carlo. Markov Chain Monte Carlo dipilih karena karakteristik solusinya yang dapat melakukan perpindahan dengan probabilitas \textit{states}$-$nya. \textit{Hidden Markov model} dirancang untuk mengerjakan perpindahan \textit{states} yang salah satunya sisinya merupakan \textit{hidden states}. Selanjutnya, \textit{layered hidden Markov model} dirancang untuk \textit{states} bertingkat. Untuk model beban yang tersebar secara individual, kerangka runtun waktu, dan studi sensitivitas adalah usulan-usulan solusi dari permasalahan-permasalahan spesifik yang dalam pengerjaannya dimasukkan dalam simulasi Markov Chain Monte Carlo yang dirancang.
+\bgroup
+\vspace{4pt}
+{\renewcommand{\arraystretch}{1.3}
+\begin{table}[!h]
+	\caption{Usulan Solusi untuk Permasalahan Spesifik pada Penelitian Ini}
+	\vspace{-12pt}
+	\begin{center}
+		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{1em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{15em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{12em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
+			\cline{1-3} 
+			\textbf{No.}&	
+			%\textbf{\textit{Non-Sequential Monte Carlo}}&
+			\textbf{Permasalahan Spesifik}&
+			\textbf{Usulan Solusi}\\
+			\hline 1 &Kurangnya representasi ketidakpastian penetrasi yang disebabkan karena penggunaan \textit{lumped load}. & Perancangan model untuk beban tersebar secara individual. \\
+			\hline 2 &Tidak diperhitungkannya probabilitas kemunculan jenis/kategori pelanggan. &Perancangan \textit{hidden Markov model}. \\
+			\hline 3 &Kurangnya representasi dari kriteria variabilitas karena kerangka runtun waktu yang disederhanakan. &Perancangan kerangka runtun waktu dengan resolusi 1 menit untuk variasi selama satu tahun. \\
+			\hline 4 &Semakin tingginya beban komputasi karena semakin tingginya resolusi pengamatan. & Perancangan matriks probabilitas untuk perpindahan \textit{states}. \\
+			\hline 5 &Tidak dipertimbangkannya probabilitas kemunculan pelanggan dengan PLTS-baterai. &Perancangan \textit{layered hidden Markov model} dengan probabilitas pelanggan dengan PLTS dan PLTS-baterai. \\
+			\hline 6 &Perlunya investigasi dampak dari peningkatan penetrasi PLTS-baterai pada jaringan distribusi.	&Studi sensitivitas untuk variabel/parameter penetrasi dan sistem distribusi. \\
+			\hline
+		\end{tabular}
+		\label{tab-usul}
+	\end{center}
+	\vspace{-12pt}
+	%\thisfloatpagestyle{floatpage}
+\end{table}
+\egroup
+
+\subsubsection{Keaslian Penelitian}
+Untuk menunjukkan posisi penelitian disertasi ini dibandingkan penelitian-penelitian sebelumnya dan untuk menggarisbawahi keaslian penelitian yang diusulkan, Gambar \ref{cmap} disediakan.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{Fig/cmap}
+	\caption{Peta konsep untuk posisi penelitian pada bidang kapasitas \textit{hosting} stokastik.}
+	\label{cmap}
+\end{figure}
+Gambar tersebut menunjukkan posisi penelitian disertasi ini terhadap penelitian-penelitian sebelumnya secara umum. Dalam hal ini, metode yang dirancang pada penelitian ini merupakan pengembangan penelitian-penelitian sebelumnya dan usulan solusi dari permasalahan terkait kapasitas \textit{hosting} stokastik. %Seperti ditunjukkan pada gambar tersebut, kapasitas \textit{hosting} stokastik bisa dijelaskan melalui lima hal, yaitu metode penetrasi dan analisisnya, kerangka runtun waktunya, batas operasi sistem distribusi yang diamati, penetrasinya, dan karakteristik ketidakpastiannya.
+
+Penelitian-penelitian sebelumnya mempunyai berbagai macam cara dalam memodelkan karakteristik-karakteristik ketidakpastian dan variabilitas penetrasi. Untuk lokasi penetrasinya, distribusi uniform digunakan pada penelitian-penelitian \cite{Kharrazi2020,Shahnia2011}, sedangkan distribusi normal digunakan pada penelitian-penelitian \cite{Dubey2017,Ding2017,Torquato2018,Epri2012,Dubey2015}. Untuk ukuran dayanya, peneliti pada \cite{Shahnia2011} menggunakan distribusi uniform, sedangkan peneliti-peneliti pada \cite{Kharrazi2020,Dubey2017,Ding2017,Epri2012,Dubey2015} menggunakan distribusi normal. Selanjutnya, penelitian-penelitian \cite{Ruiz-Rodriguez2012,Dubey2017,Ding2017} menggunakan daya keluaran PLTS yang didapat dari data historis, sedangkan penelitian \cite{Silva2016} menggunakan ARMA untuk menghitung daya keluaran PLTS. Untuk permintaan beban, penelitian-penelitian \cite{Dubey2017,Ding2017,Torquato2018} menggunakan data historis. Pada penelitian disertasi ini, distribusi dari lokasi integrasi dan ukuran daya PLTS menggunakan distribusi normal, sedangkan daya keluaran PLTS dan permintaan beban dihitung dari data historis. Berbeda dengan penelitian-penelitian sebelumnya, distribusi-distribusi yang dirancang mempertimbangkan kriteria baterai. Selain itu, karena penelitian disertasi ini menggunakan Markov Chain Monte Carlo, maka data-data historis yang digunakan tersebut direpresentasikan menjadi probabilitas-probabilitas, baik probabilitas transisi maupun probabilitas keluaran.
+
+Terkait dengan kerangka analisisnya, penelitian-penelitian \cite{Epri2012,Dubey2015,Dubey2017,Ding2017,Bollen2017,Torquato2018,Vergara2020} menggunakan analisis runtun waktu, sedangkan penelitian \cite{Deakin2019} menggunakan satu nilai waktu untuk pengamatan dampak penetrasinya. Dalam hal ini, karena ketidakpastian-ketidakpastian penetrasi dan fluktuasi daya keluaran PLTS serta permintaan-permintaan beban, analisis dampak penetrasi dari waktu ke waktu perlu dilakukan. Oleh karena itu, penelitian disertasi ini menggunakan analisis runtun waktu. Meskipun demikian, selaras dengan temuan pada \cite{Beck2016}, bahwa akurasi akan menurun jika resolusi pengamatannya lebih rendah, maka penelitian disertasi ini menggunakan resolusi pengamatan per satu menit. Dengan resolusi pengamatan yang lebih tinggi dibanding penelitian-penelitian sebelumnya, dampak penetrasi pada batas tegangan lebih tersebut diharapkan dapat diamati dengan akurasi yang lebih tinggi. Selanjutnya, karena kapasitas \textit{hosting} stokastik ditentukan sebagai level penetrasi daya maksimum sebelum terjadi pelanggaran batas operasi sistem distribusi, maka batas operasi tersebut harus didefinisikan. Seperti penelitian-penelitian \cite{Santos-Martin2016,Silva2016,Navarro-Espinosa2016,Arshad2017,Baptista2019,Epri2012,Dubey2015,Dubey2017,Ding2017,Bollen2017,Torquato2018,Deakin2019,Vergara2020}, penelitian disertasi ini menggunakan tegangan lebih sebagai batas operasi sistem distribusi yang diamati.
+
+Untuk metode penetrasi dan analisis aliran dayanya, penelitian-penelitian \cite{Arshad2017,Deakin2019,Watson2016} menggunakan non-sequential Monte Carlo. Dalam hal ini, baik proses penetrasi maupun perhitungan aliran dayanya dilakukan secara tidak \textit{chronological}. Peneliti-peneliti pada \cite{Dubey2017,Ding2017,Bollen2017,Torquato2018,Vergara2020,Quiles2020} juga melakukan proses penetrasi secara tidak \textit{chronological}, tetapi perhitungan aliran dayanya dilakukan secara \textit{chronological}. Hal ini menyebabkan penelitian-penelitian yang menggunakan Monte Carlo tersebut digolongkan sebagai pseudo-sequential Monte Carlo. Untuk penelitian disertasi ini, sequential Markov Chain Monte Carlo diterapkan. Proses penetrasinya dilakukan dengan probabilitas-probabilitas yang dibentuk dari data historis penetrasi yang diurutkan berdasarkan waktu integrasinya ke jaringan distribusi. Aliran dayanya juga menggunakan kerangka runtun waktu.
+
+Pada penelitian distertasi ini, pelanggan dipilih secara acak menggunakan proses Markov sehingga ukuran daya PLTS tersebar bervariasi secara acak. Untuk lokasi integrasi PLTS tersebar juga tersebar secara acak karena mengikuti lokasi dari pelanggan yang telah dipilih acak. Selanjutnya, untuk merepresentasikan pelanggan-pelanggan yang mengintegrasikan PLTS-baterai pada jaringan distribusi tegangan rendah, penelitian disertasi ini mempertimbangkan karakteristik-karakteristik ketidakpastian PLTS-baterai tersebar seperti yang sudah dideskripsikan sebelumnya. Terkait metodenya, matriks probabilitas transisi pada proses markov menjadi kendali dalam melakukan proses penetrasi PLTS tersebar pada jaringan distribusi. Dari sisi analisisnya, kerangka analisis runtun waktu digunakan dalam penelitian disertasi ini untuk menganalisis dampak penertasi pada setiap rentang waktu tertentu. 
+
+Dari sisi penetrasinya, terdapat kategori PLTS dan PLTS-baterai tersebar. Untuk penetrasi PLTS, mekanisme penyebarannya dapat dilakukan secara \textit{deterministic} \cite{Jayasekara2016,Hashemi2018,Hasanpor2019} maupun secara stokastik \cite{Epri2012,Dubey2015,Dubey2017,Ding2017,Bollen2017,Torquato2018,Deakin2019,Vergara2020}. Untuk penetrasi PLTS-baterai, baterainya bisa dipasang terpusat di jaringan distribusi \cite{Jayasekara2016} maupun tersebar \cite{Hashemi2018,Hasanpor2019,Al-Saffar2020}. Pada penelitian-penelitian tersebut, baterai dipasang terpisah dengan PLTS. Pada penelitian ini, penetrasi yang dipertimbangkan adalah penetrasi PLTS dan PLTS-baterai tersebar. Meskipun demikian, berbeda dengan penelitian-penelitian sebelumnya, PLTS-tersebar yang dipertimbangkan bukan baterai yang terpisah dengan PLTS, melainkan baterai yang terintegrasi dengan PLTS.
+
+\section{Landasan Teori}
+Pada penelitian disertasi ini, pengembangan metode penentuan kapasitas \textit{hosting} stokastik berbasis Markov Chain Monte Carlo diusulkan. Untuk melandasi hal tersebut, beberapa teori yang telah disediakan oleh penelitian-penelitian sebelumnya dipresentasikan.
+
+\subsection{Kapasitas \textit{Hosting} PLTS Tersebar pada Penetrasi Skala Besar}
+Kapasitas \textit{hosting} PLTS tersebar adalah jumlah maksimum PLTS tersebar yang dapat dipenetrasikan pada sistem distribusi tenaga listrik tanpa pelanggaran batas operasi pada sistem distribusi tersebut. Penentuan kapasitas \textit{hosting} PLTS diperlukan untuk mencegah dampak negatif yang muncul ketika sistem distribusi menghadapi kenaikan penetrasi PLTS tersebar yang tinggi. 
+
+\subsection{Penentuan Kapasitas \textit{Hosting} Berbasis Monte Carlo}
+Metode penentuan kapasitas \textit{hosting} PLTS tersebar telah diteliti oleh beberapa peneliti pada beberapa tahun terakhir \cite{Dubey2017,Torquato2018,Ding2017}. Berdasarkan \cite{Dubey2017}, metode ini terdiri atas tiga prosedur, yaitu penyebaran PLTS, analisis dampak PLTS tersebar per jam, dan penentuan kapasitas \textit{hosting} PLTS pertama.
+
+Dalam penyebaran PLTS, skenario-skenario perlu dirancang terlebih dahulu. Skenario-skenario tersebut antara lain level penetrasi pelanggan dan level penetrasi PLTS tersebar. Level penetrasi pelanggan ($C_{pen}^k$) adalah jumlah pelanggan yang mempunyai PLTS tersebar yang terintegrasi ke jaringan distribusi \cite{Dubey2017}. Level penetrasi pelanggan ke-$k$ mewakili pelanggan dengan PLTS tersebar sebesar $k\%$. Dengan nilai kenaikan sebesar 2\%, sampai 100\%. Formula matematikanya adalah
+\begin{equation}
+C_{pen}=\{C^2_{pen},C^4_{pen},...,C^{100}_{pen}\}\label{cpl}.
+\end{equation}
+
+Skenario selanjutnya yang perlu untuk dirancang adalah level penetrasi PLTS tersebar ($PV^k_{pen}$). Level penetrasi PLTS tersebar didefinisikan sebagai total pembangkitan PLTS tersebar yang terintegrasi ke jaringan distribusi sesuai dengan level penetrasi pelanggan ($C_{pen}^k$) ke-$k$ \cite{Dubey2017}. Hal ini didefinisikan sebagai
+\begin{equation}
+PV_{pen}=\{PV^2_{pen},PV^4_{pen},...,PV^{100}_{pen}\}\label{rppl}.
+\end{equation}
+
+Dengan mempertimbangkan formula-formula tersebut, pada setiap level penetrasi pelanggan  ($C_{pen}^k$), sejumlah skenario penyebaran PLTS ($m$) dapat dirancang \cite{Dubey2017}, yaitu
+\begin{equation}
+X^k=\{x^k_{1},x^k_{2},...,x^{k}_{m},...,x^{k}_{u}\}\label{rpds]}.
+\end{equation}
+
+Selanjutnya, untuk menjalankan analisis per jam, suatu kerangka analisis perlu untuk dirancang \cite{Dubey2017}. Dalam hal ini, dua langkah perlu dijalankan. Pertama adalah penentuan beban minimum efektif ($\mathit{Eff^{hr}_{load}}$). Kedua adalah penentuan pembangkitan PLTS tersebar untuk setiap skenario penyebaran yang dideskripsikan sebagai
+\begin{equation}
+PV^k_{pen}(hr)=PV^k_{pen}\times PV^{hr}_{norm}\label{hrpia}
+\end{equation}
+
+Peneliti pada \cite{Dubey2017} membuat definisi penentuan kapasitas \textit{hosting} PLTS pertama. Kapasitas \textit{hosting} PLTS pertama adalah kapasitas \textit{hosting} PLTS ketika terdapat satu pelanggaran batas operasi \cite{Dubey2017}. Dalam penentuan kapasitas \textit{hosting} PLTS pertama tersebut, sebelumnya perlu dilakukan analisis aliran daya. Analisis aliran daya ini digunakan sebagai acuan penentuan kapasitas \textit{hosting} PLTS pertama dengan mempertimbangkan tegangan lebih sebagai batas operasi. Selanjutnya kapasitas \textit{hosting} PLTS pertama ($\mathit{H_{1,m}}$) dihitung dengan \cite{Dubey2017}
+\begin{equation}
+\mathit{H_{1,m}}=\underset{i\in S}{min}\Big\{PV^k_{pen}\ |\ P(V^k_{max,m}(hr)>1.05)\geq \dfrac{1}{m}\Big\}\label{fphc}
+\end{equation}
+
+
+\subsection{Konsep Markov Chain Monte Carlo}
+Terdapat dua jenis pendekatan Markov Chain Monte Carlo, yaitu \textit{continuous-time} dan \textit{discrete-time}. Dalam hal ini, Markov Chain Monte Carlo dengan karakteristik \textit{continuous-time} mempunyai kemungkinan keluaran yang bersifat kontinyu, sedangkan Markov Chain Monte Carlo dengan karakteristik \textit{discrete-time} mempunyai kemungkinan keluaran yang tertentu atau dapat diukur. Selanjutnya, jika himpunan dari Markov Chain Monte Carlo dengan karakteristik \textit{discrete-time} mempunyai batas nilai, maka Markov Chain Monte Carlo tersebut mempunyai sifat \textit{finite}. Sebagai gambaran sederhana sebelum masuk ke definisi Markov Chain Monte Carlo, prosedur perubahan keadaan pada Markov Chain Monte Carlo ditunjukkan pada Gambar \ref{diagramMCMC}. Teramati dalam gambar tersebut bahwa pada Markov Chain Monte Carlo, perubahan keadaan dilakukan berdasarkan suatu nilai probabilitas yang spesifik. Nilai-nilai probabilitas ini yang mengarahkan transisi dari suatu keadaan ke keadaan yang lain.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Fig/diagramMCMC}
+	\caption{Blok diagram Markov Chain Monte Carlo.}
+	\label{diagramMCMC}
+\end{figure}
+
+\subsubsection{Proses \textit{Markov}}
+Dalam proses \textit{Markov}, untuk semua nilai $q$, nilai saat ini bergantung pada keluaran nilai sebelumnya \cite{Revuz1984}. Definisi proses \textit{Markov} dilakukan dengan mengasumsikan bahwa $\{f_k\ |\ k \in [1,2,...,w]\}$ adalah himpunan dari fungsi-fungsi keluaran dari sebuah proses stokastik, $s_j$ adalah nilai dari $f_k$ jika keluaran pada proses stokastik ke-$k$ adalah $s_j$, and $s_i$ adalah nilai dari $f_{k-1}$ jika keluaran pada proses stokastik ke-$(k-1)$ adalah $s_i$. Selanjutnya, proses \textit{Markov} didefinisikan sebagai 
+\begin{equation}
+Pr[f_k=s_j\ |\ (f_{k-1}=s_i)\wedge q]=Pr[f_k=s_j\ |\ f_{k-1}=s_i]\label{fmc}
+\end{equation}
+\subsubsection{Probabilitas Transisi Dari Proses \textit{Markov}}
+Probabilitas transisi dari proses \textit{Markov} adalah probabilitas dari suatu \textit{state} jika sudah ada \textit{state} sebelumnya \cite{Revuz1984}. Probabilitas transisi ke-$n$ dari proses \textit{Markov} $p_{ij}(n)$ adalah
+\begin{equation}
+p_{ij}(n)=Pr[f_n=s_j\ |\ f_{n-1}=s_i]\label{tp1}
+\end{equation}
+\subsubsection{Markov Chain Monte Carlo}
+Dengan mengasumsikan bahwa $\mathbf{P}$ adalah matriks dengan anggota-anggota $p_{ij}$, maka Markov Chain Monte Carlo didefinisikan sebagai proses \textit{Markov} yang mempunyai matriks transisi $\mathbf{P}$ \cite{Revuz1984}.
+
+\subsection{Jumlah Proses Acak}
+Penentuan jumlah proses acak, yaitu metode \textit{multistage non-finite population} (MNP), dipersentasikan oleh peneliti pada \cite{Louangrath2014}. Dengan $Z$ sebagai variabel acak normal, $\alpha$ sebagai level signifikan, $\sigma$ sebagai standar deviasi, dan $E$ sebagai ukuran presisi yang diinginkan, jumlah sampel proses acak $u$ dihitung melalui
+\begin{align}\label{mnp1}
+u=\sqrt{\dfrac{\dfrac{u_3}{0.01}-\dfrac{u_3}{0.99}}{2}},
+\end{align}
+dengan $u_3$ adalah nilai perkiraan $u$ pada tahap ketiga yang didefinisikan sebagai
+\begin{align}\label{mnp2}
+u_3=\sqrt{\dfrac{u_2-u_1}{2}},
+\end{align}
+adan $u_1$ serta $u_2$ secara berurutan adalah perkiraan $u$ pada tahap pertama dan kedua yang dideskripsikan sebagai  
+\begin{align}\label{mnp3}
+	u_1=\dfrac{Z_{(1-\alpha)}\sigma}{E}\text{ dan }u_2=\dfrac{Z_{(1-\alpha)}^2\sigma^2}{E^2}.
+\end{align}
+
+\subsection{Kerangka Analisis Runtun Waktu}
+Kerangka analisis runtun waktu diklasifikasikan menjadi dua jenis runtun waktu, yaitu runtun waktu nilai tunggal dan runtun waktu interval. Kerangka analisis runtun waktu nilai tunggal merupakan kerangka analisis runtun waktu yang mempunyai satu nilai untuk setiap titik waktunya. Sementara itu, kerangka analisis runtun waktu interval mempunyai lebih dari satu nilai untuk setiap titik waktunya. Hal ini membuat runtun waktu jenis ini mampu menyajikan interval data untuk setiap titik datanya. 
+
+Perbedaan antara kerangka analisis runtun waktu nilai tunggal dan runtun waktu interval terletak pada jumlah titik data yang disediakan untuk setial titik waktu. Pada kerangka analisis runtun waktu interval, titik-titik data umumnya disediakan dalam bentuk sebaran distribusi. Kerangka analisis runtun waktu interval diperkenalkan oleh Javier Arroyo pada \cite{Arroyo2006}. Selanjutnya, lima tahun setelah itu, oleh peneliti yang sama, disediakan contoh aplikasinya yang dipresentasikan pada \cite{Arroyo2011}.
+
+\subsection{Studi Akurasi}
+Akurasi dalam penentuan kapasitas \textit{hosting} PLTS tersebar dapat ditentukan dengan cara mencari probabilitas metode untuk merasakan pelanggaran \cite{Dubey2017}. Hal ini diformulasikan sebagai
+\begin{align}
+\begin{split}\label{acc}
+	Acc^{\epsilon}_k(H_1)=\underset{0\leq p \leq 100}{max}\Big\{p\ |\ 0<Pr(V_{max,k}\ |\ h^p_{1,k}>1.05)\leq \epsilon\Big\}
+\end{split}
+\end{align}
+
+Agar resiko penetrasi PLTS tersebar skala besar dapat diukur, penghitungan resiko pelanggaran (RV) perlu dilakukan \cite{Torquato2018}. Hal ini dapat digunakan oleh perencana sistem distribusi dan pengatur regulasi untuk menentukan langkah-langkah strategis dalam menghadapi dampak penetrasi PLTS skala besar dan mencegah pelanggaran batas operasi yang terjadi. Untuk menghitung resiko pelanggaran (RV) tersebut, digunakan persentasi sistem distribusi tanpa pelanggaran (SV). Formula matematika yang digunakan adalah
+\begin{align}
+\begin{split}\label{rov}
+	RV\ (\%)=100-SV\ (\%)
+\end{split}
+\end{align}
+
+Selanjutnya, mean absolute error (MAE) dapat digunakan untuk mengukur eror antara hasil estimasi dan data. Dengan membandingkan MAE metode sebelumnya dan MAE metode yang diusulkan, kinerja metode yang diusulkan dapat diukur. MAE diformulasikan sebagai berikut
+\begin{align}
+\begin{split}\label{mae}
+	MAE&=\dfrac{1}{N}\sum^N_{i=1}|x_{f,i}-x_{o,i}|
+\end{split}
+\end{align}
+\section{Hipotesis}
+Metode penentuan kapasitas \textit{hosting} stokastik berbasis Markov Chain Monte Carlo yang diusulkan, dengan pertimbangan ketidakpastian lokasi dan ukuran daya PLTS, variabilitas permintaan beban dan daya keluaran PLTS dalam runtun waktu, serta ketidakpastian dan variabilitas dari PLTS-baterai, terbukti dapat meningkatkan akurasi dibandingkan dengan pendekatan sebelumnya yaitu Monte Carlo. Pembuktian atau penilaian akurasi dilakukan dengan menggunakan mean absolute error (MAE) yang diterapkan pada hasil yang didapat dari studi kasus.
+
