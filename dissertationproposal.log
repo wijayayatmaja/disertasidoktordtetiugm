@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.5.8)  19 MAY 2021 07:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.5.8)  19 MAY 2021 07:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.tex
-(/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.tex
+**/Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.tex
+(/Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/thesisdtetiugm.cls
+L3 programming layer <2021-02-18> (/Users/wyatmaja/Documents/Doctor/proposalhc/thesisdtetiugm.cls
 Document Class: thesisdtetiugm 2018/02/08
 (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2021/03/24 3.56 The Babel package
@@ -762,11 +762,11 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count345
 \l__pdf_internal_box=\box82
-) (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.aux (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-1/chapter-1.aux) (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-2/chapter-2.aux) (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-3/chapter-3.aux
+) (/Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.aux (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-1/chapter-1.aux) (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-2/chapter-2.aux) (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-3/chapter-3.aux
 
 LaTeX Warning: Label `batt2' multiply defined.
 
-) (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-4/chapter-4.aux) (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-5/chapter-5.aux))
+) (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-4/chapter-4.aux) (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-5/chapter-5.aux))
 \openout1 = `dissertationproposal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
@@ -853,7 +853,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 57.
 LaTeX Info: Redefining \pageref on input line 57.
 LaTeX Info: Redefining \nameref on input line 57.
- (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.out) (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.out)
+ (/Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.out) (/Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.out)
 \@outlinefile=\write4
 \openout4 = `dissertationproposal.out'.
 
@@ -910,7 +910,7 @@ Package pdftex.def Info: sample/logougm.png  used on input line 71.
  [1
 
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/sample/logougm.png>]
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/wyatmaja/Documents/Doctor/proposalhc/sample/logougm.png>]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -943,7 +943,7 @@ Package pdftex.def Info: sample/logougm.png  used on input line 71.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/statement/persetujuan2.tex
+ (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/statement/persetujuan2.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -994,25 +994,25 @@ Overfull \vbox (7.24669pt too high) has occurred while \output is active []
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/abstract/intisari.tex) [4
+ (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/abstract/intisari.tex) [4
 
 
-] (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.toc [5] [6])
+] (/Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.toc [5] [6])
 \tf@toc=\write5
 \openout5 = `dissertationproposal.toc'.
 
- [7] (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.lof [8])
+ [7] (/Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.lof [8])
 \tf@lof=\write6
 \openout6 = `dissertationproposal.lof'.
 
- [9] (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.lot)
+ [9] (/Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.lot)
 \tf@lot=\write7
 \openout7 = `dissertationproposal.lot'.
 
  [10]
 \openout2 = `contents/chapter-1/chapter-1.aux'.
 
- (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-1/chapter-1.tex
+ (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-1/chapter-1.tex
 BAB I.
 [1
 
@@ -1069,7 +1069,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [7]
 \openout2 = `contents/chapter-2/chapter-2.aux'.
 
- (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-2/chapter-2.tex
+ (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-2/chapter-2.tex
 BAB II.
 <Fig/biblio.pdf, id=597, 597.23125pt x 376.16083pt>
 File: Fig/biblio.pdf Graphic file (type pdf)
@@ -1081,7 +1081,7 @@ Package pdftex.def Info: Fig/biblio.pdf  used on input line 7.
 
 
 
- </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/biblio.pdf>]
+ </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/biblio.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1119,7 +1119,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/voltagerise.pdf>]
+[12 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/voltagerise.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1157,7 +1157,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/LimitPHC.pdf> </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/phcepri.pdf>]
+[15 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/LimitPHC.pdf> </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/phcepri.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1209,7 +1209,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/Epri2012.pdf>]
+[19 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/Epri2012.pdf>]
 <Fig/methodfeiding.pdf, id=842, 596.28503pt x 326.2821pt>
 File: Fig/methodfeiding.pdf Graphic file (type pdf)
 <use Fig/methodfeiding.pdf>
@@ -1223,7 +1223,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/methoddubey.pdf> </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/methodfeiding.pdf>]
+[20 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methoddubey.pdf> </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodfeiding.pdf>]
 <Fig/methodbletterie.pdf, id=861, 588.74783pt x 345.29211pt>
 File: Fig/methodbletterie.pdf Graphic file (type pdf)
 <use Fig/methodbletterie.pdf>
@@ -1237,7 +1237,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/methodbletterie.pdf>]
+[21 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodbletterie.pdf>]
 <Fig/methodtorquato.pdf, id=877, 590.58226pt x 337.77193pt>
 File: Fig/methodtorquato.pdf Graphic file (type pdf)
 <use Fig/methodtorquato.pdf>
@@ -1251,7 +1251,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[22 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/methodtorquato.pdf>]
+[22 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodtorquato.pdf>]
 <Fig/methodvergara.pdf, id=893, 597.23125pt x 845.1575pt>
 File: Fig/methodvergara.pdf Graphic file (type pdf)
 <use Fig/methodvergara.pdf>
@@ -1265,7 +1265,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[23 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/methodvergara.pdf>]
+[23 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodvergara.pdf>]
 Overfull \hbox (4.67958pt too wide) in paragraph at lines 296--296
 []|\T1/ptm/b/n/12 Lokasi
  []
@@ -1315,7 +1315,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[25 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/diagrampltsbateraigrid.pdf>]
+[25 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/diagrampltsbateraigrid.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1368,7 +1368,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[30 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/cmap.pdf>]
+[30 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/cmap.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1414,7 +1414,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[35 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/diagramMCMC.pdf>]
+[35 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/diagramMCMC.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1441,7 +1441,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [38]
 \openout2 = `contents/chapter-3/chapter-3.aux'.
 
- (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-3/chapter-3.tex
+ (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-3/chapter-3.tex
 BAB III.
 <Fig/fcpenelitian.pdf, id=1174, 384.47638pt x 548.0475pt>
 File: Fig/fcpenelitian.pdf Graphic file (type pdf)
@@ -1461,7 +1461,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/fcpenelitian.pdf>]
+[40 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/fcpenelitian.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1510,7 +1510,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[45 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/opendss-python.pdf>]
+[45 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/opendss-python.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1537,7 +1537,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[47 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/stage2.pdf>]
+[47 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/stage2.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1545,7 +1545,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[48 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/stage2-1.pdf>]
+[48 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/stage2-1.pdf>]
 <Fig/hmc.pdf, id=1320, 291.00719pt x 182.6022pt>
 File: Fig/hmc.pdf Graphic file (type pdf)
 <use Fig/hmc.pdf>
@@ -1567,7 +1567,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/hmc.pdf>]
+[50 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/hmc.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1605,7 +1605,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[54 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/fcmcmc.pdf>]
+[54 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/fcmcmc.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1627,7 +1627,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[56 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/fcmc.pdf>]
+[56 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/fcmc.pdf>]
 <Fig/stage3.pdf, id=1445, 383.51279pt x 218.7372pt>
 File: Fig/stage3.pdf Graphic file (type pdf)
 <use Fig/stage3.pdf>
@@ -1658,7 +1658,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[58 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/stage3.pdf>]
+[58 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/stage3.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1666,7 +1666,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[59 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/stage3-1.pdf>]
+[59 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/stage3-1.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1702,7 +1702,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[62 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/lhmc.pdf>]
+[62 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/lhmc.pdf>]
 <Fig/fcmcmcbatt.pdf, id=1534, 491.91779pt x 565.15138pt>
 File: Fig/fcmcmcbatt.pdf Graphic file (type pdf)
 <use Fig/fcmcmcbatt.pdf>
@@ -1729,7 +1729,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[64 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/fcmcmcbatt.pdf>]
+[64 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/fcmcmcbatt.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1737,7 +1737,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[65 </Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/Fig/fcmcbatt.pdf>]
+[65 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/fcmcbatt.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1756,7 +1756,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [67]
 \openout2 = `contents/chapter-4/chapter-4.aux'.
 
- (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-4/chapter-4.tex
+ (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-4/chapter-4.tex
 BAB IV.
 [68
 
@@ -1842,7 +1842,7 @@ l.134 \include{contents/chapter-4/chapter-4}
                                             ]
 \openout2 = `contents/chapter-5/chapter-5.aux'.
 
- (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-5/chapter-5.tex
+ (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-5/chapter-5.tex
 BAB V.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1860,7 +1860,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[77] (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.bbl [78
+[77] (/Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.bbl [78
 
 
 
@@ -1920,7 +1920,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[85] (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.aux (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-1/chapter-1.aux) (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-2/chapter-2.aux) (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-3/chapter-3.aux) (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-4/chapter-4.aux) (/Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/contents/chapter-5/chapter-5.aux))
+[85] (/Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.aux (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-1/chapter-1.aux) (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-2/chapter-2.aux) (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-3/chapter-3.aux) (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-4/chapter-4.aux) (/Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-5/chapter-5.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1942,14 +1942,14 @@ Package rerunfilecheck Info: File `dissertationproposal.out' has not changed.
 ### bottom level 
 Here is how much of TeX's memory you used:
  28068 strings out of 478994
- 488223 string characters out of 5858185
+ 487391 string characters out of 5858185
  833910 words of memory out of 5000000
  44517 multiletter control sequences out of 15000+600000
  448668 words of font info for 104 fonts, out of 8000000 for 9000
  1155 hyphenation exceptions out of 8191
- 102i,18n,103p,2740b,1142s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,18n,103p,2727b,1142s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on /Users/wyatmaja/Documents/Doctor/proposalhcmarkov-master/dissertationproposal.pdf (95 pages, 2811102 bytes).
+Output written on /Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.pdf (95 pages, 2810765 bytes).
 PDF statistics:
  1861 PDF objects out of 2073 (max. 8388607)
  1598 compressed objects within 16 object streams
