@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.5.8)  19 MAY 2021 07:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.5.8)  20 MAY 2021 10:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1091,6 +1091,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1106,10 +1109,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11]
-<Fig/voltagerise.pdf, id=690, 596.95581pt x 270.26392pt>
+<Fig/voltagerise.pdf, id=688, 596.95581pt x 270.26392pt>
 File: Fig/voltagerise.pdf Graphic file (type pdf)
 <use Fig/voltagerise.pdf>
-Package pdftex.def Info: Fig/voltagerise.pdf  used on input line 105.
+Package pdftex.def Info: Fig/voltagerise.pdf  used on input line 109.
 (pdftex.def)             Requested size: 278.83578pt x 126.24051pt.
 
 
@@ -1121,6 +1124,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/voltagerise.pdf>]
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1128,20 +1134,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13]
-<Fig/LimitPHC.pdf, id=728, 1168.365pt x 719.68875pt>
+<Fig/LimitPHC.pdf, id=727, 1168.365pt x 719.68875pt>
 File: Fig/LimitPHC.pdf Graphic file (type pdf)
 <use Fig/LimitPHC.pdf>
-Package pdftex.def Info: Fig/LimitPHC.pdf  used on input line 156.
+Package pdftex.def Info: Fig/LimitPHC.pdf  used on input line 160.
 (pdftex.def)             Requested size: 278.83578pt x 171.75146pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Fig/phcepri.pdf, id=733, 592.88995pt x 545.1328pt>
-File: Fig/phcepri.pdf Graphic file (type pdf)
-<use Fig/phcepri.pdf>
-Package pdftex.def Info: Fig/phcepri.pdf  used on input line 165.
-(pdftex.def)             Requested size: 239.00558pt x 219.75444pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1150,30 +1148,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14]
+<Fig/phcepri.pdf, id=739, 592.88995pt x 545.1328pt>
+File: Fig/phcepri.pdf Graphic file (type pdf)
+<use Fig/phcepri.pdf>
+Package pdftex.def Info: Fig/phcepri.pdf  used on input line 169.
+(pdftex.def)             Requested size: 239.00558pt x 219.75444pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/LimitPHC.pdf> </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/phcepri.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Fig/Epri2012.pdf, id=800, 1375.1375pt x 543.02875pt>
-File: Fig/Epri2012.pdf Graphic file (type pdf)
-<use Fig/Epri2012.pdf>
-Package pdftex.def Info: Fig/Epri2012.pdf  used on input line 221.
-(pdftex.def)             Requested size: 398.3386pt x 157.3003pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/LimitPHC.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/phcepri.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1182,6 +1184,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
+<Fig/Epri2012.pdf, id=812, 1375.1375pt x 543.02875pt>
+File: Fig/Epri2012.pdf Graphic file (type pdf)
+<use Fig/Epri2012.pdf>
+Package pdftex.def Info: Fig/Epri2012.pdf  used on input line 225.
+(pdftex.def)             Requested size: 398.3386pt x 157.3003pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1196,7 +1204,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Fig/methoddubey.pdf, id=828, 593.12895pt x 535.1404pt>
 File: Fig/methoddubey.pdf Graphic file (type pdf)
 <use Fig/methoddubey.pdf>
-Package pdftex.def Info: Fig/methoddubey.pdf  used on input line 233.
+Package pdftex.def Info: Fig/methoddubey.pdf  used on input line 237.
 (pdftex.def)             Requested size: 358.50229pt x 323.44656pt.
 
 
@@ -1213,8 +1221,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Fig/methodfeiding.pdf, id=842, 596.28503pt x 326.2821pt>
 File: Fig/methodfeiding.pdf Graphic file (type pdf)
 <use Fig/methodfeiding.pdf>
-Package pdftex.def Info: Fig/methodfeiding.pdf  used on input line 242.
+Package pdftex.def Info: Fig/methodfeiding.pdf  used on input line 246.
 (pdftex.def)             Requested size: 278.83578pt x 152.57593pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1223,11 +1234,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methoddubey.pdf> </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodfeiding.pdf>]
-<Fig/methodbletterie.pdf, id=861, 588.74783pt x 345.29211pt>
+[20 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methoddubey.pdf>]
+<Fig/methodbletterie.pdf, id=856, 588.74783pt x 345.29211pt>
 File: Fig/methodbletterie.pdf Graphic file (type pdf)
 <use Fig/methodbletterie.pdf>
-Package pdftex.def Info: Fig/methodbletterie.pdf  used on input line 251.
+Package pdftex.def Info: Fig/methodbletterie.pdf  used on input line 255.
 (pdftex.def)             Requested size: 358.50229pt x 210.26433pt.
 
 
@@ -1237,11 +1248,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodbletterie.pdf>]
+[21 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodfeiding.pdf> </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodbletterie.pdf>]
 <Fig/methodtorquato.pdf, id=877, 590.58226pt x 337.77193pt>
 File: Fig/methodtorquato.pdf Graphic file (type pdf)
 <use Fig/methodtorquato.pdf>
-Package pdftex.def Info: Fig/methodtorquato.pdf  used on input line 263.
+Package pdftex.def Info: Fig/methodtorquato.pdf  used on input line 267.
 (pdftex.def)             Requested size: 358.50229pt x 205.0407pt.
 
 
@@ -1255,67 +1266,73 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Fig/methodvergara.pdf, id=893, 597.23125pt x 845.1575pt>
 File: Fig/methodvergara.pdf Graphic file (type pdf)
 <use Fig/methodvergara.pdf>
-Package pdftex.def Info: Fig/methodvergara.pdf  used on input line 274.
+Package pdftex.def Info: Fig/methodvergara.pdf  used on input line 278.
 (pdftex.def)             Requested size: 219.08743pt x 310.03389pt.
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodvergara.pdf>]
-Overfull \hbox (4.67958pt too wide) in paragraph at lines 296--296
+
+Overfull \hbox (4.67958pt too wide) in paragraph at lines 300--300
 []|\T1/ptm/b/n/12 Lokasi
  []
 
 
-Overfull \hbox (4.00764pt too wide) in paragraph at lines 297--297
+Overfull \hbox (4.00764pt too wide) in paragraph at lines 301--301
 []|\T1/ptm/b/n/12 Ukuran
  []
 
 
-Overfull \hbox (2.90376pt too wide) in paragraph at lines 298--298
+Overfull \hbox (2.90376pt too wide) in paragraph at lines 302--302
 []|\T1/ptm/b/n/12 PLTS-
  []
 
 
-Overfull \hbox (4.3794pt too wide) in paragraph at lines 299--299
+Overfull \hbox (4.3794pt too wide) in paragraph at lines 303--303
 []|\T1/ptm/b/n/12 Kendali
  []
 
 
-Overfull \hbox (4.67926pt too wide) in paragraph at lines 300--301
+Overfull \hbox (4.67926pt too wide) in paragraph at lines 304--305
 []|\T1/ptm/b/n/12 Analisis
  []
 
 
-Overfull \hbox (3.3476pt too wide) in paragraph at lines 300--301
+Overfull \hbox (3.3476pt too wide) in paragraph at lines 304--305
 \T1/ptm/b/n/12 Runtun
  []
 
-<Fig/diagrampltsbateraigrid.pdf, id=937, 413.62529pt x 233.9139pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodvergara.pdf>]
+<Fig/diagrampltsbateraigrid.pdf, id=941, 413.62529pt x 233.9139pt>
 File: Fig/diagrampltsbateraigrid.pdf Graphic file (type pdf)
 <use Fig/diagrampltsbateraigrid.pdf>
-Package pdftex.def Info: Fig/diagrampltsbateraigrid.pdf  used on input line 328.
+Package pdftex.def Info: Fig/diagrampltsbateraigrid.pdf  used on input line 332.
 (pdftex.def)             Requested size: 398.3386pt x 225.2829pt.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[25 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/diagrampltsbateraigrid.pdf>]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1323,7 +1340,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26]
+[25]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/diagrampltsbateraigrid.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1332,7 +1357,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [27]
-Overfull \hbox (5.66396pt too wide) in paragraph at lines 389--389
+Overfull \hbox (5.66396pt too wide) in paragraph at lines 393--393
 []|\T1/ptm/b/n/12 No.| 
  []
 
@@ -1347,7 +1372,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Fig/cmap.pdf, id=991, 389.5353pt x 499.8675pt>
 File: Fig/cmap.pdf Graphic file (type pdf)
 <use Fig/cmap.pdf>
-Package pdftex.def Info: Fig/cmap.pdf  used on input line 412.
+Package pdftex.def Info: Fig/cmap.pdf  used on input line 416.
 (pdftex.def)             Requested size: 398.3386pt x 511.16237pt.
 
 
@@ -1404,7 +1429,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <Fig/diagramMCMC.pdf, id=1132, 370.663pt x 296.06459pt>
 File: Fig/diagramMCMC.pdf Graphic file (type pdf)
 <use Fig/diagramMCMC.pdf>
-Package pdftex.def Info: Fig/diagramMCMC.pdf  used on input line 468.
+Package pdftex.def Info: Fig/diagramMCMC.pdf  used on input line 472.
 (pdftex.def)             Requested size: 199.1693pt x 159.08643pt.
 
 
@@ -1933,23 +1958,23 @@ Package rerunfilecheck Info: File `dissertationproposal.out' has not changed.
 (\end occurred inside a group at level 7)
 
 ### simple group (level 7) entered at line 175 ({)
-### simple group (level 6) entered at line 380 ({)
-### simple group (level 5) entered at line 334 ({)
-### simple group (level 4) entered at line 281 ({)
-### simple group (level 3) entered at line 182 ({)
-### simple group (level 2) entered at line 126 ({)
-### simple group (level 1) entered at line 63 ({)
+### simple group (level 6) entered at line 384 ({)
+### simple group (level 5) entered at line 338 ({)
+### simple group (level 4) entered at line 285 ({)
+### simple group (level 3) entered at line 186 ({)
+### simple group (level 2) entered at line 130 ({)
+### simple group (level 1) entered at line 67 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
  28068 strings out of 478994
  487391 string characters out of 5858185
- 833910 words of memory out of 5000000
+ 833919 words of memory out of 5000000
  44517 multiletter control sequences out of 15000+600000
  448668 words of font info for 104 fonts, out of 8000000 for 9000
  1155 hyphenation exceptions out of 8191
  102i,18n,103p,2727b,1142s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/esvect/vect10.pfb>
-Output written on /Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.pdf (95 pages, 2810765 bytes).
+Output written on /Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.pdf (95 pages, 2810578 bytes).
 PDF statistics:
  1861 PDF objects out of 2073 (max. 8388607)
  1598 compressed objects within 16 object streams

@@ -13,8 +13,8 @@
 \contentsline {section}{\numberline {1.4}Manfaat Penelitian}{7}{section.1.4}%
 \contentsline {chapter}{\numberline {II}TINJAUAN PUSTAKA DAN LANDASAN TEORI}{8}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Tinjauan Pustaka}{8}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Kerangka Analisis Probabilistik untuk Ketidakpastian dan Variabilitas Masukan}{9}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Batasan Level Tegangan Sistem Distribusi Tegangan Rendah}{11}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.1}Kerangka Analisis Probabilistik untuk Ketidakpastian dan Variabilitas Masukan}{10}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Batasan Level Tegangan Sistem Distribusi Tegangan Rendah}{12}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Kapasitas \textit {Hosting} Stokastik}{14}{subsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.1.4}Prosedur Penentuan Kapasitas \textit {Hosting} Stokastik}{18}{subsection.2.1.4}%
 \contentsline {subsection}{\numberline {2.1.5}Konfigurasi serta Kendali Sistem Baterai pada Penetrasi PLTS dan Baterai Tersebar}{25}{subsection.2.1.5}%
@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {2.2}Landasan Teori}{33}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Kapasitas \textit {Hosting} PLTS Tersebar pada Penetrasi Skala Besar}{33}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Penentuan Kapasitas \textit {Hosting} Berbasis Monte Carlo}{33}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Konsep Markov Chain Monte Carlo}{34}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Konsep Markov Chain Monte Carlo}{35}{subsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.3.1}Proses \textit {Markov}}{35}{subsubsection.2.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.2.3.2}Probabilitas Transisi Dari Proses \textit {Markov}}{36}{subsubsection.2.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.2.3.3}Markov Chain Monte Carlo}{36}{subsubsection.2.2.3.3}%
