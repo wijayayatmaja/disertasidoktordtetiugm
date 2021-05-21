@@ -21,17 +21,22 @@ Permasalahan selanjutnya yang belum terselesaikan pada penelitian-penelitian seb
 %Selanjutnya, kategori pelanggan, kategori penetrasi, dan kategori daya penetrasi adalah kategori-kategori yang didapatkan dari data historis. Oleh karena itu, untuk dapat memasukkan kategori-kategori tersebut ke dalam model estimasi penetrasi PLTS atap, suatu metode yang berbasis pada data historis diperlukan. Terkait implikasinya, studi untuk pengembangan metode tersebut mempunyai tingkat urgensi yang tinggi. Hal ini ditunjukkan dari kebutuhan untuk menyediakan pertimbangan yang akurat dan representatif pada perencanaan sistem distribusi tenaga listrik dalam menghadapi penetrasi PLTS atap yang semakin meningkat, serta dalam upaya mengantisipasi dampak negatif dari penetrasinya.
 
 \section{Perumusan Masalah}
-Dalam hal ini, penentuan kapasitas \textit{hosting} stokastik perlu mempertimbangkan keakurasian metode dari model penetrasinya sehingga diperlukan studi pengembangan metode. Secara detail, permasalahan spesifik terkait hal itu dirumuskan sebagai:
+Permasalahan terkait penentuan kapasitas \textit{hosting} stokastik dalam penelitian disertasi ini dirumuskan sebagai:
 \begin{enumerate}
-\item Kurangnya representasi ketidakpastian penetrasi yang disebabkan karena penggunaan \textit{lumped load}.
-\item Tidak diperhitungkannya probabilitas kemunculan jenis/kategori pelanggan.
-\item Kurangnya representasi dari kriteria variabilitas karena kerangka runtun waktu yang disederhanakan.
-\item Semakin tingginya beban komputasi karena semakin tingginya resolusi pengamatan.
-\item Tidak dipertimbangkannya probabilitas kemunculan pelanggan dengan PLTS-baterai.
-\item Perlunya investigasi dampak dari peningkatan penetrasi PLTS-baterai pada jaringan distribusi.
+    \item Ketidakpastian lokasi dan ukuran daya PLTS, serta variabilitas permintaan beban dan iradiasi matahari dalam runtun waktu.
+    \item Ketidakpastian lokasi dan ukuran daya PLTS/PLTS-baterai, serta operasi baterai pada penetrasi PLTS-baterai.
 \end{enumerate}
 
-Masalah-masalah tersebut bersumber pada kebutuhan mengenai peningkatan akurasi metode penentuan kapasitas \textit{hosting} stokastik. Metode yang tidak akurat menyebabkan ketidaktepatan dalam memproduksi hasil kapasitas \textit{hosting} stokastik. Selanjutnya, ketepatan memproduksi hasil diperlukan untuk meminimalkan kesalahan pada pengambilan keputusan dalam menghadapi kenaikan penetrasi PLTS dan PLTS-baterai, serta dalam menentukan strategi pencegahan dampak negatif penetrasi pada jaringan distribusi.
+% \begin{enumerate}
+% \item Kurangnya representasi ketidakpastian penetrasi yang disebabkan karena penggunaan \textit{lumped load}.
+% \item Tidak diperhitungkannya probabilitas kemunculan jenis/kategori pelanggan.
+% \item Kurangnya representasi dari kriteria variabilitas karena kerangka runtun waktu yang disederhanakan.
+% \item Semakin tingginya beban komputasi karena semakin tingginya resolusi pengamatan.
+% \item Tidak dipertimbangkannya probabilitas kemunculan pelanggan dengan PLTS-baterai.
+% \item Perlunya investigasi dampak dari peningkatan penetrasi PLTS-baterai pada jaringan distribusi.
+% \end{enumerate}
+
+Masalah-masalah tersebut bersumber pada kebutuhan mengenai peningkatan akurasi dari metode penentuan kapasitas \textit{hosting} stokastik. Dalam hal ini, metode yang akurat diperlukan untuk meminimalkan kesalahan pada pengambilan keputusan dalam menghadapi kenaikan penetrasi PLTS dan PLTS-baterai, serta dalam menentukan strategi pencegahan dampak negatif penetrasi pada jaringan distribusi.
 
 \section{Tujuan Penelitian}
 Penelitian disertasi ini bertujuan untuk meningkatkan akurasi dengan model yang representatif terhadap kondisi riil penetrasi PLTS dan PLTS-baterai dengan mengembangkan metode penentuan kapasitas \textit{hosting} stokastik berbasis pendekatan Markov Chain Monte Carlo. Hal itu diwujudkan melalui tujuan spesifik:
