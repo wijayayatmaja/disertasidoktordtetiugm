@@ -23,7 +23,7 @@ Permasalahan selanjutnya yang belum terselesaikan pada penelitian-penelitian seb
 \section{Perumusan Masalah}
 Permasalahan yang berkaitan dengan kapasitas \textit{hosting} stokastik dalam penelitian disertasi ini dirumuskan sebagai:
 \begin{enumerate}
-    \item Kurangnya representasi ketidakpastian lokasi dan ukuran daya PLTS tersebar, serta variabilitas permintaan beban dan iradiasi matahari dalam runtun waktu, dari model penetrasi PLTS dalam penentuan kapasitas \textit{hosting} stokastik. Hal ini ditunjukkan melalui penggunaan \textit{lumped load}, tidak dipertimbangkannya kategori pelanggan, dan penyederhanaan kerangka runtun waktu pada penelitian-penelitian sebelumnya.
+    \item Kurangnya representasi ketidakpastian lokasi dan ukuran daya PLTS tersebar dari model penetrasi PLTS dalam penentuan kapasitas \textit{hosting} stokastik, serta variabilitas permintaan beban dan iradiasi matahari dalam runtun waktu. Hal ini ditunjukkan melalui penggunaan \textit{lumped load}, tidak dipertimbangkannya kategori pelanggan, dan penyederhanaan kerangka runtun waktu pada penelitian-penelitian sebelumnya.
     \item Belum dipertimbangkannya PLTS-baterai dan operasi baterai pada penetrasi PLTS/PLTS-baterai. Hal ini menyebabkan dampak penetrasi yang melibatkan PLTS-baterai belum teridentifikasi.
 \end{enumerate}
 
@@ -36,16 +36,16 @@ Permasalahan yang berkaitan dengan kapasitas \textit{hosting} stokastik dalam pe
 % \item Perlunya investigasi dampak dari peningkatan penetrasi PLTS-baterai pada jaringan distribusi.
 % \end{enumerate}
 
-Masalah-masalah tersebut bersumber pada kebutuhan mengenai peningkatan akurasi dari metode penentuan kapasitas \textit{hosting} stokastik. Terkait pendekatan sebelumnya, yaitu Monte Carlo, peningkatan akurasi dari metode penentuan kapasitas \textit{hosting} stokastik mempunyai sebuah tantangan utama. Dengan jumlah simulasi yang sama, semakin banyaknya jenis variabel penetrasi yang dipertimbangkan dan semakin tingginya resolusi analisis runtun waktu menyebabkan menurunnya akurasi Monte Carlo. Dalam hal ini, metode yang akurat menempati posisi yang penting dalam pengembangan metode penentuan kapasistas \textit{hosting} stokastik. Metode yang akurat diperlukan untuk meminimalkan kesalahan pada pengambilan keputusan dalam menghadapi dampak dari kenaikan penetrasi PLTS dan PLTS-baterai.
+Masalah-masalah tersebut bersumber pada kebutuhan mengenai peningkatan akurasi dari metode penentuan kapasitas \textit{hosting} stokastik. Terkait peningkatan akurasi ini, muncul tantangan dari pendekatan sebelumnya, yaitu Monte Carlo. Dengan jumlah simulasi yang sama, semakin banyaknya jenis variabel penetrasi yang dipertimbangkan dan semakin tingginya resolusi analisis runtun waktu menyebabkan menurunnya akurasi Monte Carlo. Dalam hal ini, metode yang akurat merupakan sesuatu yang penting dalam pengembangan metode penentuan kapasitas \textit{hosting} stokastik. Metode yang akurat diperlukan untuk meminimalkan kesalahan pada pengambilan keputusan dalam menghadapi dampak dari kenaikan penetrasi PLTS dan PLTS-baterai.
 
 \section{Tujuan Penelitian}
 Berdasarkan rumusan masalah yang telah dideskripsikan, tujuan dari penelitian disertasi ini adalah:
 \begin{enumerate}
-    \item Untuk meningkatkan representasi ketidakpastian lokasi dan ukuran daya PLTS tersebar, serta variabilitas permintaan beban dan iradiasi matahari dalam runtun waktu, dari model penetrasi PLTS dalam penentuan kapasitas \textit{hosting} stokastik.
-    \item Untuk mempertimbangkan PLTS-baterai dan operasi baterai pada penetrasi PLTS/PLTS-baterai, serta mengidentifikasi dampaknya pada jaringan distribusi tegangan rendah.
+    \item Untuk meningkatkan representasi ketidakpastian lokasi dan ukuran daya PLTS tersebar dari model penetrasi PLTS dalam penentuan kapasitas \textit{hosting} stokastik, serta variabilitas permintaan beban dan iradiasi matahari dalam runtun waktu.
+    \item Untuk memasukkan pertimbangan PLTS-baterai dan operasi baterai pada penetrasi PLTS/PLTS-baterai, serta mengidentifikasi dampaknya pada jaringan distribusi tegangan rendah.
 \end{enumerate}
 
-Tujuan-tujuan tersebut dicapai untuk meningkatkan akurasi dari metode penentuan kapasitas \textit{hosting} stokastik. Untuk pencapaiannya, sebuah metode penentuan kapasitas \textit{hosting} stokastik dengan basis pendekatan Markov Chain Monte Carlo dikembangkan pada penelitian disertasi ini.
+Dalam pencapaiannya, sebuah metode penentuan kapasitas \textit{hosting} stokastik dengan basis pendekatan Markov Chain Monte Carlo dikembangkan pada penelitian disertasi ini. Ukuran ketercapaian tujuan diamati dari peningkatan akurasi metode yang diusulkan melalui perbandingan dengan metode sebelumnya. 
 
 % \begin{enumerate}
 %     \item Untuk meningkatkan akurasi metode terkait ketidakpastian penetrasi PLTS. Tujuan ini dirumuskan untuk menyelesaikan permasalahan kurangnya representasi ketidakpastian penetrasi karena penggunaan \textit{lumped load} dan tidak diperhitungkannya probabilitas kemunculan jenis/kategori pelanggan.
@@ -55,7 +55,7 @@ Tujuan-tujuan tersebut dicapai untuk meningkatkan akurasi dari metode penentuan 
 
 
 \section{Manfaat Penelitian}
-Penelitian ini dapat digunakan oleh perencana dan operator sistem distribusi sebagai salah satu pertimbangan untuk menghadapi dampak negatif dari kenaikan yang tinggi dari penetrasi PLTS-baterai pada jaringan distribusi tegangan rendah. Selain itu, untuk peneliti-peneliti dibidang integrasi PLTS-baterai pada jaringan distribusi tegangan rendah, penelitian ini dapat dijadikan sebagai sumber acuan. 
+Penelitian ini dapat digunakan oleh perencana dan operator sistem distribusi sebagai salah satu pertimbangan untuk menghadapi dampak negatif dari kenaikan yang tinggi dari penetrasi PLTS dan PLTS-baterai pada jaringan distribusi tegangan rendah. Selain itu, untuk peneliti-peneliti dibidang pembangkitan tersebar, penelitian ini dapat dijadikan sebagai sumber acuan. 
 
 
 %Pada skala tertentu, penetrasi PLTS tersebar pada jaringan distribusi tegangan rendah dapat menyebabkan gangguan pada performa operasinya, seperti tegangan lebih, aliran daya balik, pelanggaran kapasitas termal konduktor dan lain-lain. Terkait hal itu, metode penentuan kapasitas \textit{hosting} yang representatif dengan kondisi riil penetrasi PLTS tersebar diperlukan. Meskipun metode penentuan kapasitas \textit{hosting} stokastik dapat merepresentasikan karakteristik-karakteristik ketidakpastian dengan lebih baik dibandingkan metode berbasis \textit{deterministic}, karakteristik-karakteristik PLTS-baterai belum dipertimbangkan pada penelitian-penelitian sebelumnya. Kenaikan penetrasi PLTS-baterai mendorong urgensi untuk melibatkan PLTS-baterai dalam penghitungan kapasitas \textit{hosting} stokastik. 

@@ -99,6 +99,7 @@
 \usepackage{xcolor}
 \usepackage{colortbl}
 \definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+\usepackage{array,  makecell}
 %======================================
 %% Localise the Strings
 %======================================

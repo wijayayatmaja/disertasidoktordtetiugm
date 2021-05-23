@@ -1,17 +1,19 @@
 \chapter{METODE PENELITIAN}
-Untuk menyelesaikan permasalahan yang telah dideskripsikan, suatu metode penelitian terkait penentuan kapasitas \textit{\textit{hosting}} stokastik perlu dikembangkan.
-\begin{figure}[!t]
+Untuk menyelesaikan permasalahan yang telah dideskripsikan, suatu metode penelitian terkait penentuan kapasitas \textit{\textit{hosting}} stokastik perlu dirancang.
+\begin{figure}[!b]
 	\centering
 	\includegraphics[width=1\textwidth]{Fig/fcpenelitian}
 	\caption{Diagram alir penelitian.}
 	\label{tahapan}
 \end{figure}
-Untuk alasan tersebut, penelitian disertasi ini mengusulkan metode pengembangan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo yang dijelaskan pada bab ini. Pada metode penentuan kapasitas \textit{\textit{hosting}} yang diusulkan, Ilustrasi diagram alir penelitian disertasi ini ditunjukkan pada Gambar \ref{tahapan}. Dalam gambar tersebut, penelitian disertasi ini dibagi menjadi tiga bagian: studi pustaka dan pengolahan data masukan; formulasi permasalahan, perancangan metode dan pengerjaan simulasi, serta; analisis hasil dan kesimpulan.
+Untuk alasan tersebut, penelitian disertasi ini mengusulkan metode pengembangan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo yang dijelaskan pada bab ini. Pada metode penentuan kapasitas \textit{\textit{hosting}} yang diusulkan, Ilustrasi diagram alir penelitian disertasi ini ditunjukkan pada Gambar \ref{tahapan}. Dalam gambar tersebut, metode penelitian pada disertasi ini dibagi menjadi tiga bagian: pengkajian pustaka dan persiapan data masukan; formulasi permasalahan, perancangan metode dan pengerjaan simulasi, serta; perancangan proses analisis hasil.
 
 \section{Pengkajian Pustaka dan Persiapan Data Masukan}
-Pengkajian pustaka dilakukan untuk hal-hal yang berkaitan dengan metode penentuan kapasitas \textit{\textit{hosting}} PLTS. Dalam pengkajian pustaka tersebut, berbagai teori, metode, aplikasi, dan temuan baru mengenai pengembangan metode penentuan kapasitas \textit{\textit{hosting}} dipelajari. Langkah selanjutnya adalah perumusan masalah, pengidentifikasian keaslian penelitian, penetapan tujuan, dan penentuan hipotesis. Dalam hal ini, untuk menentukan kapasitas \textit{\textit{hosting}} PLTS stokastik yang melibatkan pelanggan-pelanggan dengan PLTS-baterai dengan akurasi yang diinginkan dan beban komputasi diijinkan, metode berbasis proses Markov Chain Monte Carlo diusulkan.
+Pengkajian pustaka dilakukan untuk hal-hal yang berkaitan dengan metode penentuan kapasitas \textit{\textit{hosting}}. Pada bagian ini, berbagai teori, metode, aplikasi, dan temuan baru mengenai pengembangan metode penentuan kapasitas \textit{\textit{hosting}} dikaji. Langkah selanjutnya adalah perumusan masalah, pengidentifikasian keaslian penelitian, penetapan tujuan, dan penentuan hipotesis. Dalam hal ini, untuk menentukan kapasitas \textit{\textit{hosting}} PLTS stokastik yang melibatkan pelanggan-pelanggan dengan PLTS-baterai dengan akurasi yang diinginkan dan beban komputasi diijinkan, metode berbasis proses Markov Chain Monte Carlo diusulkan.
 
-Untuk mengerjakan simulasi penentuan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo tersebut, penelitian disertasi ini membutuhkan data-data historis terkait PLTS dan sistem distribusi tegangan rendah sebagai data-data masukan. Pada langkah selanjutnya, pengolahan data masukan diperlukan sebelum data-data masukan tersebut digunakan. Data-data masukan tersebut adalah data sekunder yang didapat baik dari lembaga-lembaga riset terkait penetrasi PLTS skala besar, maupun Institute of Electrical and Electronics Engineers (IEEE). Data-data tersebut antara lain
+Untuk mengerjakan simulasi penentuan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo tersebut, penelitian disertasi ini membutuhkan data-data historis terkait PLTS dan sistem distribusi tegangan rendah sebagai data-data masukan. Pada langkah selanjutnya, pengolahan data masukan diperlukan sebelum data-data masukan tersebut digunakan. Data-data masukan tersebut adalah data sekunder yang didapat baik dari lembaga-lembaga riset terkait penetrasi PLTS skala besar, maupun Institute of Electrical and Electronics Engineers (IEEE). 
+
+Data-data masukan yang dipersiapkan dalam penelitian disertasi ini antara lain:
 \begin{enumerate}
 	\item Ukuran daya PLTS untuk pelanggan-pelanggan dengan PLTS.
 	\item Ukuran daya PLTS dan baterai untuk pelanggan-pelanggan dengan PLTS-baterai.

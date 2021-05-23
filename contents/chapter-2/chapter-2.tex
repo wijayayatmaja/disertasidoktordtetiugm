@@ -69,7 +69,7 @@ Untuk mendapatkan hasil analisis probabilistik yang diinginkan, proses memodelka
 	\caption{Perbandingan Distribusi Probabilitas Masukan Penetrasi PLTS Tersebar}
 	\vspace{-12pt}
 	\begin{center}
-		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{11em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{15em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
+		\begin{tabular}{|m{11em}|m{15em}|}
 			\cline{1-2} 
 			\textbf{Karakteristik}&	
 			\textbf{Model Distribusi Penelitian Sebelumnya}\\
@@ -189,11 +189,11 @@ Seperti yang dapat dilihat pada Tabel \ref{tab-monte}, pendekatan \textit{non-se
 	\caption{Perbandingan Pendekatan Stokastik Monte Carlo yang Berkaitan dengan Analisis Runtun Waktu dalam Studi Kapasitas \textit{Hosting}}
 	\vspace{-12pt}
 	\begin{center}
-		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{11em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{9em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
+		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{11em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{10em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
 			\cline{1-2} 
 			\textbf{Referensi}&	
 			%\textbf{\textit{Non-Sequential Monte Carlo}}&
-			\textbf{Pendekatan Stokastik Terkait Analisis Runtun Waktu}\\
+			\textbf{Pendekatan Stokastik Monte Carlo}\\
 			\hline J. D. Watson (2016) \cite{Watson2016} 	&Non-Sequential 	\\
 			\hline A. Arshad (2017) \cite{Arshad2017} 		&Non-Sequential 	\\
 			\hline A. Dubey (2017) \cite{Dubey2017}  		&Pseudo-Sequential 	\\
@@ -375,37 +375,38 @@ Mohammed Al-Saffar dkk mengembangkan metode untuk kendali antar sistem baterai p
 
 %\subsection{Markov Chain Monte Carlo untuk Pemodelan Distribusi Acak}
 \subsection{Usulan Solusi dan Keaslian Penelitian}
-Salah satu produk keluaran dari kajian pustaka yang telah dideskripsikan adalah usulan solusi spesifik terhadap permasalahan spesifik yang telah dirumuskan. Selain usulan solusi, pada bagian ini juga dijelaskan mengenai keaslian penelitian. Keaslian penelitian dideskripsikan untuk menunjukkan kebaruan usulan solusi dan posisinya diantara penelitian-penelitian sebelumnya.
+Salah satu hasil dari kajian pustaka yang telah dideskripsikan adalah usulan solusi spesifik terhadap permasalahan spesifik yang telah dirumuskan. Selain usulan solusi, pada bagian ini juga dijelaskan mengenai keaslian penelitian. Keaslian penelitian dideskripsikan untuk menunjukkan kebaruan usulan solusi dan posisinya diantara penelitian-penelitian sebelumnya.
 
 \subsubsection{Usulan Solusi}
-Usulan-usulan solusi untuk permasalahan-permasalahan spesifik terkait penentuan kapasitas \textit{hosting} stokastik ditampilkan pada Tabel \ref{tab-usul}. Usulan solusi yang dijelaskan pada Tabel \ref{tab-usul} dituliskan berdasarkan permasalahan spesifik yang telah dirumuskan pada bagian sebelumnya dari naskah disertasi ini. Namun, pada dasarnya, usulan solusi utamanya adalah Markov Chain Monte Carlo. Markov Chain Monte Carlo dipilih karena karakteristik solusinya yang dapat melakukan perpindahan dengan probabilitas \textit{states}$-$nya. \textit{Hidden Markov model} dirancang untuk mengerjakan perpindahan \textit{states} yang salah satunya sisinya merupakan \textit{hidden states}. Selanjutnya, \textit{layered hidden Markov model} dirancang untuk \textit{states} bertingkat. Untuk model beban yang tersebar secara individual, kerangka runtun waktu, dan studi sensitivitas adalah usulan-usulan solusi dari permasalahan-permasalahan spesifik yang dalam pengerjaannya dimasukkan dalam simulasi Markov Chain Monte Carlo yang dirancang.
+Usulan-usulan solusi untuk rumusan masalah dari penelitian disertasi ini ditampilkan pada Tabel \ref{tab-usul}.
 \bgroup
 \vspace{4pt}
 {\renewcommand{\arraystretch}{1.3}
-\begin{table}[!h]
-	\caption{Usulan Solusi untuk Permasalahan Spesifik pada Penelitian Ini}
+\begin{sidewaystable}[hbtp]
+	\caption{Usulan Solusi untuk Rumusan Masalah dari Penelitian Disertasi Ini}
 	\vspace{-12pt}
 	\begin{center}
-		\begin{tabular}{|@{\hspace*{0.7em}\extracolsep{\fill}}p{1em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{15em}@{\hspace*{0.7em}\extracolsep{\fill}}|@{\hspace*{0.7em}\extracolsep{\fill}}p{12em}@{\hspace*{0.7em}\extracolsep{\fill}}|}
-			\cline{1-3} 
-			\textbf{No.}&	
-			%\textbf{\textit{Non-Sequential Monte Carlo}}&
+		\begin{tabular}{|m{1.2em}|m{11.2em}|m{20em}|m{16em}|}
+			\cline{1-4} 
+			\textbf{No}&	
+			\textbf{Rumusan Masalah}&
 			\textbf{Permasalahan Spesifik}&
 			\textbf{Usulan Solusi}\\
-			\hline 1 &Kurangnya representasi ketidakpastian penetrasi yang disebabkan karena penggunaan \textit{lumped load}. & Perancangan model untuk beban tersebar secara individual. \\
-			\hline 2 &Tidak diperhitungkannya probabilitas kemunculan jenis/kategori pelanggan. &Perancangan \textit{hidden Markov model}. \\
-			\hline 3 &Kurangnya representasi dari kriteria variabilitas karena kerangka runtun waktu yang disederhanakan. &Perancangan kerangka runtun waktu dengan resolusi 1 menit untuk variasi selama satu tahun. \\
-			\hline 4 &Semakin tingginya beban komputasi karena semakin tingginya resolusi pengamatan. & Perancangan matriks probabilitas untuk perpindahan \textit{states}. \\
-			\hline 5 &Tidak dipertimbangkannya probabilitas kemunculan pelanggan dengan PLTS-baterai. &Perancangan \textit{layered hidden Markov model} dengan probabilitas pelanggan dengan PLTS dan PLTS-baterai. \\
-			\hline 6 &Perlunya investigasi dampak dari peningkatan penetrasi PLTS-baterai pada jaringan distribusi.	&Studi sensitivitas untuk variabel/parameter penetrasi dan sistem distribusi. \\
+			\hline 1 & \multirow{4}{*}{\parbox{11.2em}{Kurangnya representasi ketidakpastian lokasi dan ukuran daya PLTS tersebar dari model penetrasi PLTS dalam penentuan kapasitas \textit{hosting} stokastik, serta variabilitas permintaan beban dan iradiasi matahari dalam runtun waktu.}} &Kurangnya representasi ketidakpastian penetrasi yang disebabkan karena penggunaan \textit{lumped load}. & Perancangan model untuk beban tersebar secara individual. \\
+			\cline{3-4}& &Tidak diperhitungkannya probabilitas kemunculan jenis/kategori pelanggan. &Perancangan \textit{hidden Markov model}. \\
+			\cline{3-4}& &Kurangnya representasi dari kriteria variabilitas karena kerangka runtun waktu yang disederhanakan. &Perancangan kerangka runtun waktu dengan resolusi 1 menit untuk variasi selama satu tahun. \\
+			\cline{3-4}& &Semakin tingginya beban komputasi karena semakin tingginya resolusi pengamatan. & Perancangan matriks probabilitas untuk perpindahan \textit{states}. \\
+			\hline 2 & \multirow{2}{11em}{\parbox{11.2em}{Tidak dipertimbangkannya PLTS-baterai dan operasi baterai pada penetrasi PLTS/PLTS-baterai.}} &Tidak dipertimbangkannya probabilitas kemunculan pelanggan dengan PLTS-baterai. &Perancangan \textit{layered hidden Markov model} dengan probabilitas pelanggan dengan PLTS dan PLTS-baterai. \\
+			\cline{3-4}& &Perlunya identifikasi dampak dari peningkatan penetrasi PLTS-baterai pada jaringan distribusi. &Studi sensitivitas untuk variabel/parameter penetrasi dan sistem distribusi. \\
 			\hline
 		\end{tabular}
 		\label{tab-usul}
 	\end{center}
 	\vspace{-12pt}
 	%\thisfloatpagestyle{floatpage}
-\end{table}
+\end{sidewaystable}
 \egroup
+Solusi yang dideskripsikan pada tabel tersebut diusulkan berdasarkan permasalahan-permasalahan spesifik dari masing-masing poin rumusan masalah. Namun, pada dasarnya, usulan solusi utamanya adalah Markov Chain Monte Carlo. Markov Chain Monte Carlo dipilih karena karakteristik solusinya yang dapat melakukan perpindahan dengan probabilitas \textit{states}$-$nya. Lebih dalam lagi, \textit{hidden Markov model} dirancang untuk mengerjakan perpindahan \textit{states} yang salah satu sisinya merupakan \textit{hidden states}, sedangkan \textit{layered hidden Markov model} dirancang untuk mengatasi \textit{states} tingkatan yang lebih tinggi. Selanjutnya, model beban yang tersebar secara individual, kerangka runtun waktu, dan studi sensitivitas merupakan usulan-usulan solusi tambahan untuk meningkatkan akurasi dari pendekatan Markov Chain Monte Carlo yang diusulkan.
 
 \subsubsection{Keaslian Penelitian}
 Untuk menunjukkan posisi penelitian disertasi ini dibandingkan penelitian-penelitian sebelumnya dan untuk menggarisbawahi keaslian penelitian yang diusulkan, Gambar \ref{cmap} disediakan.
