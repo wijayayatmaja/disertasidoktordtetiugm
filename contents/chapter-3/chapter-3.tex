@@ -6,14 +6,17 @@ Untuk menyelesaikan permasalahan yang telah dideskripsikan, suatu metode penelit
 	\caption{Diagram alir penelitian.}
 	\label{tahapan}
 \end{figure}
-Untuk alasan tersebut, penelitian disertasi ini mengusulkan metode pengembangan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo yang dijelaskan pada bab ini. Pada metode penentuan kapasitas \textit{\textit{hosting}} yang diusulkan, Ilustrasi diagram alir penelitian disertasi ini ditunjukkan pada Gambar \ref{tahapan}. Dalam gambar tersebut, metode penelitian pada disertasi ini dibagi menjadi tiga bagian: pengkajian pustaka dan persiapan data masukan; formulasi permasalahan, perancangan metode dan pengerjaan simulasi, serta; perancangan proses analisis hasil.
+Untuk alasan tersebut, penelitian disertasi ini mengusulkan metode pengembangan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo yang dijelaskan pada bab ini. Dalam hal ini, diagram alir dari metode penelitian disertasi ini ditunjukkan pada Gambar \ref{tahapan}. Pada gambar tersebut, metode penelitian disertasi ini dibagi menjadi tiga bagian, yaitu
+\begin{enumerate}
+	\item Pengkajian pustaka dan persiapan data masukan.
+	\item Perancangan metode dan pengerjaan simulasi.
+	\item Proses analisis hasil.
+\end{enumerate}
+
+Metode penelitian pada disertasi ini dimulai dengan pengkajian pustaka dan persiapan data masukan. Pengkajian pustaka merupakan proses mengkaji penelitian-penelitian sebelumnya yang berkaitan dengan pengembangan metode penentuan kapasitas \textit{\textit{hosting}}. Selanjutnya, data-data masukan dipersiapkan. Proses selanjutnya dari metode penelitian disertasi ini adalah perancangan metode dan pengerjaan simulasi. Proses terakhir adalah proses analisis hasil. Pada proses ini, interpretasi hasil, implikasi, kesimpulan, dan rekomendasi untuk penelitian selanjutnya disediakan. Penjelasan terperinci dari masing-masing proses tersebut disediakan pada bagian-bagian selanjutnya dari bab ini.
 
 \section{Pengkajian Pustaka dan Persiapan Data Masukan}
-Pengkajian pustaka dilakukan untuk hal-hal yang berkaitan dengan metode penentuan kapasitas \textit{\textit{hosting}}. Pada bagian ini, berbagai teori, metode, aplikasi, dan temuan baru mengenai pengembangan metode penentuan kapasitas \textit{\textit{hosting}} dikaji. Langkah selanjutnya adalah perumusan masalah, pengidentifikasian keaslian penelitian, penetapan tujuan, dan penentuan hipotesis. Dalam hal ini, untuk menentukan kapasitas \textit{\textit{hosting}} PLTS stokastik yang melibatkan pelanggan-pelanggan dengan PLTS-baterai dengan akurasi yang diinginkan dan beban komputasi diijinkan, metode berbasis proses Markov Chain Monte Carlo diusulkan.
-
-Untuk mengerjakan simulasi penentuan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo tersebut, penelitian disertasi ini membutuhkan data-data historis terkait PLTS dan sistem distribusi tegangan rendah sebagai data-data masukan. Pada langkah selanjutnya, pengolahan data masukan diperlukan sebelum data-data masukan tersebut digunakan. Data-data masukan tersebut adalah data sekunder yang didapat baik dari lembaga-lembaga riset terkait penetrasi PLTS skala besar, maupun Institute of Electrical and Electronics Engineers (IEEE). 
-
-Data-data masukan yang dipersiapkan dalam penelitian disertasi ini antara lain:
+Pada pengkajian pustaka, berbagai teori, metode, aplikasi, dan temuan baru mengenai pengembangan metode penentuan kapasitas \textit{\textit{hosting}} dikaji. Langkah selanjutnya adalah perumusan masalah, pengidentifikasian keaslian penelitian, penetapan tujuan, dan penentuan hipotesis. Untuk mengerjakan simulasi penentuan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo tersebut, penelitian disertasi ini membutuhkan data-data historis terkait PLTS dan sistem distribusi tegangan rendah sebagai data-data masukan. Pada langkah selanjutnya, pengolahan data masukan diperlukan sebelum data-data masukan tersebut digunakan. Data-data masukan tersebut adalah data sekunder yang didapat baik dari lembaga-lembaga riset terkait penetrasi PLTS skala besar, maupun Institute of Electrical and Electronics Engineers (IEEE). Data-data masukan yang dipersiapkan dalam penelitian disertasi ini antara lain
 \begin{enumerate}
 	\item Ukuran daya PLTS untuk pelanggan-pelanggan dengan PLTS.
 	\item Ukuran daya PLTS dan baterai untuk pelanggan-pelanggan dengan PLTS-baterai.
@@ -35,7 +38,7 @@ Berkaitan dengan jaringan distribusi tegangan rendah yang digunakan, penelitian 
 
 Data permintaan-permintaan beban dalam rentang waktu 24 jam didapat dari data permintaan-permintaan beban yang disusun oleh Test Feeders Working Group of the Distribution System Analysis Subcommittee of the Power Systems Analysis, Computing, and Economics (PSACE). Dalam penelitian ini, beban-beban diasumsikan bersifat P-Q (daya aktif dan daya reaktif) konstan. Karena daya-daya keluaran PLTS dan permintaan-permintaan beban menggunakan resolusi pengamatan per 1 menit, maka penelitian disertasi ini menggunakan kerangka analisis dengan resolusi pengamatan per 1 menit.
 
-\section{Formulasi Permasalahan, Perancangan Metode, dan Pengerjaan Simulasi}
+\section{Perancangan Metode dan Pengerjaan Simulasi}
 Bagian ini dimulai dengan pembuatan program untuk perhitungan aliran daya dari sistem distribusi yang digunakan. Program simulasi yang digunakan untuk penghitungan aliran daya tersebut adalah OpenDSS. Pada setiap integrasi PLTS atau PLTS-baterai tersebar, perhitungan aliran daya dari program jaringan distribusi pada penelitian disertasi ini dirancang untuk menghasilkan resolusi pengamatan per 1 menit. Untuk tujuan tersebut, meteran untuk mengukur perubahan tegangan pada semua bus untuk resolusi pengamatan per 1 menit tersebut dipasang di semua bus. Hal ini dilakukan untuk mengamati setiap perubahan daya keluaran PLTS dan permintaan beban yang direkam untuk setiap 1 menit perubahan.
 
 Setelah perancangan program simulasi penghitungan aliran daya, langkah selanjutnya adalah pengerjaan simulasi. Simulasi aliran daya ini dikerjakan sebelum program penentuan kapasitas \textit{\textit{hosting}} stokastik dirancang. Hal ini dilakukan karena tujuan dari simulasi ini adalah validasi program. Program aliran daya tersebut divalidasi dengan cara membandingkan hasil simulasi pada penelitian disertasi ini dengan hasil simulasi pada dokumen data sistem distribusi sumber. Validasi ini dikerjakan untuk mendapatkan program sistem distribusi yang sesuai sebelum usulan metode diterapkan. Perancangan program sistem distribusi untuk perhitungan aliran daya akan terus diperbaiki jika validasinya gagal. Jika validasinya berhasil, proses selanjutnya adalah perancangan metode yang diusulkan. Perancangan metode ini diawali dengan formulasi permasalahan dari kapasitas \textit{\textit{hosting}} stokastik.
@@ -57,7 +60,7 @@ Untuk mengerjakan simulasi dari metode yang diusulkan, penelitian disertasi ini 
 \end{figure}
 OpenDSS adalah alat simulasi sistem tenaga listrik yang berbasis program. Dalam penelitian disertasi ini, OpenDSS digunakan untuk pemodelan jaringan distribusi dan penghitungan aliran daya. Pada setiap iterasi penetrasi, hasil perhitungan dihasilkan dari program tersebut. Untuk pemograman metode yang diusulkan, bahasa pemrograman phyton digunakan pada penelitian disertasi ini. Program python tersebut mengerjakan pemodelan penetrasi PLTS atau PLTS-baterai tersebar berdasarkan ketidakpastian-ketidakpastian, pengendalian operasi baterai untuk PLTS-baterai tersebar, dan pengerjaan simulasi penentuan kapasitas \textit{\textit{hosting}} stokastik. Penelitian ini menggunakan COM server yang disediakan oleh OpenDSS untuk menghubungkan antara OpenDSS dan python. Dalam hal ini, keleluasaan pemrograman yang disedikan oleh python ditujukan untuk memperoleh berbagai hasil yang dibutuhkan. Selanjutnya, gnuplot digunakan untuk menampilkan hasil dalam bentuk grafik.
 
-\subsection{Kapasitas \textit{\textit{hosting}} Stokastik}
+\subsection{Kapasitas \textit{\textit{Hosting}} Stokastik}
 Untuk menghadapi kenaikan instalasi PLTS tersebar yang dihubungkan ke jaringan distribusi tegangan rendah, penyedia listrik berusaha untuk memfasilitasi sebanyak mungkin PLTS tersebar tanpa mengorbankan kinerja operasi sistem distribusi tenaga listrik. Berkaitan dengan hal tersebut, kemampuan sistem distribusi tenaga listrik dalam menerima sambungan PLTS tersebar dapat diukur. Dengan mempertimbangkan karakteristik-karakteristik ketidakpastian penetrasi, jumlah maksimal PLTS tersebar yang dapat diintegrasikan ke jaringan distribusi sebelum terjadinya pelanggaran batas operasi itu didefinisikan sebagai kapasitas \textit{\textit{hosting}} stokastik. Kapasitas \textit{\textit{hosting}} stokastik ini diperlukan untuk mengambil keputusan untuk setiap permintaan penyambungan PLTS tersebar ke jaringan distribusi tenaga listrik. Dengan $Pr[T^m=\mathit{t^m_k}]$ adalah probabilitas terjadinya pelanggaran pada skenario penetrasi ke-$m$ dan proses penetrasi ke-$k$, perhitungan kapasitas \textit{\textit{hosting}} PLTS dilakukan dengan
 \begin{equation}\label{phc1}
 \mathit{h^m}=min\Big\{\mathit{xp^m_{k-\text{1}}}\ |\ Pr[T^m=\mathit{t^m_k}]\geq \frac{1}{w}\wedge k\neq 1\Big\}.
@@ -296,7 +299,7 @@ Pada penetrasi PLTS dan PLTS-baterai tersebar ini, seperti skenario-skenario yan
 
 %\subsection{Studi Kasus}
 
-\section{Perancangan Proses Analisis Hasil}
+\section{Proses Analisis Hasil}
 Hasil-hasil penelitian merupakan nilai-nilai keluaran yang didapat dari penerapan metode yang diusulkan pada studi kasus yang dirancang. Untuk mengukur kinerja dari metode yang diusulkan, metode sebelumnya yaitu yang berbasis Monte Carlo dirancang dan juga disimulasikan. Terkait hal tersebut, kerangka analisis penelitian dan penarikan kesimpulan perlu dirancang agar hasil-hasil penelitian dapat diinterpretasikan dengan tepat. Pada penelitian ini, analisis dibagi menjadi dua bagian besar, yaitu analisis hasil kapasitas \textit{\textit{hosting}} stokastik dan evaluasi akurasi. 
 
 \subsection{Analisis Hasil Kapasitas \textit{\textit{hosting}} Stokastik}
