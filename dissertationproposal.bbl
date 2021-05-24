@@ -91,8 +91,8 @@ K.~Handayani, Y.~Krozer, and T.~Filatova, ``{From Fossil Fuels to Renewables:
 
 \bibitem{Bollen2011}
 M.~Bollen and F.~Hassan, \emph{{Integration of Distributed Generation in the
-  Power System}}.\hskip 1em plus 0.5em minus 0.4em\relax John Wiley {\&} Sons,
-  2011.
+  Power System}}.\hskip 1em plus 0.5em minus 0.4em\relax Hoboken: John Wiley
+  {\&} Sons, 2011.
 
 \bibitem{Dubey2017}
 A.~Dubey and S.~Santoso, ``{On Estimation and Sensitivity Analysis of
@@ -467,9 +467,30 @@ H.~Ben-Ammar, Y.~Hadjadj-Aoul, G.~Rubino, and S.~Ait-Chellouche, ``{On the
   \url{https://doi.org/10.1016/j.jnca.2019.01.011}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Gilks1996}
+W.~R. Gilks, S.~Richardson, and D.~J. Spiegelhalter, \emph{{Markov Chain Monte
+  Carlo in Practice}}, 1st~ed.\hskip 1em plus 0.5em minus 0.4em\relax
+  Dordrecht: Springer-Science+Business Media, B.V., 1996.
+
+\bibitem{Liang2010}
+F.~Liang, C.~Liu, and R.~J. Carroll, \emph{{Advanced Markov Chain Monte Carlo
+  Methods: Learning from Past Samples}}, 1st~ed.\hskip 1em plus 0.5em minus
+  0.4em\relax Chichester: A John Wiley and Sons, Ltd., 2010.
+
 \bibitem{Revuz1984}
 D.~Revuz, \emph{{Markov Chains}}.\hskip 1em plus 0.5em minus 0.4em\relax North
   Holland, Amsterdam: American Elsevier, New York, 1984.
+
+\bibitem{Upper1997}
+D.~R. Upper, ``{Theory and Algorithms for Hidden Markov Models and Generalized
+  Hidden Markov Models},'' Doctoral Dissertation, University of California at
+  Berkeley, 1997.
+
+\bibitem{Penagarikano2004}
+M.~Penagarikano and G.~Bordel, ``{Layered Markov Models: A New Architectural
+  Approach to Automatic Speech Recognition},'' in \emph{The 2004 14th IEEE
+  Signal Processing Society Workshop Machine Learning for Signal
+  Processing}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2004, pp. 305--314.
 
 \bibitem{Louangrath2014}
 P.~Louangrath, ``{Sample Size Determination for Non-Finite Population},'' in
