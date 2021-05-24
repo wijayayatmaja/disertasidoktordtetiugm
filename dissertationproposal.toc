@@ -21,40 +21,40 @@
 \contentsline {subsection}{\numberline {2.1.6}Usulan Solusi dan Keaslian Penelitian}{27}{subsection.2.1.6}%
 \contentsline {subsubsection}{\numberline {2.1.6.1}Usulan Solusi}{27}{subsubsection.2.1.6.1}%
 \contentsline {subsubsection}{\numberline {2.1.6.2}Keaslian Penelitian}{29}{subsubsection.2.1.6.2}%
-\contentsline {section}{\numberline {2.2}Landasan Teori}{33}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Kapasitas \textit {Hosting} PLTS Tersebar pada Penetrasi Skala Besar}{33}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.2}Landasan Teori}{34}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Kapasitas \textit {Hosting} PLTS Tersebar pada Penetrasi Skala Besar}{34}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Penentuan Kapasitas \textit {Hosting} Berbasis Monte Carlo}{34}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Konsep Markov Chain Monte Carlo}{35}{subsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.3.1}Proses Markov}{35}{subsubsection.2.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.2.3.2}Probabilitas Transisi Dari Proses Markov}{36}{subsubsection.2.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.2.3.3}Markov Chain Monte Carlo}{36}{subsubsection.2.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.2.3.1}Proses Markov}{36}{subsubsection.2.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.2.3.2}Probabilitas Transisi Dari Proses Markov}{37}{subsubsection.2.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.2.3.3}Markov Chain Monte Carlo}{37}{subsubsection.2.2.3.3}%
 \contentsline {subsection}{\numberline {2.2.4}Jumlah Proses Acak}{37}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Kerangka Analisis Runtun Waktu}{37}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.5}Kerangka Analisis Runtun Waktu}{38}{subsection.2.2.5}%
 \contentsline {subsection}{\numberline {2.2.6}Studi Akurasi}{38}{subsection.2.2.6}%
 \contentsline {section}{\numberline {2.3}Hipotesis}{39}{section.2.3}%
-\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{40}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Pengkajian Pustaka dan Persiapan Data Masukan}{40}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Perancangan Metode dan Pengerjaan Simulasi}{44}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Kapasitas \textit {\textit {Hosting}} Stokastik}{46}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Batas Kinerja Operasi}{47}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Kerangka Analisis Runtun Waktu}{47}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Perancangan Metode Penentuan Kapasitas \textit {\textit {hosting}} Stokastik untuk PLTS Tersebar}{48}{subsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.4.1}Perancangan Skenario Penetrasi PLTS Tersebar}{49}{subsubsection.3.2.4.1}%
-\contentsline {subsubsection}{\numberline {3.2.4.2}Perancangan Markov Chain Monte Carlo}{50}{subsubsection.3.2.4.2}%
-\contentsline {subsubsection}{\numberline {3.2.4.3}Pembentukan Algoritme}{54}{subsubsection.3.2.4.3}%
-\contentsline {subsection}{\numberline {3.2.5}Pengembangan Metode dengan Pertimbangan PLTS dan PLTS-Baterai Tersebar}{58}{subsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.5.1}Pengembangan Skenario Penetrasi PLTS dan PLTS-Baterai Tersebar}{59}{subsubsection.3.2.5.1}%
-\contentsline {subsubsection}{\numberline {3.2.5.2}Perancangan Operasi Baterai pada PLTS-Baterai}{61}{subsubsection.3.2.5.2}%
-\contentsline {subsubsection}{\numberline {3.2.5.3}Pengembangan Markov Chain Monte Carlo}{62}{subsubsection.3.2.5.3}%
-\contentsline {subsubsection}{\numberline {3.2.5.4}Pembentukan Algoritme}{64}{subsubsection.3.2.5.4}%
-\contentsline {section}{\numberline {3.3}Proses Analisis Hasil}{66}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Analisis Hasil Kapasitas \textit {\textit {hosting}} Stokastik}{67}{subsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.1}Pengaruh Penetrasi PLTS dan PLTS-Baterai terhadap Kapasitas \textit {\textit {hosting}} Stokastik}{67}{subsubsection.3.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.2}Pengaruh Penetrasi PLTS dan PLTS-Baterai terhadap Batas Operasi Sistem Distribusi}{67}{subsubsection.3.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.3.1.3}Studi Sensitivitas}{67}{subsubsection.3.3.1.3}%
-\contentsline {subsection}{\numberline {3.3.2}Evaluasi Akurasi}{68}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {IV}KEMAJUAN PENELITIAN}{69}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Rancangan Skenario Penetrasi PLTS Tersebar}{69}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Algoritme}{73}{section.4.2}%
-\contentsline {chapter}{\numberline {V}JADWAL PENELITIAN}{77}{chapter.5}%
-\contentsline {chapter}{DAFTAR PUSTAKA}{79}{section*.44}%
+\contentsline {chapter}{\numberline {III}METODE PENELITIAN}{41}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Pengkajian Pustaka dan Persiapan Data Masukan}{41}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Perancangan Metode dan Pengerjaan Simulasi}{45}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Kapasitas \textit {\textit {Hosting}} Stokastik}{47}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Batas Kinerja Operasi}{48}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Kerangka Analisis Runtun Waktu}{48}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Perancangan Metode Penentuan Kapasitas \textit {\textit {hosting}} Stokastik untuk PLTS Tersebar}{49}{subsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}Perancangan Skenario Penetrasi PLTS Tersebar}{50}{subsubsection.3.2.4.1}%
+\contentsline {subsubsection}{\numberline {3.2.4.2}Perancangan Markov Chain Monte Carlo}{51}{subsubsection.3.2.4.2}%
+\contentsline {subsubsection}{\numberline {3.2.4.3}Pembentukan Algoritme}{55}{subsubsection.3.2.4.3}%
+\contentsline {subsection}{\numberline {3.2.5}Pengembangan Metode dengan Pertimbangan PLTS dan PLTS-Baterai Tersebar}{59}{subsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.5.1}Pengembangan Skenario Penetrasi PLTS dan PLTS-Baterai Tersebar}{60}{subsubsection.3.2.5.1}%
+\contentsline {subsubsection}{\numberline {3.2.5.2}Perancangan Operasi Baterai pada PLTS-Baterai}{62}{subsubsection.3.2.5.2}%
+\contentsline {subsubsection}{\numberline {3.2.5.3}Pengembangan Markov Chain Monte Carlo}{63}{subsubsection.3.2.5.3}%
+\contentsline {subsubsection}{\numberline {3.2.5.4}Pembentukan Algoritme}{65}{subsubsection.3.2.5.4}%
+\contentsline {section}{\numberline {3.3}Proses Analisis Hasil}{67}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Analisis Hasil Kapasitas \textit {\textit {hosting}} Stokastik}{68}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}Pengaruh Penetrasi PLTS dan PLTS-Baterai terhadap Kapasitas \textit {\textit {hosting}} Stokastik}{68}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}Pengaruh Penetrasi PLTS dan PLTS-Baterai terhadap Batas Operasi Sistem Distribusi}{68}{subsubsection.3.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.3.1.3}Studi Sensitivitas}{68}{subsubsection.3.3.1.3}%
+\contentsline {subsection}{\numberline {3.3.2}Evaluasi Akurasi}{69}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {IV}KEMAJUAN PENELITIAN}{70}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Rancangan Skenario Penetrasi PLTS Tersebar}{70}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Algoritme}{74}{section.4.2}%
+\contentsline {chapter}{\numberline {V}JADWAL PENELITIAN}{78}{chapter.5}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{80}{section*.44}%
