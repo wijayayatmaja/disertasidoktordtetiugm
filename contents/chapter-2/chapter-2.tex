@@ -111,17 +111,17 @@ Untuk menjelaskan fenomena kenaikan tegangan, Gambar \ref{volrise} diilustrasika
 Gambar tersebut mengilustrasikan suatu sumber tenaga listrik yang diwakili oleh gardu induk (GI) pada satu sisi. Selanjutnya, pada sisi satunya terdapat suatu sumber lain, yaitu PLTS. Berdasarkan gambar tersebut, daya yang mengalir pada sisi PLTS adalah
 \begin{equation}\label{eq:volrise1}
 	\widetilde S_P = P_P + jQ_P =
-	\widetilde E_P \widetilde I^* =
-	\widetilde E_P \Big\{\dfrac{\widetilde E_S - \widetilde E_P}{R+jX}\Big\}^* =
-	E_P \Big\{\dfrac{E_S cos\theta + E_P sin\theta - E_P}{R+jX}\Big\}^*,
+	\widetilde E_R \widetilde I^* =
+	\widetilde E_R \Big\{\dfrac{\widetilde E_S - \widetilde E_R}{R+jX}\Big\}^* =
+	E_R \Big\{\dfrac{E_S cos\theta + E_R sin\theta - E_R}{R+jX}\Big\}^*,
 \end{equation}
 sehingga
 \begin{equation}\label{eq:volrise2}
-	P_P = \dfrac{E_S E_P}{R+jX}sin\theta \ \text{dan}\  P_S = \dfrac{E_S E_P}{R+jX}sin\theta,
+	P_P = \dfrac{E_S E_R}{R+jX}sin\theta \ \text{dan}\  P_S = \dfrac{E_S E_R}{R+jX}sin\theta,
 \end{equation}
 serta
 \begin{equation}\label{eq:volrise3}
-	Q_P = \dfrac{E_S E_P cos\theta - E_P^2}{R+jX} \ \text{dan}\  Q_S = \dfrac{E_S^2 - E_S E_P cos\theta}{R+jX}.
+	Q_P = \dfrac{E_S E_R cos\theta - E_R^2}{R+jX} \ \text{dan}\  Q_S = \dfrac{E_S^2 - E_S E_R cos\theta}{R+jX}.
 \end{equation}
 
 Untuk memperlihatkan kondisi kenaikan tegangan di sisi PLTS, sebuah asumsi berupa nilai nol pada $\theta$ diterapkan ($\theta=0$). Dengan kondisi tersebut, Persamaan (\ref{eq:volrise2}) dan (\ref{eq:volrise3}) menjadi
@@ -130,18 +130,27 @@ Untuk memperlihatkan kondisi kenaikan tegangan di sisi PLTS, sebuah asumsi berup
 \end{equation}
 serta
 \begin{equation}\label{eq:volrise5}
-	Q_P = \dfrac{E_P(E_S - E_P)}{R+jX} \ \text{dan}\  Q_S = \dfrac{E_S(E_S - E_P)}{R+jX}.
+	Q_P = \dfrac{E_R(E_S - E_R)}{R+jX} \ \text{dan}\  Q_S = \dfrac{E_S(E_S - E_R)}{R+jX}.
 \end{equation}
-Pada Persamaan (\ref{eq:volrise4}) teramati bahwa kondisi $\theta=0$ menyebabkan daya aktif di sisi GI dan PLTS bernilai sama dengan nol. Akan tetapi, terdapat aliran daya reaktif. Hal ini ditunjukkan oleh Persamaan (\ref{eq:volrise5}). Pada kedua persamaan tersebut dapat dipahami bahwa kondisi $E_P > E_S$ akan menyebabkan aliran daya dari sisi PLTS ke sisi GI. Seperti yang ditunjukkan pada Gambar \ref{volrise2}(b), kondisi $E_P > E_S$ disebabkan oleh mengalirnya arus \textit{leading} melalui reaktans induktif pada saluran.
+Pada Persamaan (\ref{eq:volrise4}) teramati bahwa kondisi $\theta=0$ menyebabkan daya aktif di sisi GI dan PLTS bernilai sama dengan nol. Akan tetapi, terdapat aliran daya reaktif. Hal ini ditunjukkan oleh Persamaan (\ref{eq:volrise5}). Pada kedua persamaan tersebut dapat dipahami bahwa kondisi $E_R > E_S$ akan menyebabkan aliran daya dari sisi PLTS ke sisi GI. Seperti yang ditunjukkan pada Gambar \ref{volrise2}, kondisi $E_R > E_S$ disebabkan oleh mengalirnya arus \textit{leading} melalui reaktans induktif pada saluran. Arus \textit{leading} ini muncul disebabkan oleh kendali daya reaktif pada jaringan distribusi tenaga listrik, seperti penelitian yang dikerjakan pada \cite{Ding2017}. Pada penelitian tersebut ditunjukkan bahwa terdapat empat \textit{capacitor bank} yang diletakkan pada empat bus beban yang berbeda. Hal ini menyebabkan penurunan tegangan pada titik-titik beban menjadi terkoreksi dan mendekati nilai 1 p.u.
+
+Diagram fasor untuk kondisi sebelum dan sesudah penetrasi PLTS ditunjukkan pada Gambar \ref{volrise3}. Gambar \ref{volrise3} (a) menunjukkan kondisi sebelum penetrasi PLTS. Ini adalah karakteristik jaringan distribusi tenaga rendah dengan banyaknya beban-beban induktif. Teramati bahwa tegangan di sisi PLTS ($E_R$) lebih rendah daripada tegangan di sisi GI ($E_S$). Hal ini terjadi karena drop tegangan pada saluran diantara kedua sisi tersebut. Selanjutnya, Gambar \ref{volrise3} (b) memperlihatkan kondisi setelah penetrasi PLTS. Dalam hal ini, ketika PLTS-PLTS digunakan oleh pelanggan-pelanggan untuk menyuplai beban-beban induktif, maka terjadi pengurangan arus induktif dalam jaringan. Hal ini menyebabkan penurunan drop tegangan dan peningkatan tegangan di sisi PLTS ($E_R$) \cite{Hasheminamin2015a,Mai2021}.  
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Fig/volrise2.pdf}
-	\caption{Diagram fasor pada kondisi $\theta=0$.}
+	\caption{Diagram fasor. (a) $E_S>E_R$, (b) $E_R>E_S$.}
 	\label{volrise2}
 \end{figure}
 
-Dalam hal ini, kenaikan tegangan yang telah dijelaskan tersebut perlu untuk diukur. Pengukuran kenaikan ditujukan untuk menghindari pelanggaran batas tegangan. Batasan-batasan level tegangan pada sistem-sistem tenaga listrik diperlihatkan pada Tabel \ref{tab-batastegangan}.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Fig/volrise3.pdf}
+	\caption{Diagram fasor. (a) Sebelum penetrasi PLTS, (b) Setelah penetrasi PLTS.}
+	\label{volrise3}
+\end{figure}
+
+Kenaikan tegangan yang telah dijelaskan tersebut perlu untuk diukur. Pengukuran kenaikan ditujukan untuk menghindari pelanggaran batas tegangan. Batasan-batasan level tegangan pada sistem-sistem tenaga listrik diperlihatkan pada Tabel \ref{tab-batastegangan}.
 \bgroup
 \vspace{4pt}
 {\renewcommand{\arraystretch}{1.3}
@@ -164,7 +173,7 @@ Dalam hal ini, kenaikan tegangan yang telah dijelaskan tersebut perlu untuk diuk
 	%\thisfloatpagestyle{floatpage}
 \end{table}
 \egroup
-Diperlihatkan pada tabel tersebut bahwa Standar EN 50160 mengatur batas tegangan pada rentang 0.9 pu sampai dengan 1.1 pu dengan rata-rata nilai RMS yang terjadi selama 10 menit \cite{ENStd.501602000}. Durasi dalam definisi tersebut dimaksudkan untuk membedakan kenaikan tegangan dengan perubahan cepat pada tegangan atau tegangan \textit{dip}. Selanjutnya, Standar ANSI C84.1 menjelaskan dua jenis rentang dalam mengatur batasan level tegangan, yaitu rentang A dan rentang B \cite{ANSI2011}. Dalam hal ini, rentang A adalah rentang tegangan optimal, yaitu 0.95 pu sampai dengan 1.05 pu. Rentang B adalah rentang tegangan yang diterima, tetapi tidak optimal, yaitu 0.91 pu sampai dengan 1.058 pu. Pada IEC 60038, rentang yang diijinkan adalah 0.9 pu sampai dengan 1.1 pu untuk tegangan nominal 230/400 V pada sistem 50 Hz \cite{IEC60038:2002}. Meskipun demikian, batasan level tegangan yang tertuang pada \textit{grid code} juga berbeda-beda untuk negara yang berbeda, misalnya -6.1\%/ +10.0\% di Australia,-8.3\%/ +4.2\% di Canada, $\pm$ 10\% di Jerman, $\pm$ 6\% di Jepang, $\pm$ 5.9\% di Korea, -6.0\%/ +10.0\% di U.K., dan $\pm$ 5 di U.S. \cite{Lee2017}. 
+Ditunjukkan pada tabel itu bahwa Standar EN 50160 mengatur batas tegangan pada rentang 0.9 pu sampai dengan 1.1 pu dengan rata-rata nilai RMS yang terjadi selama 10 menit \cite{ENStd.501602000}. Durasi dalam definisi tersebut dimaksudkan untuk membedakan kenaikan tegangan dengan perubahan cepat pada tegangan atau tegangan \textit{dip}. Selanjutnya, Standar ANSI C84.1 menjelaskan dua jenis rentang dalam mengatur batasan level tegangan, yaitu rentang A dan rentang B \cite{ANSI2011}. Dalam hal ini, rentang A adalah rentang tegangan optimal, yaitu 0.95 pu sampai dengan 1.05 pu. Rentang B adalah rentang tegangan yang diterima, tetapi tidak optimal, yaitu 0.91 pu sampai dengan 1.058 pu. Pada IEC 60038, rentang yang diijinkan adalah 0.9 pu sampai dengan 1.1 pu untuk tegangan nominal 230/400 V pada sistem 50 Hz \cite{IEC60038:2002}. Meskipun demikian, batasan level tegangan yang tertuang pada \textit{grid code} juga berbeda-beda untuk negara yang berbeda, misalnya -6.1\%/ +10.0\% di Australia,-8.3\%/ +4.2\% di Canada, $\pm$ 10\% di Jerman, $\pm$ 6\% di Jepang, $\pm$ 5.9\% di Korea, -6.0\%/ +10.0\% di U.K., dan $\pm$ 5 di U.S. \cite{Lee2017}. 
 
 %Pada penelitian disertasi ini, batas operasi tegangan lebih diterapkan sebagai kekangan dalam menentukan kapasitas \textit{hosting} untuk penetrasi PLTS tersebar skala besar. Untuk batasan level tegangan lebih, penelitian disertasi ini menggunakan Standar ANSI C84.1. Dalam hal ini, rentang tegangan dari 0.95 pu sampai dengan 1.05 pu (rentang A) digunakan sebagai rentang dalam mengevaluasi kenaikan tegangan yang diakibatkan oleh penetrasi PLTS tersebar skala besar pada jaringan distribusi. Berbeda dengan penelitian sebelumnya yang menggunakan resolusi pengamatan per jam \cite{Dubey2015,Dubey2017} atau penelitian pada \cite{Torquato2018} yang menggunakan resolusi pengamatan per 15 menit, penelitian disertasi ini menggunakan resolusi pengamatan per 1 menit. Karena fluktuasi daya keluaran PLTS tersebar yang sangat cepat, resolusi yang lebih tinggi ini diterapkan agar dampak-dampak penetrasi PLTS terhadap tegangan lebih pada waktu kurang dari satu jam dapat diamati.
 

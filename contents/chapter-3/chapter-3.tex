@@ -1,19 +1,28 @@
 \chapter{METODE PENELITIAN}
-Untuk menyelesaikan permasalahan yang telah dideskripsikan, suatu metode penelitian terkait penentuan kapasitas \textit{\textit{hosting}} stokastik perlu dirancang.
+Untuk menyelesaikan permasalahan yang telah dideskripsikan, suatu metodologi penelitian terkait penentuan kapasitas \textit{\textit{hosting}} stokastik perlu dirancang.
 \begin{figure}[!b]
 	\centering
 	\includegraphics[width=1\textwidth]{Fig/fcpenelitian}
-	\caption{Diagram alir penelitian.}
+	\caption{Diagram alir metodologi penelitian.}
 	\label{tahapan}
 \end{figure}
-Untuk alasan tersebut, penelitian disertasi ini mengusulkan metode pengembangan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo yang dijelaskan pada bab ini. Dalam hal ini, diagram alir dari metode penelitian disertasi ini ditunjukkan pada Gambar \ref{tahapan}. Pada gambar tersebut, metode penelitian disertasi ini dibagi menjadi tiga bagian, yaitu
+Untuk alasan tersebut, penelitian disertasi ini mengusulkan metode pengembangan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo yang dijelaskan pada bab ini. Diagram alir dari metodologi penelitian disertasi ini ditunjukkan pada Gambar \ref{tahapan}. Pada gambar tersebut, metodologi penelitian disertasi ini dibagi menjadi tiga bagian, yaitu
 \begin{enumerate}
 	\item Pengkajian pustaka dan persiapan data masukan.
 	\item Perancangan metode dan pengerjaan simulasi.
 	\item Proses analisis hasil.
 \end{enumerate}
 
-Metode penelitian pada disertasi ini dimulai dengan pengkajian pustaka dan persiapan data masukan. Pengkajian pustaka merupakan proses mengkaji penelitian-penelitian sebelumnya yang berkaitan dengan pengembangan metode penentuan kapasitas \textit{\textit{hosting}}. Selanjutnya, data-data masukan dipersiapkan. Proses selanjutnya dari metode penelitian disertasi ini adalah perancangan metode dan pengerjaan simulasi. Proses terakhir adalah proses analisis hasil. Pada proses ini, interpretasi hasil, implikasi, kesimpulan, dan rekomendasi untuk penelitian selanjutnya disediakan. Penjelasan terperinci dari masing-masing proses tersebut disediakan pada bagian-bagian selanjutnya dari bab ini.
+Metodologi penelitian pada disertasi ini dimulai dengan pengkajian pustaka dan persiapan data masukan. Pengkajian pustaka merupakan proses mengkaji penelitian-penelitian sebelumnya yang berkaitan dengan pengembangan metode penentuan kapasitas \textit{\textit{hosting}}. Selanjutnya, data-data masukan dipersiapkan.
+
+Proses selanjutnya dari metodologi penelitian yang ditunjukkan pada Gambar \ref{tahapan} adalah perancangan metode dan pengerjaan simulasi. Pada proses ini, usulan metode dari penelitian ini dikerjakan. Pada Tabel \ref{tab-usul} telah dijelaskan rincian usulan solusi dari rumusan masalah yang diangkat dalam penelitian disertasi ini. Dalam hal ini, usulan-usulan solusi tersebut dapat dikategorikan menjadi dua usulan metode, yaitu
+\begin{enumerate}
+	\item Perancangan metode penentuan kapasitas \textit{hosting} stokastik untuk PLTS tersebar.
+	\item Pengembangan metode dengan pertimbangan PLTS dan PLTS-baterai tersebar.
+\end{enumerate}
+Kedua usulan metode tersebut merupakan tahapan teknis dari pengembangan metode penentuan kapasitas \textit{hosting} stokastik dengan Markov Chain Monte Carlo. Usulan metode pertama merupakan solusi untuk rumusan masalah: Kurangnya representasi ketidakpastian lokasi dan ukuran daya PLTS tersebar dari model penetrasi PLTS dalam penentuan kapasitas \textit{hosting} stokastik, serta variabilitas permintaan beban dan iradiasi matahari dalam runtun waktu. Sesuai dengan karakteristik masalahnya, usulan metode dengan pendekatan hidden Markov model dikembangkan. Selanjutnya, usulan metode kedua merupakan solusi untuk rumusan masalah: Tidak dipertimbangkannya PLTS-baterai dan operasi baterai pada penetrasi PLTS/PLTS-baterai. Dengan karakteristik masalahnya, yaitu tingkatan \textit{states} yang lebih tinggi, metode yang diusulkan adalah metode dengan pendekatan layered hidden Markov model.
+
+Proses terakhir dari diagram alir penelitian pada Gambar \ref{tahapan} adalah proses analisis hasil. Pada proses ini, interpretasi hasil, implikasi, kesimpulan, dan rekomendasi untuk penelitian selanjutnya disediakan. Penjelasan terperinci dari masing-masing proses tersebut disediakan pada bagian-bagian selanjutnya dari bab ini.
 
 \section{Pengkajian Pustaka dan Persiapan Data Masukan}
 Pada pengkajian pustaka, berbagai teori, metode, aplikasi, dan temuan baru mengenai pengembangan metode penentuan kapasitas \textit{\textit{hosting}} dikaji. Langkah selanjutnya adalah perumusan masalah, pengidentifikasian keaslian penelitian, penetapan tujuan, dan penentuan hipotesis. Untuk mengerjakan simulasi penentuan kapasitas \textit{\textit{hosting}} stokastik dengan Markov Chain Monte Carlo tersebut, penelitian disertasi ini membutuhkan data-data historis terkait PLTS dan sistem distribusi tegangan rendah sebagai data-data masukan. Pada langkah selanjutnya, pengolahan data masukan diperlukan sebelum data-data masukan tersebut digunakan. Data-data masukan tersebut adalah data sekunder yang didapat baik dari lembaga-lembaga riset terkait penetrasi PLTS skala besar, maupun Institute of Electrical and Electronics Engineers (IEEE). Data-data masukan yang dipersiapkan dalam penelitian disertasi ini antara lain
@@ -46,7 +55,7 @@ Setelah perancangan program simulasi penghitungan aliran daya, langkah selanjutn
 Perancangan metode yang diusulkan pada penelitian disertasi ini dibagi menjadi dua tahap, sebagai berikut
 \begin{enumerate}
 	\item Perancangan metode penentuan kapasitas \textit{\textit{hosting}} stokastik untuk PLTS tersebar.
-	\item Pengembangan metode dengan pertimbangan PLTS-baterai tersebar.
+	\item Pengembangan metode dengan pertimbangan PLTS dan PLTS-baterai tersebar.
 \end{enumerate}
 
 Pada tahap pertama, pelanggan-pelanggan dengan PLTS-baterai belum dimasukkan dalam penetrasi. Hal ini dilakukan karena tujuan dari pengembangan metode tahap pertama adalah pendekatan Markov Chain Monte Carlo untuk pengembangan metode penentuan kapasitas \textit{\textit{hosting}} stokastik. Untuk memasukkan pertimbangan PLTS-baterai tersebar, pengembangan metode tahap kedua dikerjakan. Dalam hal ini, operasi baterai juga diperhatikan.
