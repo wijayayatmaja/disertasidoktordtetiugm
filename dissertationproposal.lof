@@ -4,29 +4,30 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Peta \textit {bibliometric} dari topik kapasitas \textit {hosting} PLTS.\relax }}{7}{figure.caption.9}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Rangkaian sederhana dari PLTS tersebar yang terhubung pada sistem tenaga listrik.\relax }}{11}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Konsep kapasitas \textit {hosting} PLTS tersebar.\relax }}{14}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Kapasitas \textit {hosting} stokastik untuk batas operasi tegangan lebih \cite {Epri2013}.\relax }}{14}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Skenario penentuan kapasitas \textit {hosting} PLTS tersebar pada \cite {Epri2012}.\relax }}{17}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Metode penentuan kapasitas \textit {hosting} PLTS tersebar pada \cite {Dubey2017}.\relax }}{19}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Metode penentuan kapasitas \textit {hosting} PLTS tersebar pada \cite {Ding2017}.\relax }}{19}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Skenario penyebaran PLTS tersebar pada \cite {Bletterie2017}.\relax }}{20}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Metode penentuan kapasitas \textit {hosting} PLTS tersebar pada \cite {Torquato2018}.\relax }}{21}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Metode penentuan kapasitas \textit {hosting} PLTS tersebar pada \cite {Vergara2020}.\relax }}{22}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Konfigurasi-konfigurasi instalasi PLTS tersebar oleh pelanggan.\relax }}{24}{figure.caption.23}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Peta konsep untuk posisi penelitian pada bidang kapasitas \textit {hosting} stokastik.\relax }}{30}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Blok diagram Markov Chain Monte Carlo.\relax }}{36}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagram fasor pada kondisi $\theta =0$.\relax }}{12}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Konsep kapasitas \textit {hosting} PLTS tersebar.\relax }}{14}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Kapasitas \textit {hosting} stokastik untuk batas operasi tegangan lebih \cite {Epri2013}.\relax }}{15}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Skenario penentuan kapasitas \textit {hosting} PLTS tersebar pada \cite {Epri2012}.\relax }}{18}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Metode penentuan kapasitas \textit {hosting} PLTS tersebar pada \cite {Dubey2017}.\relax }}{20}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Metode penentuan kapasitas \textit {hosting} PLTS tersebar pada \cite {Ding2017}.\relax }}{20}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Skenario penyebaran PLTS tersebar pada \cite {Bletterie2017}.\relax }}{21}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Metode penentuan kapasitas \textit {hosting} PLTS tersebar pada \cite {Torquato2018}.\relax }}{22}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Metode penentuan kapasitas \textit {hosting} PLTS tersebar pada \cite {Vergara2020}.\relax }}{23}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Konfigurasi-konfigurasi instalasi PLTS tersebar oleh pelanggan.\relax }}{25}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Peta konsep untuk posisi penelitian pada bidang kapasitas \textit {hosting} stokastik.\relax }}{31}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Blok diagram Markov Chain Monte Carlo.\relax }}{37}{figure.caption.28}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram alir penelitian.\relax }}{42}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Blok diagram metode penentuan kapasitas \textit {\textit {hosting}} stokastik berdasarkan alat yang digunakan.\relax }}{47}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Proses perancangan metode penentuan kapasitas \textit {\textit {hosting}} stokastik untuk PLTS tersebar.\relax }}{49}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Proses perancangan skenario-skenario penetrasi PLTS tersebar.\relax }}{50}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Blok diagram hidden Markov model yang diusulkan.\relax }}{52}{figure.caption.32}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram alir dari usulan metode mengenai penentuan kapasitas \textit {\textit {hosting}} stokastik untuk PLTS tersebar dengan Markov Chain Monte Carlo.\relax }}{56}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram alir penentuan kapasitas \textit {\textit {hosting}} stokastik untuk PLTS tersebar dengan Monte Carlo.\relax }}{58}{figure.caption.35}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Proses pengembangan metode dengan pertimbangan PLTS dan PLTS-baterai tersebar.\relax }}{60}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Proses pengembangan skenario-skenario penetrasi PLTS dan PLTS-baterai tersebar.\relax }}{61}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Blok diagram layered hidden Markov model yang diusulkan.\relax }}{64}{figure.caption.38}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Diagram alir dari usulan metode mengenai penentuan kapasitas \textit {\textit {hosting}} stokastik untuk PLTS tersebar dengan Markov Chain Monte Carlo.\relax }}{66}{figure.caption.39}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Diagram alir penentuan kapasitas \textit {\textit {hosting}} stokastik untuk PLTS tersebar dengan Monte Carlo.\relax }}{67}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram alir penelitian.\relax }}{43}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Blok diagram metode penentuan kapasitas \textit {\textit {hosting}} stokastik berdasarkan alat yang digunakan.\relax }}{48}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Proses perancangan metode penentuan kapasitas \textit {\textit {hosting}} stokastik untuk PLTS tersebar.\relax }}{50}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Proses perancangan skenario-skenario penetrasi PLTS tersebar.\relax }}{51}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Blok diagram hidden Markov model yang diusulkan.\relax }}{53}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagram alir dari usulan metode mengenai penentuan kapasitas \textit {\textit {hosting}} stokastik untuk PLTS tersebar dengan Markov Chain Monte Carlo.\relax }}{57}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagram alir penentuan kapasitas \textit {\textit {hosting}} stokastik untuk PLTS tersebar dengan Monte Carlo.\relax }}{59}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Proses pengembangan metode dengan pertimbangan PLTS dan PLTS-baterai tersebar.\relax }}{61}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Proses pengembangan skenario-skenario penetrasi PLTS dan PLTS-baterai tersebar.\relax }}{62}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Blok diagram layered hidden Markov model yang diusulkan.\relax }}{65}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Diagram alir dari usulan metode mengenai penentuan kapasitas \textit {\textit {hosting}} stokastik untuk PLTS tersebar dengan Markov Chain Monte Carlo.\relax }}{67}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Diagram alir penentuan kapasitas \textit {\textit {hosting}} stokastik untuk PLTS tersebar dengan Monte Carlo.\relax }}{68}{figure.caption.41}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

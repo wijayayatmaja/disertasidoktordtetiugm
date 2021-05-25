@@ -108,15 +108,38 @@ Untuk menjelaskan fenomena kenaikan tegangan, Gambar \ref{volrise} diilustrasika
 	\caption{Rangkaian sederhana dari PLTS tersebar yang terhubung pada sistem tenaga listrik.}
 	\label{volrise}
 \end{figure}
-Gambar tersebut mengilustrasikan suatu sumber tenaga listrik yang diwakili oleh gardu induk pada satu sisi. Selanjutnya, pada sisi satunya terdapat suatu sumber lain, yaitu PLTS. Berdasarkan gambar tersebut, daya yang mengalir pada sisi PLTS adalah
-\begin{equation}\label{eq:volrise}
+Gambar tersebut mengilustrasikan suatu sumber tenaga listrik yang diwakili oleh gardu induk (GI) pada satu sisi. Selanjutnya, pada sisi satunya terdapat suatu sumber lain, yaitu PLTS. Berdasarkan gambar tersebut, daya yang mengalir pada sisi PLTS adalah
+\begin{equation}\label{eq:volrise1}
 	\widetilde S_P = P_P + jQ_P =
 	\widetilde E_P \widetilde I =
 	\widetilde E_P \Big\{\dfrac{\widetilde E_S - \widetilde E_P}{jX}\Big\}^* =
-	E_P \Big\{\dfrac{E_S cos\theta + E_P sin\theta - E_P}{jX}\Big\}^*
+	E_P \Big\{\dfrac{E_S cos\theta + E_P sin\theta - E_P}{jX}\Big\}^*,
+\end{equation}
+sehingga
+\begin{equation}\label{eq:volrise2}
+	P_P = \dfrac{E_S E_P}{X}sin\theta \ \text{dan}\  P_S = \dfrac{E_S E_P}{X}sin\theta,
+\end{equation}
+serta
+\begin{equation}\label{eq:volrise3}
+	Q_P = \dfrac{E_S E_P cos\theta - E_P^2}{X} \ \text{dan}\  Q_S = \dfrac{E_S^2 - E_S E_P cos\theta}{X}.
 \end{equation}
 
-Untuk memperlihatkan kondisi kenaikan tegangan disisi PLTS, sebuah asumsi berupa nilai nol pada $\theta$ diterapkan ($\theta=0$).
+Untuk memperlihatkan kondisi kenaikan tegangan di sisi PLTS, sebuah asumsi berupa nilai nol pada $\theta$ diterapkan ($\theta=0$). Dengan kondisi tersebut, Persamaan (\ref{eq:volrise2}) dan (\ref{eq:volrise3}) menjadi
+\begin{equation}\label{eq:volrise4}
+	P_R = P_S = 0,
+\end{equation}
+serta
+\begin{equation}\label{eq:volrise5}
+	Q_P = \dfrac{E_P(E_S - E_P)}{X} \ \text{dan}\  Q_S = \dfrac{E_S(E_S - E_P)}{X}.
+\end{equation}
+Pada Persamaan (\ref{eq:volrise4}) teramati bahwa kondisi $\theta=0$ menyebabkan daya aktif di sisi GI dan PLTS bernilai sama dengan nol. Akan tetapi, terdapat aliran daya reaktif. Hal ini ditunjukkan oleh Persamaan (\ref{eq:volrise5}). Pada kedua persamaan tersebut dapat dipahami bahwa kondisi $E_P > E_S$ akan menyebabkan aliran daya dari sisi PLTS ke sisi GI. Seperti yang ditunjukkan pada Gambar \ref{volrise2}(b), kondisi $E_P > E_S$ disebabkan oleh mengalirnya arus \textit{leading} melalui reaktans induktif pada saluran.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Fig/volrise2.pdf}
+	\caption{Diagram fasor pada kondisi $\theta=0$.}
+	\label{volrise2}
+\end{figure}
 
 Dalam hal ini, kenaikan tegangan yang telah dijelaskan tersebut perlu untuk diukur. Pengukuran kenaikan ditujukan untuk menghindari pelanggaran batas tegangan. Batasan-batasan level tegangan pada sistem-sistem tenaga listrik diperlihatkan pada Tabel \ref{tab-batastegangan}.
 \bgroup
