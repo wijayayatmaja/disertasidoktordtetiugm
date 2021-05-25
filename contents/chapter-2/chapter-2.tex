@@ -101,28 +101,22 @@ Selain dari sistem PLTS-nya, variabilitas juga terdapat pada sistem distribusi t
 \subsection{Batasan Level Tegangan Sistem Distribusi Tegangan Rendah}
 Batasan level tegangan sistem distribusi tegangan rendah adalah salah satu batas operasi yang cukup sering digunakan untuk penentuan kapasitas \textit{hosting} stokastik\cite{Santos-Martin2016,Silva2016,Navarro-Espinosa2016,Arshad2017,Baptista2019,Epri2012,Dubey2015,Dubey2017,Ding2017,Bollen2017,Torquato2018,Deakin2019,Vergara2020}. Batasan ini disebutkan sebagai batasan paling restriktif diantara batas yang lain di sistem distribusi tegangan rendah. Dalam menyuplai daya kepada pelanggan-pelanggan yang bersifat pasif, jaringan tenaga listrik konvensional mempunyai desain aliran menurun dari sistem pembangkit, kemudian menuju sistem transmisi dan berlanjut ke sistem distribusi. Dalam hal ini, fokus dari penyedia layanan daya listrik adalah fenomena penurunan tegangan pada penyulang-penyulang. Akan tetapi, kondisi ini berubah ketika terjadi integrasi PLTS tersebar skala besar pada sistem distribusi. Beberapa pelanggan-pelanggan yang awalnya bersifat pasif tersebut berubah menjadi pelanggan-pelanggan yang bersifat aktif, yaitu kaitannya dengan pengaliran daya. Injeksi arus dari pelanggan-pelanggan aktif ini mengubah arah aliran daya konvensional dan profil tegangan pada sistem distribusi. Skenario paling buruk adalah ketika total daya yang dibangkitkan PLTS-PLTS tersebar tersebut melebihi total kebutuhan beban dan rugi-rugi saluran. Pada kondisi tersebut, aliran daya balik dapat terjadi dan menyebabkan kenaikan tegangan yang melebihi batas-batas yang diijinkan oleh penyulang.
 
-Rangkaian sederhana mengenai penetrasi PLTS tersebar pada sistem tenaga listrik ditunjukkan pada Gambar \ref{voltagerise}.
+Untuk menjelaskan fenomena kenaikan tegangan, Gambar \ref{volrise} diilustrasikan. 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Fig/voltagerise}
+	\includegraphics[width=0.7\textwidth]{Fig/volrise.pdf}
 	\caption{Rangkaian sederhana dari PLTS tersebar yang terhubung pada sistem tenaga listrik.}
-	\label{voltagerise}
+	\label{volrise}
 \end{figure}
-Berdasarkan gambar tersebut, formula untuk mendeskripsikan fenomena penurunan tegangan yang melalui penghantar adalah
-\begin{equation}\label{dropv1}
-\Delta\vv{U}=\vv{U}_m-\vv{U}_n=I(r+jx)=\Delta\vv{U}_{Re}+\Delta\vv{U}_{Im}.
+Gambar tersebut mengilustrasikan suatu sumber tenaga listrik yang diwakili oleh gardu induk pada satu sisi. Selanjutnya, pada sisi satunya terdapat suatu sumber lain, yaitu PLTS. Berdasarkan gambar tersebut, daya yang mengalir pada sisi PLTS adalah
+\begin{equation}\label{eq:volrise}
+	\widetilde S_P = P_P + jQ_P =
+	\widetilde E_P \widetilde I =
+	\widetilde E_P \Big\{\dfrac{\widetilde E_S - \widetilde E_P}{jX}\Big\}^* =
+	E_P \Big\{\dfrac{E_S cos\theta + E_P sin\theta - E_P}{jX}\Big\}^*
 \end{equation}
 
-Dalam hal ini, perbedaan sudut fase antara kedua titik yang berdekatan, titik $m$ dan $n$, diasumsikan sangat kecil, sehingga bagian imajiner dari penurunan tegangan diabaikan. Dengan mempertimbangkan hubungan antara daya aktif dan reaktif, didapatkan
-\begin{equation}\label{dropv2}
-	|\Delta\vv{U}|\approx|\Delta\vv{U}_{Re}|=\dfrac{r\cdot P_r+x\cdot Q_r}{\vv{U}_n},
-\end{equation}
-kemudian, turunan dari Persamaan \ref{dropv2} terhadap transfer daya dapat dinyatakan sebagai
-\begin{equation}\label{vrise1}
-	\dfrac{\delta|\Delta\vv{U}|}{\delta P_r}dP_r+\dfrac{\delta|\Delta\vv{U}|}{\delta Q_r}dQ_r=\dfrac{r}{|\Delta\vv{U}|}dP_r+\dfrac{x}{|\Delta\vv{U}|}dQ_r.
-\end{equation}
-
-Dari Persamaan \ref{vrise1}, dapat dipahami bahwa perbedaan tegangan akan naik ketika daya aktifnya naik. Dengan kata lain, jika daya aktif dari pembangkitan PLTS tersebar lebih besar daripada permintaan daya aktif pada titik $m$, tegangan pada titik tersebut akan lebih besar daripada tegangan pada titik $n$.
+Untuk memperlihatkan kondisi kenaikan tegangan disisi PLTS, sebuah asumsi berupa nilai nol pada $\theta$ diterapkan ($\theta=0$).
 
 Dalam hal ini, kenaikan tegangan yang telah dijelaskan tersebut perlu untuk diukur. Pengukuran kenaikan ditujukan untuk menghindari pelanggaran batas tegangan. Batasan-batasan level tegangan pada sistem-sistem tenaga listrik diperlihatkan pada Tabel \ref{tab-batastegangan}.
 \bgroup
@@ -407,9 +401,9 @@ Usulan-usulan solusi untuk rumusan masalah dari penelitian disertasi ini ditunju
 \egroup
 Solusi-solusi pada tabel tersebut diusulkan berdasarkan permasalahan-permasalahan spesifik dari masing-masing poin rumusan masalah. Terkait pemodelan penetrasi dan simulasi stokastik untuk ketidakpastian penetrasi, penelitian disertasi ini mengusulkan pendekatan Markov Chain Monte Carlo. 
 
-Alasan pengembangan Markov Chain Monte Carlo yang diusulkan pada penelitian disertasi ini dapat dijelaskan melalui analisis terhadap performa pendekatan sebelumnya dalam memodelkan penetrasi secara stokastik, yaitu Monte Carlo. Seperti yang telah dijelaskan secara rinci pada subbab sebelumnya pada bab ini, pendekatan Monte Carlo telah berhasil menyimulasikan bermacam-macam kemungkinan penetrasi\cite{Epri2012,Dubey2015,Dubey2017,Ding2017,Bollen2017,Torquato2018,Deakin2019,Vergara2020}. Dalam implementasinya, lokasi penetrasi dan ukuran daya PLTS yang mempunyai karakteristik tidak tentu membutuhkan jumlah simulasi yang banyak. Dalam hal ini, dari sisi mekanisme simulasi proses acak yang dimilikinya, Monte Carlo mempunyai solusi dalam mengestimasi beragam kemungkinan terkait ketidakpastian lokasi penetrasi dan ukuran daya PLTS tersebut.
+Alasan pengembangan Markov Chain Monte Carlo yang diusulkan pada penelitian disertasi ini dapat dijelaskan melalui analisis terhadap performa pendekatan sebelumnya dalam memodelkan penetrasi secara stokastik, yaitu Monte Carlo. Seperti yang telah dijelaskan secara rinci pada subbab sebelumnya pada bab ini, pendekatan Monte Carlo telah berhasil menyimulasikan bermacam-macam kemungkinan penetrasi\cite{Epri2012,Dubey2015,Dubey2017,Ding2017,Bollen2017,Torquato2018,Deakin2019,Vergara2020}. Dalam implementasinya, lokasi penetrasi dan ukuran daya PLTS yang mempunyai karakteristik tidak tentu membutuhkan jumlah simulasi yang banyak. Dalam hal ini, dari sisi mekanisme simulasi proses acak yang dimilikinya, Monte Carlo menyediakan solusi dalam mengestimasi beragam kemungkinan terkait ketidakpastian lokasi penetrasi dan ukuran daya PLTS tersebut. Meskipun demikian, Monte Carlo tidak menyediakan mekanisme dalam pergerakan \textit{states}$-$nya. Seperti yang telah dijelaskan, pergerakan \textit{states} diperlukan untuk membedakan pola untuk masing-masing kategori, antara lain kategori pelanggan, kategori daya penetrasi, dan kategori jenis PLTS/PLTS-baterai. Pada Monte Carlo, setiap kategori dengan daya PLTS yang sama akan diasumsikan mempunyai perilaku penetrasi yang sama, padahal terdapat perbedaan perilaku di antara kategori-kategori tersebut. Sebagai contoh, pelanggan rumah tangga dengan daya PLTS 10 kW mempunyai perbedaan probabilitas dalam memasang PLTS dibandingkan dengan pelanggan bisnis dengan daya PLTS 10 kW.
 
-Markov Chain Monte Carlo dipilih karena karakteristik solusinya yang dapat melakukan perpindahan dengan probabilitas \textit{states}$-$nya. Lebih dalam lagi, \textit{hidden Markov model} dirancang untuk mengerjakan perpindahan \textit{states} yang salah satu sisinya merupakan \textit{hidden states}, sedangkan \textit{layered hidden Markov model} dirancang untuk mengatasi \textit{states} tingkatan yang lebih tinggi. Selanjutnya, model beban yang tersebar secara individual, kerangka runtun waktu, dan studi sensitivitas merupakan usulan-usulan solusi tambahan untuk meningkatkan akurasi dari pendekatan Markov Chain Monte Carlo yang diusulkan.
+Berkaitan dengan hal tersebut, Markov Chain Monte Carlo dipilih karena karakteristik solusinya yang dapat melakukan perpindahan dengan probabilitas \textit{states}$-$nya. Matriks probabilitas transisi yang dimiliki oleh Markov Chain Monte Carlo menggerakkan \textit{states} berdasarkan pola-pola unik yang dimiliki oleh masing-masing kategori, baik kategori pelanggan, kategori daya penetrasi, maupun kategori jenis PLTS/PLTS-baterai. Selanjutnya, pengembangan dari model Markov sederhana juga dilakukan, yaitu dikembangkan menjadi hidden Markov model dan layered hidden Markov model. Hidden Markov model dirancang untuk mengerjakan perpindahan \textit{states} yang salah satu sisinya merupakan \textit{hidden states}, sedangkan layered hidden Markov model dirancang untuk mengatasi \textit{states} pada tingkatan yang lebih tinggi. Sebagai tambahan, dalam penelitian disertasi ini, model beban yang tersebar secara individual, kerangka runtun waktu, dan studi sensitivitas diusulkan sebagai solusi tambahan untuk meningkatkan akurasi dari pendekatan Markov Chain Monte Carlo yang dikembangkan.
 
 \subsubsection{Keaslian Penelitian}
 Untuk menunjukkan posisi penelitian disertasi ini dibandingkan penelitian-penelitian sebelumnya dan untuk menggarisbawahi keaslian penelitian yang diusulkan, Gambar \ref{cmap} disediakan.
