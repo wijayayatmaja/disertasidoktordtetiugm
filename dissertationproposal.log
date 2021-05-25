@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.5.8)  25 MAY 2021 09:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.5.8)  25 MAY 2021 14:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1108,11 +1108,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [10]
 
 pdfTeX warning: pdflatex (file /Users/wyatmaja/Documents/Doctor/proposalhc/Fig/volrise.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Fig/volrise.pdf, id=683, 322.32419pt x 128.3997pt>
+<Fig/volrise.pdf, id=683, 270.0489pt x 128.3997pt>
 File: Fig/volrise.pdf Graphic file (type pdf)
 <use Fig/volrise.pdf>
 Package pdftex.def Info: Fig/volrise.pdf  used on input line 107.
-(pdftex.def)             Requested size: 278.83578pt x 111.07793pt.
+(pdftex.def)             Requested size: 278.83578pt x 132.58427pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1123,11 +1123,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [11 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/volrise.pdf>]
 
 pdfTeX warning: pdflatex (file /Users/wyatmaja/Documents/Doctor/proposalhc/Fig/volrise2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Fig/volrise2.pdf, id=746, 321.11969pt x 125.5089pt>
+<Fig/volrise2.pdf, id=741, 321.11969pt x 125.5089pt>
 File: Fig/volrise2.pdf Graphic file (type pdf)
 <use Fig/volrise2.pdf>
 Package pdftex.def Info: Fig/volrise2.pdf  used on input line 139.
 (pdftex.def)             Requested size: 278.83578pt x 108.99075pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1135,8 +1141,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/volrise2.pdf>]
-<Fig/LimitPHC.pdf, id=795, 1168.365pt x 719.68875pt>
+[12]
+<Fig/LimitPHC.pdf, id=767, 1168.365pt x 719.68875pt>
 File: Fig/LimitPHC.pdf Graphic file (type pdf)
 <use Fig/LimitPHC.pdf>
 Package pdftex.def Info: Fig/LimitPHC.pdf  used on input line 176.
@@ -1149,8 +1155,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]
-<Fig/phcepri.pdf, id=808, 592.88995pt x 545.1328pt>
+[13 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/volrise2.pdf>]
+<Fig/phcepri.pdf, id=803, 592.88995pt x 545.1328pt>
 File: Fig/phcepri.pdf Graphic file (type pdf)
 <use Fig/phcepri.pdf>
 Package pdftex.def Info: Fig/phcepri.pdf  used on input line 185.
@@ -1188,7 +1194,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-<Fig/Epri2012.pdf, id=886, 1375.1375pt x 543.02875pt>
+<Fig/Epri2012.pdf, id=881, 1375.1375pt x 543.02875pt>
 File: Fig/Epri2012.pdf Graphic file (type pdf)
 <use Fig/Epri2012.pdf>
 Package pdftex.def Info: Fig/Epri2012.pdf  used on input line 240.
@@ -1202,7 +1208,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/Epri2012.pdf>]
-<Fig/methoddubey.pdf, id=906, 593.12895pt x 535.1404pt>
+<Fig/methoddubey.pdf, id=901, 593.12895pt x 535.1404pt>
 File: Fig/methoddubey.pdf Graphic file (type pdf)
 <use Fig/methoddubey.pdf>
 Package pdftex.def Info: Fig/methoddubey.pdf  used on input line 252.
@@ -1211,7 +1217,7 @@ Package pdftex.def Info: Fig/methoddubey.pdf  used on input line 252.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Fig/methodfeiding.pdf, id=912, 596.28503pt x 326.2821pt>
+<Fig/methodfeiding.pdf, id=907, 596.28503pt x 326.2821pt>
 File: Fig/methodfeiding.pdf Graphic file (type pdf)
 <use Fig/methodfeiding.pdf>
 Package pdftex.def Info: Fig/methodfeiding.pdf  used on input line 261.
@@ -1227,7 +1233,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19]
-<Fig/methodbletterie.pdf, id=921, 588.74783pt x 345.29211pt>
+<Fig/methodbletterie.pdf, id=916, 588.74783pt x 345.29211pt>
 File: Fig/methodbletterie.pdf Graphic file (type pdf)
 <use Fig/methodbletterie.pdf>
 Package pdftex.def Info: Fig/methodbletterie.pdf  used on input line 270.
@@ -1244,7 +1250,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [20 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methoddubey.pdf> </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodfeiding.pdf>]
-<Fig/methodtorquato.pdf, id=941, 590.58226pt x 337.77193pt>
+<Fig/methodtorquato.pdf, id=936, 590.58226pt x 337.77193pt>
 File: Fig/methodtorquato.pdf Graphic file (type pdf)
 <use Fig/methodtorquato.pdf>
 Package pdftex.def Info: Fig/methodtorquato.pdf  used on input line 282.
@@ -1261,7 +1267,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [21 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodbletterie.pdf>]
-<Fig/methodvergara.pdf, id=957, 597.23125pt x 845.1575pt>
+<Fig/methodvergara.pdf, id=952, 597.23125pt x 845.1575pt>
 File: Fig/methodvergara.pdf Graphic file (type pdf)
 <use Fig/methodvergara.pdf>
 Package pdftex.def Info: Fig/methodvergara.pdf  used on input line 293.
@@ -1315,7 +1321,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/methodvergara.pdf>]
-<Fig/diagrampltsbateraigrid.pdf, id=1010, 413.62529pt x 233.9139pt>
+<Fig/diagrampltsbateraigrid.pdf, id=1005, 413.62529pt x 233.9139pt>
 File: Fig/diagrampltsbateraigrid.pdf Graphic file (type pdf)
 <use Fig/diagrampltsbateraigrid.pdf>
 Package pdftex.def Info: Fig/diagrampltsbateraigrid.pdf  used on input line 347.
@@ -1384,7 +1390,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [29]
-<Fig/cmap.pdf, id=1076, 389.5353pt x 499.8675pt>
+<Fig/cmap.pdf, id=1071, 389.5353pt x 499.8675pt>
 File: Fig/cmap.pdf Graphic file (type pdf)
 <use Fig/cmap.pdf>
 Package pdftex.def Info: Fig/cmap.pdf  used on input line 435.
@@ -1449,7 +1455,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [36]
-<Fig/diagramMCMC.pdf, id=1227, 370.663pt x 296.06459pt>
+<Fig/diagramMCMC.pdf, id=1222, 370.663pt x 296.06459pt>
 File: Fig/diagramMCMC.pdf Graphic file (type pdf)
 <use Fig/diagramMCMC.pdf>
 Package pdftex.def Info: Fig/diagramMCMC.pdf  used on input line 495.
@@ -1502,7 +1508,7 @@ BAB III.
 
 
 pdfTeX warning: pdflatex (file /Users/wyatmaja/Documents/Doctor/proposalhc/Fig/fcpenelitian.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Fig/fcpenelitian.pdf, id=1281, 384.47638pt x 577.19638pt>
+<Fig/fcpenelitian.pdf, id=1276, 384.47638pt x 577.19638pt>
 File: Fig/fcpenelitian.pdf Graphic file (type pdf)
 <use Fig/fcpenelitian.pdf>
 Package pdftex.def Info: Fig/fcpenelitian.pdf  used on input line 5.
@@ -1548,7 +1554,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [46]
-<Fig/opendss-python.pdf, id=1339, 384.47638pt x 341.35529pt>
+<Fig/opendss-python.pdf, id=1334, 384.47638pt x 341.35529pt>
 File: Fig/opendss-python.pdf Graphic file (type pdf)
 <use Fig/opendss-python.pdf>
 Package pdftex.def Info: Fig/opendss-python.pdf  used on input line 57.
@@ -1581,7 +1587,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [49]
-<Fig/stage2.pdf, id=1389, 383.51279pt x 218.7372pt>
+<Fig/stage2.pdf, id=1384, 383.51279pt x 218.7372pt>
 File: Fig/stage2.pdf Graphic file (type pdf)
 <use Fig/stage2.pdf>
 Package pdftex.def Info: Fig/stage2.pdf  used on input line 86.
@@ -1595,7 +1601,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [50 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/stage2.pdf>]
-<Fig/stage2-1.pdf, id=1409, 217.77359pt x 254.8722pt>
+<Fig/stage2-1.pdf, id=1404, 217.77359pt x 254.8722pt>
 File: Fig/stage2-1.pdf Graphic file (type pdf)
 <use Fig/stage2-1.pdf>
 Package pdftex.def Info: Fig/stage2-1.pdf  used on input line 96.
@@ -1609,7 +1615,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [51 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/stage2-1.pdf>]
-<Fig/hmc.pdf, id=1430, 291.00719pt x 182.6022pt>
+<Fig/hmc.pdf, id=1425, 291.00719pt x 182.6022pt>
 File: Fig/hmc.pdf Graphic file (type pdf)
 <use Fig/hmc.pdf>
 Package pdftex.def Info: Fig/hmc.pdf  used on input line 112.
@@ -1647,7 +1653,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [55]
-<Fig/fcmcmc.pdf, id=1479, 491.91779pt x 543.95218pt>
+<Fig/fcmcmc.pdf, id=1474, 491.91779pt x 543.95218pt>
 File: Fig/fcmcmc.pdf Graphic file (type pdf)
 <use Fig/fcmcmc.pdf>
 Package pdftex.def Info: Fig/fcmcmc.pdf  used on input line 169.
@@ -1677,7 +1683,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [58]
-<Fig/fcmc.pdf, id=1520, 492.88138pt x 586.10968pt>
+<Fig/fcmc.pdf, id=1515, 492.88138pt x 586.10968pt>
 File: Fig/fcmc.pdf Graphic file (type pdf)
 <use Fig/fcmc.pdf>
 Package pdftex.def Info: Fig/fcmc.pdf  used on input line 212.
@@ -1691,7 +1697,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [59 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/fcmc.pdf>]
-<Fig/stage3.pdf, id=1555, 383.51279pt x 218.7372pt>
+<Fig/stage3.pdf, id=1550, 383.51279pt x 218.7372pt>
 File: Fig/stage3.pdf Graphic file (type pdf)
 <use Fig/stage3.pdf>
 Package pdftex.def Info: Fig/stage3.pdf  used on input line 222.
@@ -1705,7 +1711,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [60]
-<Fig/stage3-1.pdf, id=1561, 369.29968pt x 298.23419pt>
+<Fig/stage3-1.pdf, id=1556, 369.29968pt x 298.23419pt>
 File: Fig/stage3-1.pdf Graphic file (type pdf)
 <use Fig/stage3-1.pdf>
 Package pdftex.def Info: Fig/stage3-1.pdf  used on input line 233.
@@ -1738,7 +1744,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [63]
-<Fig/lhmc.pdf, id=1606, 405.43468pt x 594.30032pt>
+<Fig/lhmc.pdf, id=1601, 405.43468pt x 594.30032pt>
 File: Fig/lhmc.pdf Graphic file (type pdf)
 <use Fig/lhmc.pdf>
 Package pdftex.def Info: Fig/lhmc.pdf  used on input line 262.
@@ -1766,12 +1772,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [65 </Users/wyatmaja/Documents/Doctor/proposalhc/Fig/lhmc.pdf>]
-<Fig/fcmcmcbatt.pdf, id=1644, 491.91779pt x 565.15138pt>
+<Fig/fcmcmcbatt.pdf, id=1639, 491.91779pt x 565.15138pt>
 File: Fig/fcmcmcbatt.pdf Graphic file (type pdf)
 <use Fig/fcmcmcbatt.pdf>
 Package pdftex.def Info: Fig/fcmcmcbatt.pdf  used on input line 286.
 (pdftex.def)             Requested size: 358.50229pt x 411.87582pt.
-<Fig/fcmcbatt.pdf, id=1646, 492.88138pt x 607.30888pt>
+<Fig/fcmcbatt.pdf, id=1641, 492.88138pt x 607.30888pt>
 File: Fig/fcmcbatt.pdf Graphic file (type pdf)
 <use Fig/fcmcbatt.pdf>
 Package pdftex.def Info: Fig/fcmcbatt.pdf  used on input line 294.
@@ -2014,16 +2020,16 @@ Package rerunfilecheck Info: File `dissertationproposal.out' has not changed.
 Here is how much of TeX's memory you used:
  28245 strings out of 478994
  489412 string characters out of 5858185
- 837239 words of memory out of 5000000
+ 837234 words of memory out of 5000000
  44675 multiletter control sequences out of 15000+600000
  448668 words of font info for 104 fonts, out of 8000000 for 9000
  1157 hyphenation exceptions out of 8191
  102i,18n,103p,2727b,1144s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.pdf (99 pages, 2827899 bytes).
+Output written on /Users/wyatmaja/Documents/Doctor/proposalhc/dissertationproposal.pdf (99 pages, 2806861 bytes).
 PDF statistics:
- 1975 PDF objects out of 2073 (max. 8388607)
- 1683 compressed objects within 17 object streams
+ 1970 PDF objects out of 2073 (max. 8388607)
+ 1680 compressed objects within 17 object streams
  380 named destinations out of 1000 (max. 500000)
  612 words of extra memory for PDF output out of 10000 (max. 10000000)
 
