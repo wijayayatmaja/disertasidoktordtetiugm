@@ -2,10 +2,10 @@
 \babel@toc {bahasa}{}
 \contentsline {chapter}{HALAMAN JUDUL}{i}{section*.1}%
 \contentsline {chapter}{HALAMAN PERSETUJUAN}{ii}{section*.2}%
-\contentsline {chapter}{ABSTRAK}{iv}{chapter*.5}%
-\contentsline {chapter}{DAFTAR ISI}{v}{section*.6}%
-\contentsline {chapter}{DAFTAR GAMBAR}{viii}{section*.7}%
-\contentsline {chapter}{DAFTAR TABEL}{x}{section*.8}%
+\contentsline {chapter}{ABSTRAK}{iii}{chapter*.5}%
+\contentsline {chapter}{DAFTAR ISI}{iv}{section*.6}%
+\contentsline {chapter}{DAFTAR GAMBAR}{vii}{section*.7}%
+\contentsline {chapter}{DAFTAR TABEL}{ix}{section*.8}%
 \contentsline {chapter}{\numberline {I}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Perumusan Masalah}{5}{section.1.2}%
