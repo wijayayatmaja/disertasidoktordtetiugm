@@ -24,13 +24,13 @@
 \contentsline {section}{\numberline {2.2}Landasan Teori}{36}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Kapasitas \textit {Hosting} PLTS Tersebar pada Penetrasi Skala Besar}{36}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Penentuan Kapasitas \textit {Hosting} Berbasis Monte Carlo}{36}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Konsep Markov Chain Monte Carlo}{37}{subsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.3.1}Proses Markov}{38}{subsubsection.2.2.3.1}%
+\contentsline {subsection}{\numberline {2.2.3}Konsep Markov Chain Monte Carlo}{38}{subsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.3.1}Proses Markov}{39}{subsubsection.2.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.2.3.2}Probabilitas Transisi Dari Proses Markov}{39}{subsubsection.2.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.2.3.3}Markov Chain Monte Carlo}{39}{subsubsection.2.2.3.3}%
 \contentsline {subsection}{\numberline {2.2.4}Jumlah Proses Acak}{39}{subsection.2.2.4}%
 \contentsline {subsection}{\numberline {2.2.5}Kerangka Analisis Runtun Waktu}{40}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}Studi Akurasi}{40}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.6}Studi Akurasi}{41}{subsection.2.2.6}%
 \contentsline {section}{\numberline {2.3}Hipotesis}{41}{section.2.3}%
 \contentsline {chapter}{\numberline {III}METODE PENELITIAN}{43}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Pengkajian Pustaka dan Persiapan Data Masukan}{45}{section.3.1}%

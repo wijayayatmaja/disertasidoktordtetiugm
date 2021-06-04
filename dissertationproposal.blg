@@ -2,11 +2,11 @@ This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: dissertationproposal.aux
 The style file: IEEEtran.bst
-A level-1 auxiliary file: contents/chapter-1/chapter-1.aux
-A level-1 auxiliary file: contents/chapter-2/chapter-2.aux
-A level-1 auxiliary file: contents/chapter-3/chapter-3.aux
-A level-1 auxiliary file: contents/chapter-4/chapter-4.aux
-A level-1 auxiliary file: contents/chapter-5/chapter-5.aux
+A level-1 auxiliary file: contents/chapter1/chapter1.aux
+A level-1 auxiliary file: contents/chapter2/chapter2.aux
+A level-1 auxiliary file: contents/chapter3/chapter3.aux
+A level-1 auxiliary file: contents/chapter4/chapter4.aux
+A level-1 auxiliary file: contents/chapter5/chapter5.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -20,7 +20,7 @@ Database file #1: dissertationproposal.bib
 Done.
 You've used 92 entries,
             4087 wiz_defined-function locations,
-            1399 strings with 26591 characters,
+            1399 strings with 26581 characters,
 and the built_in function-call counts, 76252 in all, are:
 = -- 6417
 > -- 1795
