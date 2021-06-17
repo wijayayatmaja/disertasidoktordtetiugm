@@ -1,0 +1,6 @@
+PWD /Users/wyatmaja/Documents/Doctor/proposalhc/contents/chapter-1
+INPUT /usr/local/texlive/2021/texmf.cnf
+INPUT /usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT chapter-1.tex
+OUTPUT chapter-1.log

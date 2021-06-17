@@ -18,44 +18,44 @@ Database file #1: dissertationproposal.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 92 entries,
+You've used 91 entries,
             4087 wiz_defined-function locations,
-            1399 strings with 26581 characters,
-and the built_in function-call counts, 76252 in all, are:
-= -- 6417
-> -- 1795
-< -- 777
-+ -- 1012
-- -- 286
-* -- 3659
-:= -- 11239
-add.period$ -- 188
-call.type$ -- 92
-change.case$ -- 92
-chr.to.int$ -- 1788
-cite$ -- 92
-duplicate$ -- 5322
-empty$ -- 5579
-format.name$ -- 359
-if$ -- 17773
+            1396 strings with 26423 characters,
+and the built_in function-call counts, 75158 in all, are:
+= -- 6326
+> -- 1764
+< -- 764
++ -- 994
+- -- 281
+* -- 3604
+:= -- 11088
+add.period$ -- 186
+call.type$ -- 91
+change.case$ -- 91
+chr.to.int$ -- 1758
+cite$ -- 91
+duplicate$ -- 5250
+empty$ -- 5506
+format.name$ -- 353
+if$ -- 17516
 int.to.chr$ -- 0
-int.to.str$ -- 92
-missing$ -- 892
-newline$ -- 301
-num.names$ -- 92
-pop$ -- 1878
+int.to.str$ -- 91
+missing$ -- 880
+newline$ -- 298
+num.names$ -- 91
+pop$ -- 1854
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 5908
+skip$ -- 5824
 stack$ -- 0
-substring$ -- 4250
-swap$ -- 4674
-text.length$ -- 181
+substring$ -- 4179
+swap$ -- 4604
+text.length$ -- 178
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 92
+type$ -- 91
 warning$ -- 0
-while$ -- 376
-width$ -- 94
-write$ -- 944
+while$ -- 371
+width$ -- 93
+write$ -- 933

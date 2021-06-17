@@ -1,0 +1,163 @@
+
+%% Use option "bahasa" or "english" 
+%%    to change the basic language used
+%% User option "bachelor", "master", or "doctoral"
+%% 	  to change the degree
+% \documentclass[<bachelor/master/doctoral>,<bahasa/english>]{thesisdtetiugm}
+\documentclass[master,bahasa]{thesisdtetiugm}
+
+%======================================
+% Information Input
+%======================================
+% Input author's name and ID number
+\author{Wijaya Yudha Atmaja}{20/468298/STK/00830}
+% Input the thesis' title
+\title{\textbf{\vspace*{0.15cm}Markov Chain Monte Carlo untuk Penentuan Kapasitas \textit{Hosting} Stokastik pada Penetrasi PLTS\vspace*{0.15cm} dan PLTS-Baterai Tersebar}}
+
+%\title{\textbf{
+%		\vspace{0.15cm}
+%		Monte Carlo Based Method for Preventing Substation Power Factor
+%		\vspace{0.15cm}
+%		Degradation Caused by Large-Scale Rooftop PV Penetration}}
+% Program and the head of the program
+\program{Doktor Teknik Elektro}{Dr.Eng. Ir. Risanuri Hidayat, M.Sc.}{196708021993031002}
+% Name of department head and NIP
+\departmenthead{Ir. Sarjiya, S.T., M.T., Ph.D., IPU.}{197307061999031005}
+\major{Konsentrasi Sistem Tenaga Listrik}
+\yearsubmit{2021}
+\examdate{<<Exam date>>}
+% Name of thesis supervisors/promotors
+\addsupervisor{Ir. Sarjiya, S.T., M.T., Ph.D., IPU.}{197307061999031005}
+\addsupervisor{Ir. Lesnanto Multa Putranto, S.T., M.Eng., Ph.D., IPM.}{111198506201304101}
+\addsupervisor{<<Supervisor 3>>}{<<NIP>>}
+% Name of examiners
+\addexaminer{<<Examiner 1>>}{<<NIP 1>>}
+\addexaminer{<<Examiner 2>>}{<<NIP 2>>}
+\addexaminer{<<Examiner 3>>}{<<NIP 3>>}
+\addexaminer{<<Examiner 4>>}{<<NIP 4>>}
+\addexaminer{<<Examiner 5>>}{<<NIP 5>>}
+\addexaminer{<<Examiner 6>>}{<<NIP 6>>}
+\addexaminer{<<Examiner 7>>}{<<NIP 7>>}
+\addexaminer{<<Examiner 8>>}{<<NIP 8>>}
+\addexaminer{<<Examiner 9>>}{<<NIP 9>>}
+
+%======================================
+
+% correct bad hyphenation here [example]
+
+
+\makeatletter
+\renewcommand{\@tocrmarg}{2.55em plus1fil}
+\makeatother
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+\usepackage[hyperref=true,style=verbose-trad2,citepages=omit,backend=biber,sorting=nyt,isbn=false,annote=false,issn=false,note=false,backref=true]{biblatex}
+
+\begin{document}
+\pagecolor{white}
+\hyphenation{PLTS me-nge-nai meng-klaim be-be-ra-pa me-ne-rap-kan pe-mo-delan me-re-pre-sen-ta-si-kan men-da-pat-kan ke-ti-dak-pas-ti-an wa-lau-pun al-go-rit-me pe-nye-le-sai-an ob-ser-va-si ke-ti-dak-pas-ti-an-nya me-ngem-bang-kan me-nger-ja-kan in-tractable}
+\righthyphenmin=3
+\lefthyphenmin=4
+%\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=50
+\hbadness=10000
+\sloppy
+
+%======================================
+% Create cover etc
+%======================================
+\phantomsection
+\printcover{sample/logougm.png}
+\setcounter{page}{1}
+\addcontentsline{toc}{chapter}{HALAMAN JUDUL}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\newpage
+
+\phantomsection
+\addcontentsline{toc}{chapter}{HALAMAN PERSETUJUAN}
+\setcounter{page}{2}
+
+\phantomsection
+\includepdf[pages={1,2}]{halamanpersetujuanrevisi.pdf}
+\setcounter{page}{4}
+
+
+%\chapterdedication{contents/dedication/dedication}
+%\printendorsement
+%\chapterstatement{contents/statement/persetujuan1}
+%----%\chapterstatement{contents/statement/persetujuan2}
+%\chapterpreface{contents/preface/preface}
+%\chapternomenclature{contents/nomenclature/nomenclature}
+%\chapterabstract{contents/abstract/abstract}
+\chapterintisari{contents/abstract/intisari}
+%======================================
+
+%======================================
+% Create Table of Contents, List of Figures, List of Tables
+% <Do not change this part>
+%======================================
+
+
+\thetoc
+\tableofcontents
+
+\let\origaddvspace\addvspace
+\renewcommand{\addvspace}[1]{}
+\thelof
+\listoffigures
+\thelot
+\listoftables
+\renewcommand{\addvspace}[1]{\origaddvspace{#1}}
+
+%\thetoc
+%\tableofcontents
+%\thelof
+%\listoffigures
+%\thelot
+%\listoftables
+
+%======================================
+
+%======================================
+%  MAIN TEXT
+%======================================
+\startmain
+% You can change 
+%    the filename and location of the files inputted
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\include{contents/chapter1/chapter1}
+\include{contents/chapter2/chapter2}
+\include{contents/chapter3/chapter3}
+\include{contents/chapter4/chapter4}
+\include{contents/chapter5/chapter5}
+%\include{contents/chapter-6/chapter-6}
+%\include{contents/chapter-7/chapter-7}
+%======================================
+
+%======================================
+%  References
+%======================================
+\thereferences
+% You can change 
+%    the filename and location of the files inputted
+\begingroup
+\hyphenrules{nohyphenation}
+\bibliography{dissertationproposal3}
+% \bibliography{test}
+\endgroup
+%======================================
+
+%======================================
+%  Appendix
+%======================================
+% You can change 
+%    the filename and location of the files inputted
+%\chapterappendix{contents/appendix/appendix}
+%======================================
+
+\end{document}
