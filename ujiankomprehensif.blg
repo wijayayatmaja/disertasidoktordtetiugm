@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: ujiankomprehensif.aux
+The style file: IEEEtran.bst
+A level-1 auxiliary file: contents/chapter1/chapter1.aux
+A level-1 auxiliary file: contents/chapter2/chapter2.aux
+A level-1 auxiliary file: contents/chapter3/chapter3.aux
+A level-1 auxiliary file: contents/chapter4/chapter4.aux
+A level-1 auxiliary file: contents/chapter5/chapter5.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: doktordtetiugm.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 14 entries,
+            4087 wiz_defined-function locations,
+            926 strings with 10496 characters,
+and the built_in function-call counts, 11240 in all, are:
+= -- 947
+> -- 270
+< -- 109
++ -- 152
+- -- 44
+* -- 551
+:= -- 1704
+add.period$ -- 28
+call.type$ -- 14
+change.case$ -- 14
+chr.to.int$ -- 246
+cite$ -- 14
+duplicate$ -- 790
+empty$ -- 789
+format.name$ -- 56
+if$ -- 2580
+int.to.chr$ -- 0
+int.to.str$ -- 14
+missing$ -- 138
+newline$ -- 65
+num.names$ -- 14
+pop$ -- 283
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 860
+stack$ -- 0
+substring$ -- 588
+swap$ -- 692
+text.length$ -- 27
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 14
+warning$ -- 0
+while$ -- 50
+width$ -- 16
+write$ -- 163

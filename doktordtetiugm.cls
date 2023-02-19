@@ -119,10 +119,10 @@
 \geometry{
 	a4paper,
 	papersize={21cm,29.7cm},
-	top=4cm,
-	left=4cm,
-	right=3cm,
-	bottom=3cm
+	top=2.5cm,
+	left=3.5cm,
+	right=2.5cm,
+	bottom=2.5cm
 }
 \setlength{\parindent}{0.8cm}
 \setlength{\parskip}{6pt}
@@ -143,14 +143,16 @@
 \newcommand{\@university}{Universitas Gadjah Mada}
 \newcommand{\@facultyIna}{Fakultas Teknik}
 \newcommand{\@departmentIna}{Departemen Teknik Elektro dan Teknologi Informasi}
-\newcommand{\@graduateIna}{Program Studi Doktor Teknik Elektro}
+\newcommand{\@graduateIna}{Program Studi Doktor}
+\newcommand*{\programstudi}[1]{\newcommand{\@programstudi}{#1}}
 \newcommand{\@city}{Yogyakarta}
 \newcommand*{\yearsubmit}[1]{\newcommand{\@yearsubmit}{#1}}
+\newcommand*{\datemonthsubmit}[1]{\newcommand{\@datemonthsubmit}{#1}}
 %======================================
 %% Cover Page
 %======================================
 \newcommand{\printcover}[1]{
-	\newgeometry{left=3cm,top=3cm,bottom=3cm,right=3cm}
+	% \newgeometry{left=3cm,top=3cm,bottom=3cm,right=3cm}
 	\thispagestyle{empty}%
 	\setcounter{page}{1}
 	\pagenumbering{roman}
@@ -170,7 +172,7 @@
 			}
 			\vfill
 			\textbf{
-				\MakeUppercase{\@graduateIna} \\ 
+				\MakeUppercase{\@graduateIna\,\@programstudi} \\ 
 				\vspace{0.11cm}
 				\MakeUppercase{\@facultyIna} \\
 				\vspace{0.11cm}
@@ -187,7 +189,7 @@
 %======================================
 \newcommand{\pageaftercover}{
 	\chapter*{}
-	\newgeometry{left=3.5cm,top=3cm,bottom=3cm,right=2.5cm}
+	% \newgeometry{left=3.5cm,top=3cm,bottom=3cm,right=2.5cm}
 	\fancyhf{}
 	\fancyfoot[C]{\thepage}
 	\begin{center}
@@ -205,12 +207,12 @@
 			\vfill
 			\textbf{
 				Dipertahankan di hadapan Tim Penguji\\
-				pada Program Studi Doktor Teknik Elektro\\	
+				pada \@graduateIna\,\@programstudi\\	
 				\@facultyIna\\
 				\vspace{0.11cm}
 				{\@university} \\
 				\vspace{0.11cm}
-				Pada tanggal: 1 Juli 2023\\
+				Pada tanggal: \@datemonthsubmit\,\@yearsubmit\\
 			}
 		\end{singlespacing}			
 	\end{center}
@@ -223,7 +225,7 @@
 %======================================
 \newcommand{\chapterapproval}[1]{
 	\phantomsection
-	\newgeometry{right=3cm,left=4cm,top=4cm,bottom=3cm}
+	% \newgeometry{right=3cm,left=4cm,top=4cm,bottom=3cm}
 	\chapter*{\approvalpagename}%
 	\input{#1}
 	% \addcontentsline{toc}{chapter}{\approvalpagename}
@@ -234,7 +236,7 @@
 %======================================
 \newcommand{\chapterstatement}[1]{
 	\phantomsection
-	\newgeometry{right=3cm,left=4cm,top=4cm,bottom=3cm}
+	% \newgeometry{right=3cm,left=4cm,top=4cm,bottom=3cm}
 	\chapter*{\statementname}%
 	\input{#1}
 	\phantompageref
@@ -283,7 +285,7 @@
 %% Abstract
 %======================================
 \newcommand{\chapterabstract}[1]{
-	\newgeometry{right=3cm,left=4cm,top=4cm,bottom=3cm}
+	% \newgeometry{right=3cm,left=4cm,top=4cm,bottom=3cm}
 	\chapter*{ABSTRACT}
 	\input{#1}
 	\phantompageref
@@ -295,7 +297,7 @@
 %======================================
 \newcommand{\chapterabstrak}[1]{
 	% \phantomsection
-	\newgeometry{right=3cm,left=4cm,top=4cm,bottom=3cm}
+	% \newgeometry{right=3cm,left=4cm,top=4cm,bottom=3cm}
 	\chapter*{ABSTRAK}
 	\input{#1}
 	\phantompageref

@@ -1,95 +1,101 @@
-%-----------------------------------------
-%--- Version#01 2023
-%--- Wijaya Y. Atmaja
-%--- wijayayatmaja@gmail.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Version#01 2023
+%%%% Wijaya Y. Atmaja
+%%%% wijayayatmaja@gmail.com
 
-%--- REFERENCES:
-%--- (Pedoman Penulisan DIsertasi FT UGM 2019)
-%--- (Canggih,2018)
-%--- (www.latextemplates.com)
-%--- (stackoverflow.com)
+%%%% REFERENCES:
+%%%% (Pedoman Penulisan DIsertasi FT UGM 2019)
+%%%% (Canggih,2018)
+%%%% (www.latextemplates.com)
+%%%% (stackoverflow.com)
 
-%--- INSTRUCTION:
-%--- You are given some choices of commands according to the purpose of your manuscript
-%--- Simply remove the % (percent sign) to activate the command you need, and put it back to deactivate the command
-%--- Line with %--- defines a comment/instruction, keep it as it is
+%%%% INSTRUCTION:
+%%%% You are given some choices of commands according to the purpose of your manuscript
+%%%% Simply remove the % (percent sign) to activate the command you need, and put it back to deactivate the command
+%%%% Line with %%%% defines a comment/instruction, keep it as it is
 
-%--- PURPOSE OF MANUSCRIPT:
-%--- Penilaian Kelayakan Disertasi (PKD) and Ujian Tertutup
+%%%% PURPOSE OF MANUSCRIPT:
+%%%% Penilaian Kelayakan Disertasi (PKD) and Ujian Tertutup
 
-%-----------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass{doktordtetiugm}
 
-%-----------------------------------------
-%--- Title
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Title
+%%%%--------------------------------------
 \title{
     \vspace{0.15cm} Penentuan Kapasitas \textit{Hosting} Stokastik untuk
     \vspace{0.15cm} Penetrasi PLTS dan PLTS-Baterai Tersebar pada
                     Jaringan Distribusi
 }
 
-%-----------------------------------------
-%--- Author
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Author
+%%%%--------------------------------------
 \author
     {Wijaya Yudha Atmaja}
     {17/419580/PTK/11690}
 
-%-----------------------------------------
-%--- Year
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Program Studi
+%%%%--------------------------------------
+\programstudi{Teknik Elektro}
+
+%%%%--------------------------------------
+%%%% Submission Time
+%%%%--------------------------------------
+\datemonthsubmit{1 November}
 \yearsubmit{2023}
 
 \begin{document}
 
-%-----------------------------------------
-%--- Hypenation
-%--- You are given 2 options to set hypenation (choose one):
-%-----------------------------------------
-%--- (Option 1) Use Indonesian hypenation with alteration because hyphenation for languages other than English in LaTeX could be incorrect:
+%%%%--------------------------------------
+%%%% Hypenation
+%%%% You are given 2 options to set hypenation (choose one):
+%%%%--------------------------------------
+%%%% (Option 1) Use Indonesian hypenation with alteration because hyphenation for languages other than English in LaTeX could be incorrect:
 \righthyphenmin=3
 \lefthyphenmin=4
 \emergencystretch=\maxdimen
 \hyphenpenalty=50
 \hbadness=10000
 \sloppy
-%--- Alteration (correct some words with bad hypenation):
+%%%% Alteration (correct some words with bad hypenation):
 \hyphenation{PLTS me-nge-nai meng-klaim be-be-ra-pa me-ne-rap-kan pe-mo-delan me-re-pre-sen-ta-si-kan men-da-pat-kan}
 
-%--- (Option 2) Turn off hyphenation (similar to Microsoft Word):
+%%%% (Option 2) Turn off hyphenation (similar to Microsoft Word):
 % \righthyphenmin=1000
 % \sloppy
 
-%================================================================
-%--- FRONT MATTER (BAGIAN AWAL)
-%================================================================
+%%%%=============================================================
+%%%% FRONT MATTER (BAGIAN AWAL)
+%%%%=============================================================
 
-%-----------------------------------------
-%--- Cover
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Cover
+%%%%--------------------------------------
 \printcover{fig/logougm.png}
 
-%-----------------------------------------
-%--- Title page
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Title page
+%%%%--------------------------------------
 \phantompageref
 \addcontentsline{toc}{chapter}{HALAMAN JUDUL}
 
-%-----------------------------------------
-%--- Page after title page
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Page after title page
+%%%%--------------------------------------
 \phantomsection
 \pageaftercover
 
-%-----------------------------------------
-%--- Approval UK, SH1, SH2, PKD, UT
-%-----------------------------------------
-%--- Approval page before Penilaian Kelayakan Disertasi to be signed:
-\chapterapproval{contents/approvalpage/approvalbeforePKD}
+%%%%--------------------------------------
+%%%% Approval PKD/UT --> CHOOSE ONE
+%%%%--------------------------------------
+%%%% Approval page before Penilaian Kelayakan Disertasi and Ujian Tertutup to be signed:
+\chapterapproval{contents/approvalpage/approvalbeforeUT}
 
-%--- Approval page before Penilaian Kelayakan Disertasi or Ujian Tertutup signed:
+%%%% Approval page before Penilaian Kelayakan Disertasi and Ujian Tertutup signed:
 % \clearpage
 % \phantomsection
 % \addcontentsline{toc}{chapter}{HALAMAN PERSETUJUAN}
@@ -97,10 +103,10 @@
 % \includepdf[pages={1}]{attachment/signedpromotorUT.pdf}
 % \setcounter{page}{4}
 
-%--- Approval page after revision to be signed:
+%%%% Approval page after revision to be signed:
 % \chapterapproval{contents/approvalpage/approvalafterUT}
 
-%--- Approval page after revision signed:
+%%%% Approval page after revision signed:
 % \clearpage
 % \phantomsection
 % \addcontentsline{toc}{chapter}{HALAMAN PERSETUJUAN}
@@ -108,14 +114,14 @@
 % \includepdf[pages={1,2}]{attachment/signedhalamanpersetujuanrevisiUT.pdf}
 % \setcounter{page}{5}
 
-%-----------------------------------------
-%--- Promovendus Originality statement/plagiarism disclaimer (Pernyataan Promovendus)
-%-----------------------------------------
-%--- Promovendus to be signed
-%--- Use this for Penilaian Kelayakan Disertasi
+%%%%--------------------------------------
+%%%% Originality statement/plagiarism disclaimer (Pernyataan Promovendus)
+%%%%--------------------------------------
+%%%% Promovendus to be signed
+%%%% Use this for Penilaian Kelayakan Disertasi
 \chapterstatement{contents/statement/statement}
 
-%--- Signed Promovendus
+%%%% Signed Promovendus
 % \clearpage
 % \phantomsection
 % \addcontentsline{toc}{chapter}{PERNYATAAN PROMOVENDUS}
@@ -123,13 +129,13 @@
 % \includepdf[pages={1}]{attachment/signedpernyataanpromovendus.pdf}
 % \setcounter{page}{6}
 
-%-----------------------------------------
-%--- Preface (Prakata)
-%--- Use this for Penilaian Kelayakan Disertasi
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Preface (Prakata)
+%%%% Use this for Penilaian Kelayakan Disertasi
+%%%%--------------------------------------
 \chapterpreface{contents/preface/preface}
 
-%--- Preface (Prakata)
+%%%% Preface (Prakata)
 % \clearpage
 % \phantomsection
 % \addcontentsline{toc}{chapter}{PRAKATA}
@@ -137,9 +143,9 @@
 % \includepdf[pages={1,2}]{attachment/signedprakata.pdf}
 % \setcounter{page}{8}
 
-%-----------------------------------------
-%--- Table of contents, figures, and tables
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Table of contents, figures, and tables
+%%%%--------------------------------------
 \thetoc
 \tableofcontents
 \let\origaddvspace\addvspace
@@ -150,24 +156,24 @@
 \listoftables
 \renewcommand{\addvspace}[1]{\origaddvspace{#1}}
 
-%-----------------------------------------
-%--- List of nomencalture and abbreviation
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% List of nomencalture and abbreviation
+%%%%--------------------------------------
 \chapternomenclature{contents/nomenclature/nomenclature}
 
-%-----------------------------------------
-%--- Abstract in Indonesian
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Abstract in Indonesian
+%%%%--------------------------------------
 \chapterabstrak{contents/abstract/abstrak}
 
-%-----------------------------------------
-%--- Abstract in English
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Abstract in English
+%%%%--------------------------------------
 \chapterabstract{contents/abstract/abstract}
 
-%================================================================
-%--- MAIN BODY (BAGIAN UTAMA)
-%================================================================
+%%%%=============================================================
+%%%% MAIN BODY (BAGIAN UTAMA)
+%%%%=============================================================
 
 \startmain
 \include{contents/chapter1/chapter1}
@@ -178,20 +184,20 @@
 %\include{contents/chapter-6/chapter-6}
 %\include{contents/chapter-7/chapter-7}
 
-%================================================================
-%--- BACK MATTER (BAGIAN AKHIR)
-%================================================================
+%%%%=============================================================
+%%%% BACK MATTER (BAGIAN AKHIR)
+%%%%=============================================================
 
-%-----------------------------------------
-%--- References
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% References
+%%%%--------------------------------------
 \thereferences
-%--- Export bib file from Mendeley/Zotero, and put it in the following brackets
+%%%% Export bib file from Mendeley/Zotero, and put it in the following brackets
 \bibliography{doktordtetiugm}
 
-%-----------------------------------------
-%--- Appendix
-%-----------------------------------------
+%%%%--------------------------------------
+%%%% Appendix
+%%%%--------------------------------------
 \chapterappendixone{contents/appendixone/appendix}
 \chapterappendixtwo{contents/appendixtwo/appendix}
 \newpage
